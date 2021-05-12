@@ -9,9 +9,9 @@ public class Car {
 
 	// constructor
 	public Car(String brand, String model, String licensePlate) {
-		this.brand = brand;
-		this.model = model;
-		this.licensePlate = licensePlate;
+		this.setBrand(brand);
+		this.setModel(model);
+		this.setLicensePlate(licensePlate);
 	}
 
 	// getters and setters
