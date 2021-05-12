@@ -1,5 +1,7 @@
 package br.com.locadoracarros.carrental.entities;
 
+import br.com.locadoracarros.carrental.exceptions.DomainException;
+
 public class Car {
 
 	// attributes
@@ -19,7 +21,11 @@ public class Car {
 		return brand;
 	}
 
+	// using DomainException to make validations
 	public void setBrand(String brand) {
+		if(brand.equals(null)){
+			throw new DomainException("The car must have a brand.");
+		}
 		this.brand = brand;
 	}
 
@@ -28,6 +34,9 @@ public class Car {
 	}
 
 	public void setModel(String model) {
+		if(model.equals(null)){
+			throw new DomainException("The car must have a model.");
+		}
 		this.model = model;
 	}
 
@@ -36,6 +45,9 @@ public class Car {
 	}
 
 	public void setLicensePlate(String licensePlate) {
+		if(licensePlate.equals(null)){
+			throw new DomainException("The car must have a license plate.");
+		}
 		this.licensePlate = licensePlate;
 	}
 }
