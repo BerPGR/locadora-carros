@@ -50,4 +50,13 @@ public class Car {
 		}
 		this.licensePlate = licensePlate;
 	}
+
+	@Override
+	public String toString() {
+		return "Car{" +
+				"brand='" + brand + '\'' +
+				", model='" + model + '\'' +
+				", licensePlate='" + licensePlate + '\'' +
+				'}';
+	}
 }
