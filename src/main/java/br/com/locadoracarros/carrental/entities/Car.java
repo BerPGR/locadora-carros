@@ -23,7 +23,7 @@ public class Car {
 
 	// using DomainException to make validations
 	public void setBrand(String brand) {
-		if(brand.equals(null)){
+		if(brand.equals(null) || brand.equals("")){
 			throw new DomainException("The car must have a brand.");
 		}
 		this.brand = brand;
@@ -34,7 +34,7 @@ public class Car {
 	}
 
 	public void setModel(String model) {
-		if(model.equals(null)){
+		if(model.equals(null) || model.equals("")){
 			throw new DomainException("The car must have a model.");
 		}
 		this.model = model;
@@ -45,7 +45,7 @@ public class Car {
 	}
 
 	public void setLicensePlate(String licensePlate) {
-		if(licensePlate.equals(null)){
+		if(licensePlate.equals(null) || licensePlate.equals("")){
 			throw new DomainException("The car must have a license plate.");
 		}
 		this.licensePlate = licensePlate;
