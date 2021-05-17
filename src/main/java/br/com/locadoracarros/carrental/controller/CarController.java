@@ -11,11 +11,29 @@ import org.springframework.web.bind.annotation.RestController;
 public class CarController {
 
 	@GetMapping
-	public ResponseEntity<Car> getCar(){
+	public Page<Car> getAllCars(
+	@RequestParam(
+			value = "page",
+			required = false,
+			defaultValue = "0") int page,
+	@RequestParam(
+			value = "size",
+			required = false,
+			defaultValue = "15") int size,
+	@RequestParam(
+			defaultValue = "desc",
+			value = "sort",
+			required = false) String sort,
+	@RequestParam(
+			defaultValue = "",
+			value = "q",
+			required = false) String q,
+	 @RequestParam(
+	 		defaultValue = "model",
+			value = "attribute",
+			required = false) String attribute)
+	{
 
-		final Car car = new Car("Fiat", "Punto", "OMG-1234");
-		return ResponseEntity.ok(car);
-
-
+		return this.carService.getAll(page, size, sort, q, attribute);
 	}
 }

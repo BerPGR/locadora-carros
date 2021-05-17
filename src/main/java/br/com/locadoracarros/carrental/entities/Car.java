@@ -10,6 +10,10 @@ public class Car {
 	private String licensePlate;
 
 	// constructor
+
+	public Car() {
+	}
+
 	public Car(String brand, String model, String licensePlate) {
 		this.setBrand(brand);
 		this.setModel(model);
