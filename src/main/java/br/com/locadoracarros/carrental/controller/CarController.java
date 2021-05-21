@@ -10,6 +10,19 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/car")
 public class CarController {
 
+	private final String endPoint = "/car";
+
+	@Autowired
+	CarService carService;
+
+
+	@ApiOperation(value = "Lista todos os carros", notes = "Lista todos os carros",
+			response = Car.class, responseContainer = "Page")
+	@ApiResponses(value = {
+			@ApiResponse(code = 200, message = "Avaliações Listadas com sucesso"),
+			@ApiResponse(code = 401, message = "You are not authorized to view the resource"),
+			@ApiResponse(code = 403, message = "Accessing the resource you were trying to reach is forbidden"),
+			@ApiResponse(code = 404, message = "The resource you were trying to reach is not found") })
 	@GetMapping
 	public Page<Car> getAllCars(
 	@RequestParam(
