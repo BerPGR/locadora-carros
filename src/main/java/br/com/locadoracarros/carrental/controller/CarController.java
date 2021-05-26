@@ -19,10 +19,9 @@ public class CarController {
 	@ApiOperation(value = "Lista todos os carros", notes = "Lista todos os carros",
 			response = Car.class, responseContainer = "Page")
 	@ApiResponses(value = {
-			@ApiResponse(code = 200, message = "Avaliações Listadas com sucesso"),
-			@ApiResponse(code = 401, message = "You are not authorized to view the resource"),
-			@ApiResponse(code = 403, message = "Accessing the resource you were trying to reach is forbidden"),
-			@ApiResponse(code = 404, message = "The resource you were trying to reach is not found") })
+			@ApiResponse(code = 204, message = "Avaliações Listadas com sucesso")
+	}
+			)
 	@GetMapping
 	public Page<Car> getAllCars(
 	@RequestParam(
@@ -46,6 +45,11 @@ public class CarController {
 			value = "attribute",
 			required = false) String attribute)
 	{
+		long start = System.currentTimeMillis();
+		logger.info("[ GET ] => {/car}");
+		long end = System.currentTimeMillis();
+
+		logger.debug("O tempo de execução foi de " + (end-start) + " ms");
 
 		return this.carService.getAll(page, size, sort, q, attribute);
 	}

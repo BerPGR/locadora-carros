@@ -12,15 +12,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class LoggingController {
 
-	Logger logger = LoggerFactory.getLogger(LoggingController.class);
+	final Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	@RequestMapping("/")
 	public String index() {
 		logger.trace("A TRACE Message");
-		logger.debug("A DEBUG Message");
+		logger.debug("Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE");
 		logger.info("An INFO Message");
 		logger.warn("A WARN Message");
-		logger.error("An ERROR Message");
+		logger.error("Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE");
 
 		return "Howdy! Check out the Logs to see the output...";
 	}

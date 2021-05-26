@@ -1,0 +1,26 @@
+package br.com.locadoracarros.carrental.repository;
+
+import br.com.locadoracarros.carrental.entities.Car;
+import br.com.locadoracarros.carrental.entities.Client;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.data.repository.query.Param;
+
+import java.util.Optional;
+
+public interface ClientRepository extends PagingAndSortingRepository<Client, Integer> {
+
+	Page<Client> findAll (Pageable pageable);
+
+	Page<Client> findById (int id, Pageable pageable);
+
+	@Override
+	Optional<Client> findById (Integer integer);
+
+	@Query(value = "SELECT * FROM client  "
+			+ "WHERE lower(name) like :query ", nativeQuery = true)
+	public Page<Client> findClients(@Param("query") String query, Pageable pageable);
+
+}
