@@ -1,76 +1,21 @@
-26-05-2021 08:06:20 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 8248 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
-26-05-2021 08:06:20 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
-26-05-2021 08:06:36 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 16.827 seconds (JVM running for 19.204)
-26-05-2021 08:06:38 | LoggingController:21 [ INFO ]  :  An INFO Message
-26-05-2021 08:06:38 | LoggingController:22 [ WARN ]  :  A WARN Message
-26-05-2021 08:06:38 | LoggingController:23 [ ERROR ]  :  Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
-26-05-2021 08:06:51 | CarController:68 [ INFO ]  :  [ GET ] => {/car}
-26-05-2021 08:09:53 | CarController:82 [ INFO ]  :  [ GET ] => { /car/{id} }
-26-05-2021 08:12:06 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 10512 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
-26-05-2021 08:12:06 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
-26-05-2021 08:12:17 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 11.795 seconds (JVM running for 13.641)
-26-05-2021 08:12:59 | CarController:82 [ INFO ]  :  [ GET ] => { /car/{id} }
-26-05-2021 08:13:21 | CarController:82 [ INFO ]  :  [ GET ] => { /car/{id} }
-26-05-2021 08:18:43 | CarController:117 [ INFO ]  :  [ POST ] => { /car }
-26-05-2021 08:18:43 | SqlExceptionHelper:142 [ ERROR ]  :  ERROR: duplicate key value violates unique constraint "car_pkey"
-  Detalhe: Key (id)=(2) already exists.
-26-05-2021 08:18:43 | CarController:132 [ ERROR ]  :  could not execute statement; SQL [n/a]; constraint [car_pkey]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
-26-05-2021 08:19:43 | CarController:117 [ INFO ]  :  [ POST ] => { /car }
-26-05-2021 08:19:43 | SqlExceptionHelper:142 [ ERROR ]  :  ERROR: duplicate key value violates unique constraint "car_pkey"
-  Detalhe: Key (id)=(3) already exists.
-26-05-2021 08:19:43 | CarController:132 [ ERROR ]  :  could not execute statement; SQL [n/a]; constraint [car_pkey]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
-26-05-2021 08:20:33 | CarController:117 [ INFO ]  :  [ POST ] => { /car }
-26-05-2021 08:20:33 | SqlExceptionHelper:142 [ ERROR ]  :  ERROR: duplicate key value violates unique constraint "car_pkey"
-  Detalhe: Key (id)=(4) already exists.
-26-05-2021 08:20:33 | CarController:132 [ ERROR ]  :  could not execute statement; SQL [n/a]; constraint [car_pkey]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
-26-05-2021 08:23:25 | CarController:82 [ INFO ]  :  [ GET ] => { /car/{id} }
-26-05-2021 08:27:11 | CarController:149 [ INFO ]  :  [ INFO ] : { /car }
-26-05-2021 08:29:17 | CarController:176 [ INFO ]  :  [ PUT ] => { /car/{id} }
-26-05-2021 08:38:15 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 10364 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
-26-05-2021 08:38:15 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
-26-05-2021 08:38:27 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 12.486 seconds (JVM running for 14.199)
-26-05-2021 08:38:41 | CarController:68 [ INFO ]  :  [ GET ] => {/car}
-26-05-2021 08:38:50 | CarController:68 [ INFO ]  :  [ GET ] => {/car}
-26-05-2021 08:39:49 | CarController:152 [ INFO ]  :  [ PUT ] : { /car }
-26-05-2021 08:39:49 | CarController:164 [ ERROR ]  :  Objeto sendo editado inexistente
-26-05-2021 08:40:46 | CarController:152 [ INFO ]  :  [ PUT ] : { /car }
-26-05-2021 08:41:41 | CarController:179 [ INFO ]  :  [ PUT ] => { /car/{id} }
-26-05-2021 08:41:58 | CarController:179 [ INFO ]  :  [ PUT ] => { /car/{id} }
-26-05-2021 08:43:02 | CarController:179 [ INFO ]  :  [ PUT ] => { /car/{id} }
-26-05-2021 08:43:27 | CarController:179 [ INFO ]  :  [ PUT ] => { /car/{id} }
-26-05-2021 08:44:17 | CarController:179 [ INFO ]  :  [ PUT ] => { /car/{id} }
-26-05-2021 08:44:37 | CarController:179 [ INFO ]  :  [ PUT ] => { /car/{id} }
-26-05-2021 08:45:03 | CarController:179 [ INFO ]  :  [ PUT ] => { /car/{id} }
-26-05-2021 08:46:08 | CarController:179 [ INFO ]  :  [ PUT ] => { /car/{id} }
-26-05-2021 08:46:35 | CarController:179 [ INFO ]  :  [ PUT ] => { /car/{id} }
-26-05-2021 08:47:00 | CarController:179 [ INFO ]  :  [ PUT ] => { /car/{id} }
-26-05-2021 08:47:26 | CarController:179 [ INFO ]  :  [ PUT ] => { /car/{id} }
-26-05-2021 08:47:26 | CarController:192 [ ERROR ]  :  Objeto sendo editado inexistente
-26-05-2021 08:48:48 | CarController:83 [ INFO ]  :  [ GET ] => { /car/{id} }
-26-05-2021 08:49:04 | CarController:83 [ INFO ]  :  [ GET ] => { /car/{id} }
-26-05-2021 08:49:53 | CarController:83 [ INFO ]  :  [ GET ] => { /car/{id} }
-26-05-2021 08:51:58 | CarController:119 [ INFO ]  :  [ POST ] => { /car }
-26-05-2021 08:51:59 | SqlExceptionHelper:142 [ ERROR ]  :  ERROR: duplicate key value violates unique constraint "car_pkey"
-  Detalhe: Key (id)=(5) already exists.
-26-05-2021 08:51:59 | CarController:135 [ ERROR ]  :  could not execute statement; SQL [n/a]; constraint [car_pkey]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
-26-05-2021 09:06:48 | CarController:68 [ INFO ]  :  [ GET ] => {/car}
-26-05-2021 09:08:14 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 10956 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
-26-05-2021 09:08:14 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
-26-05-2021 09:08:14 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
-26-05-2021 09:08:25 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 15.249 seconds (JVM running for 17.24)
-26-05-2021 09:08:28 | CarController:68 [ INFO ]  :  [ GET ] => {/car}
-26-05-2021 09:08:28 | CarController:71 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-26-05-2021 09:10:50 | CarController:119 [ INFO ]  :  [ POST ] => { /car }
-26-05-2021 09:10:50 | SqlExceptionHelper:142 [ ERROR ]  :  ERROR: duplicate key value violates unique constraint "car_pkey"
-  Detalhe: Key (id)=(6) already exists.
-26-05-2021 09:10:50 | CarController:135 [ ERROR ]  :  could not execute statement; SQL [n/a]; constraint [car_pkey]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
-26-05-2021 09:12:49 | CarController:119 [ INFO ]  :  [ POST ] => { /car }
-26-05-2021 09:12:49 | SqlExceptionHelper:142 [ ERROR ]  :  ERROR: duplicate key value violates unique constraint "car_pkey"
-  Detalhe: Key (id)=(40) already exists.
-26-05-2021 09:12:49 | CarController:135 [ ERROR ]  :  could not execute statement; SQL [n/a]; constraint [car_pkey]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
-26-05-2021 09:13:07 | CarController:119 [ INFO ]  :  [ POST ] => { /car }
-26-05-2021 09:13:07 | CarController:128 [ DEBUG ]  :  O tempo de execução foi de 18 ms
-26-05-2021 09:15:14 | CarController:119 [ INFO ]  :  [ POST ] => { /car }
-26-05-2021 09:16:57 | CarController:128 [ DEBUG ]  :  O tempo de execução foi de 102917 ms
-26-05-2021 09:18:59 | CarController:179 [ INFO ]  :  [ PUT ] => { /car/{id} }
-26-05-2021 09:18:59 | CarController:188 [ DEBUG ]  :  O tempo de execução foi de 31 ms
+27-05-2021 08:46:22 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 11568 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+27-05-2021 08:46:22 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+27-05-2021 08:46:22 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+27-05-2021 08:46:32 | LoggingFailureAnalysisReporter:40 [ ERROR ]  :  
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field clientService in br.com.locadoracarros.carrental.controller.ClientController required a bean of type 'br.com.locadoracarros.carrental.service.ClientService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'br.com.locadoracarros.carrental.service.ClientService' in your configuration.
+

@@ -19,9 +19,8 @@ public class CarController {
 	@ApiOperation(value = "Lista todos os carros", notes = "Lista todos os carros",
 			response = Car.class, responseContainer = "Page")
 	@ApiResponses(value = {
-			@ApiResponse(code = 204, message = "Avaliações Listadas com sucesso")
-	}
-			)
+			@ApiResponse(code = 204, message = "Carros listados com sucesso")
+	})
 	@GetMapping
 	public Page<Car> getAllCars(
 	@RequestParam(
