@@ -1,21 +1,4 @@
-27-05-2021 08:46:22 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 11568 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
-27-05-2021 08:46:22 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
-27-05-2021 08:46:22 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
-27-05-2021 08:46:32 | LoggingFailureAnalysisReporter:40 [ ERROR ]  :  
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Field clientService in br.com.locadoracarros.carrental.controller.ClientController required a bean of type 'br.com.locadoracarros.carrental.service.ClientService' that could not be found.
-
-The injection point has the following annotations:
-	- @org.springframework.beans.factory.annotation.Autowired(required=true)
-
-
-Action:
-
-Consider defining a bean of type 'br.com.locadoracarros.carrental.service.ClientService' in your configuration.
-
+31-05-2021 09:01:18 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 5372 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+31-05-2021 09:01:18 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+31-05-2021 09:01:18 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+31-05-2021 09:01:27 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 9.8 seconds (JVM running for 12.066)

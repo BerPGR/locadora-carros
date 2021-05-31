@@ -25,12 +25,29 @@ public class Client {
 	@ApiModelProperty(notes = "Idade do cliente", required = true)
 	private int age;
 
+	@ApiModelProperty(notes = "Sexo do cliente", required = true)
+	private String gender;
+
+	@ApiModelProperty(notes = "CPF do cliente")
+	private String cpf;
+
+	@ApiModelProperty(notes = "Celular do cliente")
+	private String number;
+
+	@ApiModelProperty(notes = "CNH do cleinte")
+	private long cnh;
+
+
 	public Client() {
 	}
 
-	public Client(int id, String name, int age) {
+	public Client(int id, String name, int age, String gender, String cpf, String number, long cnh) {
 		this.setName(name);
 		this.setAge(age);
+		this.setGender(gender);
+		this.setCpf(cpf);
+		this.setNumber(number);
+		this.setCnh(cnh);
 	}
 
 	public String getName() {
@@ -55,13 +72,39 @@ public class Client {
 		this.age = age;
 	}
 
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public String getCpf() {
+		return cpf;
+	}
+
+	public void setCpf(String cpf) {
+		if (cpf.length() > 11 || cpf.length() < 11){
+			throw new DomainException("CPF length must be 11.");
+		}
+		else if (cpf.equals(null) || cpf.isEmpty()){
+			throw new DomainException("Client must have a CPF.");
+		}
+		this.cpf = cpf;
+	}
+
 	@Override
 	public String toString() {
 		return "Client{" +
 				"id=" + id +
 				", name='" + name + '\'' +
 				", age=" + age +
-				'}';
+				", cnh=" + cnh +
+				", sexo='" + gender + '\'' +
+				", cpf='" + cpf.substring(0, 3) + "." + cpf.substring(3, 6) + "."
+				+ cpf.substring(6, 9) + "-" + cpf.substring(9) + '\''
+				+ '}';
 	}
 
 	public int getId() {
@@ -70,5 +113,24 @@ public class Client {
 
 	public void setId(int id) {
 		this.id = id;
+	}
+
+	public String getNumber() {
+		return number;
+	}
+
+	public void setNumber(String number) {
+		if(number.length() > 11 || number.length() < 11 || number.isEmpty() || number.equals(null)){
+			throw new DomainException("That's not a valid cellphone number.");
+		}
+		this.number = number;
+	}
+
+	public long getCnh() {
+		return cnh;
+	}
+
+	public void setCnh(long cnh) {
+		this.cnh = cnh;
 	}
 }

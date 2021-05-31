@@ -9,6 +9,7 @@ public class Car {
 	private String model;
 	private String licensePlate;
 
+
 	// constructor
 
 	public Car() {

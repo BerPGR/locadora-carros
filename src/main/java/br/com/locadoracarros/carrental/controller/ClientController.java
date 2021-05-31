@@ -12,6 +12,7 @@ import javassist.NotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -62,11 +63,12 @@ public class ClientController {
 					value = "attribute",
 					required = false) String attribute)
 	{
+
 		long start = System.currentTimeMillis();
 		logger.info("[ GET ] => { " + endPoint + " }");
 		long end = System.currentTimeMillis();
 
-		logger.debug("O tempo de execução foi de " + (end-start) + " ms");
+		logger.debug("O tempo de execução foi de " + (end-start) + " ms.");
 
 		return this.clientService.getAll(page, size, sort, q, attribute);
 	}
@@ -78,6 +80,9 @@ public class ClientController {
 			@ApiResponse(code = 204, message = "Existe uma cliente") })
 	@GetMapping("/{id}")
 	public ResponseEntity<Client> getClient(@PathVariable("id") int id){
+
+		logger.info("[ GET ] => { " + endPoint + " }");
+		long start = System.currentTimeMillis();
 
 		try{
 			Optional<Client> optionalClient = this.clientService.getClient(id);
@@ -93,9 +98,12 @@ public class ClientController {
 				response = ResponseEntity.noContent().build();
 
 			}
+			long end = System.currentTimeMillis();
+			logger.debug("O tempo de execução foi de " + (end-start) + " ms.");
 
 			return response;
 		} catch(Exception e){
+			logger.error(e.getMessage());
 			e.printStackTrace();
 			return ResponseEntity.unprocessableEntity().build();
 		}
@@ -110,12 +118,17 @@ public class ClientController {
 	@PostMapping
 	public ResponseEntity<Client> addClient(@RequestBody Client client){
 
+		logger.info("[ POST ] => { " + endPoint + " }");
+		long start = System.currentTimeMillis();
 		try{
 			ResponseEntity response = ResponseEntity.created(new URI(endPoint)).body(this.clientService.save(client));
 
+			long end = System.currentTimeMillis();
+			logger.debug("O tempo de execução foi de " + (end-start) + " ms.");
 			return response;
 		}
 		catch(Exception e){
+			logger.error(e.getMessage());
 			e.printStackTrace();
 			return ResponseEntity.unprocessableEntity().body(client);
 		}
@@ -130,9 +143,13 @@ public class ClientController {
 	@PutMapping
 	public ResponseEntity<Client> editClient(@RequestBody Client client){
 
+		logger.info("[ PUT ] => { " + endPoint + " }");
+		long start = System.currentTimeMillis();
 		try{
-
 			ResponseEntity response = ResponseEntity.ok(this.clientService.updateClient(client));
+
+			long end = System.currentTimeMillis();
+			logger.debug("O tempo de execução foi de " + (end-start) + " ms.");
 			return response;
 		}
 		catch(NotFoundException e){
@@ -150,12 +167,14 @@ public class ClientController {
 	@PutMapping("/{id}")
 	public ResponseEntity<Client> editCar(@RequestBody Client client, @PathVariable int id){
 
+		logger.info("");
 		try{
 			if (client.getId() == 0) {
 				client.setId(id);
 			}
 				ResponseEntity response = ResponseEntity.ok(this.clientService.updateClient(client));
-				return response;
+
+			return response;
 		}
 		catch(NotFoundException e){
 			e.printStackTrace();

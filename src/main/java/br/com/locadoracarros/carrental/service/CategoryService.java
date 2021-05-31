@@ -1,8 +1,8 @@
 package br.com.locadoracarros.carrental.service;
 
 import br.com.locadoracarros.carrental.entities.Car;
-import br.com.locadoracarros.carrental.entities.Client;
-import br.com.locadoracarros.carrental.repository.ClientRepository;
+import br.com.locadoracarros.carrental.entities.Category;
+import br.com.locadoracarros.carrental.repository.CategoryRepository;
 import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -14,25 +14,29 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 
 @Service
-public class ClientService {
+public class CategoryService {
+
 
 	@Autowired
-	ClientRepository clientRepository;
+	CategoryRepository categoryRepository;
 
-	public Client save(Client client){
-		return this.clientRepository.save(client);
+	public Category save(Category category) {
+
+		return this.categoryRepository.save(category);
 	}
 
-	public Optional<Client> getClient(int id){
-		return this.clientRepository.findById(id);
+	public Optional<Category> getCategory(int id) {
+
+		return this.categoryRepository.findById(id);
 	}
 
-	public Page<Client> getAll(int page, int size, String sort, String q, String attribute) {
+
+	public Page<Category> getAll(int page, int size, String sort, String q, String attribute) {
 
 		Sort sortable = Sort.by(attribute).ascending();
 
 		if (attribute.trim().isEmpty()) {
-			attribute = "name";
+			attribute = "carType";
 		}
 
 		if (sort.toLowerCase().contains("desc")){
@@ -43,26 +47,24 @@ public class ClientService {
 
 		if (q.isEmpty()){
 
-			return this.clientRepository.findAll(pageable);
+			return this.categoryRepository.findAll(pageable);
 		}
 		else{
 			q = "%" + q.toLowerCase() + "%";
-			return this.clientRepository.findClients(q, pageable);
+			return this.categoryRepository.findCategories(q, pageable);
 		}
 
 	}
 
-	public Client updateClient(Client client) throws NotFoundException{
-		Optional<Client> optionalClient = this.clientRepository.findById(client.getId());
+	public Category updateCategory(Category category) throws NotFoundException {
+		Optional<Category> optionalCar = this.categoryRepository.findById(category.getId());
 
-		if (optionalClient.isPresent()){
+		if (optionalCar.isPresent()) {
 
-			return this.clientRepository.save(client);
-		}
-		else{
+			return this.categoryRepository.save(category);
+		} else {
 
 			throw new NotFoundException("Objeto sendo editado inexistente");
 		}
 	}
-
 }
