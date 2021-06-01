@@ -147,14 +147,19 @@ public class CategoryController {
 	@PutMapping
 	public ResponseEntity<Category> editCategory(@RequestBody Category category) {
 
+		//log in PutMapping
+		logger.info("[ PUT ] => { " + endPoint + " }");
+		long start = System.currentTimeMillis();
 
 		try {
 			ResponseEntity response = ResponseEntity.ok(this.categoryService.updateCategory(category));
 
+			long end = System.currentTimeMillis();
+			logger.debug("O tempo de execução foi de " + (end-start) + " ms.");
 
 			return response;
 		} catch (NotFoundException e) {
-
+			logger.error(e.getMessage());
 			e.printStackTrace();
 			return ResponseEntity.unprocessableEntity().body(category);
 		}
