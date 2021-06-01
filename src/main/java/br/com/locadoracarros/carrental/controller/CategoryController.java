@@ -62,6 +62,12 @@ public class CategoryController {
 					value = "attribute",
 					required = false) String attribute)
 	{
+		//logger in GetMapping
+		logger.info("[ GET ] => { " + endPoint + " } ");
+		long start = System.currentTimeMillis();
+
+		long end = System.currentTimeMillis();
+		logger.debug("O tempo de execução foi de " + (end-start) + " ms.");
 
 		return this.categoryService.getAll(page, size, sort, q, attribute);
 	}
