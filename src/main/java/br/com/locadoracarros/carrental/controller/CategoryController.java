@@ -119,13 +119,20 @@ public class CategoryController {
 	@PostMapping
 	public ResponseEntity<Category> addCategory(@RequestBody Category category){
 
+		//log in PostMapping
+		logger.info("[ POST ] => { " + endPoint + " }");
+		long start = System.currentTimeMillis();
+
 		try {
 			ResponseEntity response = ResponseEntity.created(new URI(endPoint)).body(this.categoryService.save(category));
+
+			long end = System.currentTimeMillis();
+			logger.debug("O tempo de execução foi de " + (end-start) + " ms.");
 
 			return response;
 		}
 		catch (Exception e) {
-
+			logger.error(e.getMessage());
 			e.printStackTrace();
 			return ResponseEntity.unprocessableEntity().body(category);
 		}
