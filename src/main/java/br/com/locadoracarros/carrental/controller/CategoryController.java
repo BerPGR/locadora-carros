@@ -62,7 +62,7 @@ public class CategoryController {
 					value = "attribute",
 					required = false) String attribute)
 	{
-		//logger in GetMapping
+		//log in GetMapping
 		logger.info("[ GET ] => { " + endPoint + " } ");
 		long start = System.currentTimeMillis();
 
@@ -174,14 +174,21 @@ public class CategoryController {
 	@PutMapping("/{id}")
 	public ResponseEntity<Category> editCategoty(@RequestBody Category category, @PathVariable int id) {
 
+		//log in PutMapping by id
+		logger.info("[ PUT ] => { " + endPoint + "/{id} }");
+		long start = System.currentTimeMillis();
 		try {
 			if (category.getId() == 0)
 				category.setId(id);
+
 			ResponseEntity response = ResponseEntity.ok(this.categoryService.updateCategory(category));
+
+			long end = System.currentTimeMillis();
+			logger.debug("O tempo de execução foi de " + (end-start) + " ms.");
 
 			return response;
 		} catch (NotFoundException e) {
-
+			logger.error(e.getMessage());
 			e.printStackTrace();
 			return ResponseEntity.unprocessableEntity().body(category);
 		}
