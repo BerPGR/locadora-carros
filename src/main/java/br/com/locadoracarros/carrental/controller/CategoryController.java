@@ -6,6 +6,7 @@ import br.com.locadoracarros.carrental.service.CategoryService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
+import javassist.NotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -109,6 +110,28 @@ public class CategoryController {
 			return response;
 		}
 		catch (Exception e) {
+
+			e.printStackTrace();
+			return ResponseEntity.unprocessableEntity().body(category);
+		}
+	}
+
+	//Operation PutMapping to update a category
+	@ResponseStatus(HttpStatus.NOT_FOUND)
+	@ApiOperation(value = "Atualiza uma categoria", notes = "Atualiza uma categoria")
+	@ApiResponses({
+			@ApiResponse(code = 204, message = "Atualização com sucesso de uma categoria")
+	})
+	@PutMapping
+	public ResponseEntity<Category> editCategory(@RequestBody Category category) {
+
+
+		try {
+			ResponseEntity response = ResponseEntity.ok(this.categoryService.updateCategory(category));
+
+
+			return response;
+		} catch (NotFoundException e) {
 
 			e.printStackTrace();
 			return ResponseEntity.unprocessableEntity().body(category);
