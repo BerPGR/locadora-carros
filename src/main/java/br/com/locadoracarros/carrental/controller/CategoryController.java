@@ -137,4 +137,26 @@ public class CategoryController {
 			return ResponseEntity.unprocessableEntity().body(category);
 		}
 	}
+
+	//Operation Putmapping to update category by id
+	@ResponseStatus(HttpStatus.NOT_FOUND)
+	@ApiOperation(value = "Atualiza uma categoria por id", notes = "Atualiza uma categoria por id")
+	@ApiResponses({
+			@ApiResponse(code = 204, message = "Atualização com sucesso de uma categoria")
+	})
+	@PutMapping("/{id}")
+	public ResponseEntity<Category> editCategoty(@RequestBody Category category, @PathVariable int id) {
+
+		try {
+			if (category.getId() == 0)
+				category.setId(id);
+			ResponseEntity response = ResponseEntity.ok(this.categoryService.updateCategory(category));
+
+			return response;
+		} catch (NotFoundException e) {
+
+			e.printStackTrace();
+			return ResponseEntity.unprocessableEntity().body(category);
+		}
+	}
 }
