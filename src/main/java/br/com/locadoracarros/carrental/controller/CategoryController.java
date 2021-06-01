@@ -14,6 +14,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.net.URI;
 import java.util.Optional;
 
 @RestController
@@ -90,6 +91,27 @@ public class CategoryController {
 		} catch (Exception e) {
 			e.printStackTrace();
 			return ResponseEntity.unprocessableEntity().build();
+		}
+	}
+
+	//Operation postMapping to add categories
+	@ResponseStatus(HttpStatus.CREATED)
+	@ApiOperation(value = "Insere uma categoria", notes = "Insere uma caregoria", response = Category.class)
+	@ApiResponses(value ={
+			@ApiResponse(code = 204, message = "Categoria inserida com sucesso")
+	})
+	@PostMapping
+	public ResponseEntity<Category> addCategory(@RequestBody Category category){
+
+		try {
+			ResponseEntity response = ResponseEntity.created(new URI(endPoint)).body(this.categoryService.save(category));
+
+			return response;
+		}
+		catch (Exception e) {
+
+			e.printStackTrace();
+			return ResponseEntity.unprocessableEntity().body(category);
 		}
 	}
 }
