@@ -81,6 +81,11 @@ public class CategoryController {
 	})
 	@GetMapping("/{id}")
 	public ResponseEntity<Category> getCategory(@PathVariable("id") int id){
+
+		//log in GetMapping by id
+		logger.info("[ GET ] => { " + endPoint + "/{id} }");
+		long start = System.currentTimeMillis();
+
 		try {
 			Optional<Category> optionalCategory = this.categoryService.getCategory(id);
 
@@ -94,8 +99,12 @@ public class CategoryController {
 				response = ResponseEntity.noContent().build();
 
 			}
+			long end = System.currentTimeMillis();
+
+			logger.debug("O tempo de execução foi de " + (end-start) + " ms.");
 			return response;
 		} catch (Exception e) {
+			logger.error(e.getMessage());
 			e.printStackTrace();
 			return ResponseEntity.unprocessableEntity().build();
 		}

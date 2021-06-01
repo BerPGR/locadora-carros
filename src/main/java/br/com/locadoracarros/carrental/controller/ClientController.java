@@ -81,7 +81,7 @@ public class ClientController {
 	@GetMapping("/{id}")
 	public ResponseEntity<Client> getClient(@PathVariable("id") int id){
 
-		logger.info("[ GET ] => { " + endPoint + " }");
+		logger.info("[ GET ] => { " + endPoint + "/{id} }");
 		long start = System.currentTimeMillis();
 
 		try{
@@ -167,7 +167,7 @@ public class ClientController {
 	@PutMapping("/{id}")
 	public ResponseEntity<Client> editCar(@RequestBody Client client, @PathVariable int id){
 
-		logger.info("");
+		logger.info("[ PUT ] => { " + endPoint + "/{id} }");
 		try{
 			if (client.getId() == 0) {
 				client.setId(id);
