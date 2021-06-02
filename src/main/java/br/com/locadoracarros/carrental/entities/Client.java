@@ -28,6 +28,8 @@ public class Client {
 	@ApiModelProperty(notes = "Sexo do cliente", required = true)
 	private String gender;
 
+	//Unique in CPF
+	@Column(unique = true, nullable = false)
 	@ApiModelProperty(notes = "CPF do cliente")
 	private String cpf;
 
