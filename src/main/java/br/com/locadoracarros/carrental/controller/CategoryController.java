@@ -35,7 +35,7 @@ public class CategoryController {
 
 	//first GetMapping
 	@ApiOperation(value = "Lista todas as categorias", notes = "Lista todas as categorias",
-			response = Car.class, responseContainer = "Page")
+			response = Category.class, responseContainer = "Page")
 	@ApiResponses(value = {
 			@ApiResponse(code = 204, message = "Categorias listadas com sucesso")
 	})
@@ -172,7 +172,7 @@ public class CategoryController {
 			@ApiResponse(code = 204, message = "Atualização com sucesso de uma categoria")
 	})
 	@PutMapping("/{id}")
-	public ResponseEntity<Category> editCategoty(@RequestBody Category category, @PathVariable int id) {
+	public ResponseEntity<Category> editCategory(@RequestBody Category category, @PathVariable int id) {
 
 		//log in PutMapping by id
 		logger.info("[ PUT ] => { " + endPoint + "/{id} }");

@@ -20,8 +20,8 @@ public class Category {
 	@ApiModelProperty(notes = "Tipo da categoria")
 	private String carType;
 
-	@ApiModelProperty(notes = "Preço por hora de uma categoria")
-	private int pricePerHour;
+	@ApiModelProperty(notes = "Preço por dia de uma categoria")
+	private int pricePerDay;
 
 	public Category() {
 	}
@@ -35,11 +35,11 @@ public class Category {
 	}
 
 	public int getPricePerHour() {
-		return pricePerHour;
+		return pricePerDay;
 	}
 
-	public void setPricePerHour(int pricePerHour) {
-		this.pricePerHour = pricePerHour;
+	public void setPricePerHour(int pricePerDay) {
+		this.pricePerDay = pricePerDay;
 	}
 
 	public Category(String carType) {

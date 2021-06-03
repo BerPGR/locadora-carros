@@ -1,6 +1,5 @@
 package br.com.locadoracarros.carrental.repository;
 
-import br.com.locadoracarros.carrental.entities.Car;
 import br.com.locadoracarros.carrental.entities.Client;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

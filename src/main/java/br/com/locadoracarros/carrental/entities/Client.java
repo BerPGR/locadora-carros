@@ -2,10 +2,8 @@ package br.com.locadoracarros.carrental.entities;
 
 import br.com.locadoracarros.carrental.exceptions.DomainException;
 import com.sun.istack.NotNull;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-import javax.annotation.processing.Generated;
 import javax.persistence.*;
 
 @Entity
@@ -37,13 +35,13 @@ public class Client {
 	private String number;
 
 	@ApiModelProperty(notes = "CNH do cleinte")
-	private long cnh;
+	private String cnh;
 
 
 	public Client() {
 	}
 
-	public Client(int id, String name, int age, String gender, String cpf, String number, long cnh) {
+	public Client(int id, String name, int age, String gender, String cpf, String number, String cnh) {
 		this.setName(name);
 		this.setAge(age);
 		this.setGender(gender);
@@ -103,7 +101,7 @@ public class Client {
 				", name='" + name + '\'' +
 				", age=" + age +
 				", cnh=" + cnh +
-				", sexo='" + gender + '\'' +
+				", gender='" + gender + '\'' +
 				", cpf='" + cpf.substring(0, 3) + "." + cpf.substring(3, 6) + "."
 				+ cpf.substring(6, 9) + "-" + cpf.substring(9) + '\''
 				+ '}';
@@ -122,17 +120,20 @@ public class Client {
 	}
 
 	public void setNumber(String number) {
-		if(number.length() > 11 || number.length() < 11 || number.isEmpty() || number.equals(null)){
+		if(number.length() < 11 || number.isEmpty() || number.equals(null)){
 			throw new DomainException("That's not a valid cellphone number.");
 		}
 		this.number = number;
 	}
 
-	public long getCnh() {
+	public String getCnh() {
 		return cnh;
 	}
 
-	public void setCnh(long cnh) {
+	public void setCnh(String cnh) {
+		if(cnh.isEmpty() || cnh.equals(null)){
+			throw new DomainException("Must be a valid CNH");
+		}
 		this.cnh = cnh;
 	}
 }

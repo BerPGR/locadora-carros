@@ -10,6 +10,8 @@ public class Car {
 	private String licensePlate;
 
 
+
+
 	// constructor
 
 	public Car() {
@@ -19,6 +21,7 @@ public class Car {
 		this.setBrand(brand);
 		this.setModel(model);
 		this.setLicensePlate(licensePlate);
+
 	}
 
 	// getters and setters
@@ -60,6 +63,16 @@ public class Car {
 	public String toString() {
 		return "Car{" +
 				"brand='" + brand + '\'' +
+				", model='" + model + '\'' +
+				", licensePlate='" + licensePlate + '\'' +
+				'}';
+	}
+
+	@Override
+	public String toString() {
+		return "Car{" +
+				"id=" + id +
+				", brand='" + brand + '\'' +
 				", model='" + model + '\'' +
 				", licensePlate='" + licensePlate + '\'' +
 				'}';

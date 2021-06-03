@@ -1,18 +1,14 @@
 package br.com.locadoracarros.carrental.controller;
 
-
-import br.com.locadoracarros.carrental.entities.Car;
 import br.com.locadoracarros.carrental.entities.Client;
 import br.com.locadoracarros.carrental.service.ClientService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
-import io.swagger.models.Response;
 import javassist.NotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -36,7 +32,7 @@ public class ClientController {
 
 	//Operação GetMapping
 	@ApiOperation(value = "Lista todos os clientes", notes = "Lista todos os clientes",
-			response = Car.class, responseContainer = "Page")
+			response = Client.class, responseContainer = "Page")
 	@ApiResponses(value = {
 			@ApiResponse(code = 204, message = "Clientes listados com sucesso")
 	})
@@ -59,7 +55,7 @@ public class ClientController {
 					value = "q",
 					required = false) String q,
 			@RequestParam(
-					defaultValue = "model",
+					defaultValue = "name",
 					value = "attribute",
 					required = false) String attribute)
 	{
@@ -153,6 +149,7 @@ public class ClientController {
 			return response;
 		}
 		catch(NotFoundException e){
+			logger.error(e.getMessage());
 			e.printStackTrace();
 			return ResponseEntity.unprocessableEntity().body(client);
 		}
@@ -177,6 +174,7 @@ public class ClientController {
 			return response;
 		}
 		catch(NotFoundException e){
+			logger.error(e.getMessage());
 			e.printStackTrace();
 			return ResponseEntity.unprocessableEntity().body(client);
 		}
