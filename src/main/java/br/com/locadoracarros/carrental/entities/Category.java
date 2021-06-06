@@ -34,11 +34,11 @@ public class Category {
 		this.id = id;
 	}
 
-	public int getPricePerHour() {
+	public int getPricePerDay() {
 		return pricePerDay;
 	}
 
-	public void setPricePerHour(int pricePerDay) {
+	public void setPricePerDay(int pricePerDay) {
 		this.pricePerDay = pricePerDay;
 	}
 
@@ -54,23 +54,12 @@ public class Category {
 		if (carType.equals(null) || carType.isEmpty()){
 			throw new DomainException("Car must have a type");
 		}
-		else if (!carType.equalsIgnoreCase("Hatch")
-				|| !carType.equalsIgnoreCase("Sedan")
-				|| !carType.equalsIgnoreCase("SUV") || !carType.equalsIgnoreCase("Crossover")
-		|| !carType.equalsIgnoreCase("Minivan") || !carType.equalsIgnoreCase("Picape")
-		|| !carType.equalsIgnoreCase("Elétrico") || !carType.equalsIgnoreCase("Híbrido")
-		|| !carType.equalsIgnoreCase("Conversível") || !carType.equalsIgnoreCase("Cupe")
-				|| !carType.equalsIgnoreCase("Luxo")){
-
-			throw new DomainException("That's not a valid car type");
-		}
 		this.carType = carType;
 	}
 
 	@Override
 	public String toString() {
-		return "Categoria{" +
-				"carType='" + carType + '\'' +
-				'}';
+		return "carType='" + carType + '\'' +
+				", pricePerDay=" + pricePerDay;
 	}
 }

@@ -58,7 +58,7 @@ public class CategoryController {
 					value = "q",
 					required = false) String q,
 			@RequestParam(
-					defaultValue = "model",
+					defaultValue = "carType",
 					value = "attribute",
 					required = false) String attribute)
 	{

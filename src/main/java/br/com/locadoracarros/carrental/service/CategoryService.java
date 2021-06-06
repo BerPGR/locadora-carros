@@ -57,9 +57,9 @@ public class CategoryService {
 	}
 
 	public Category updateCategory(Category category) throws NotFoundException {
-		Optional<Category> optionalCar = this.categoryRepository.findById(category.getId());
+		Optional<Category> optionalCategory = this.categoryRepository.findById(category.getId());
 
-		if (optionalCar.isPresent()) {
+		if (optionalCategory.isPresent()) {
 
 			return this.categoryRepository.save(category);
 		} else {

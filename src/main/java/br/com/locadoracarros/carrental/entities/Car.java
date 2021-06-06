@@ -9,7 +9,8 @@ public class Car {
 	private String model;
 	private String licensePlate;
 
-
+	@ApiModelProperty(notes = "Categoria do carro", required = true)
+	private Category category;
 
 
 	// constructor
@@ -17,11 +18,11 @@ public class Car {
 	public Car() {
 	}
 
-	public Car(String brand, String model, String licensePlate) {
+	public Car(String brand, String model, String licensePlate, Category category) {
 		this.setBrand(brand);
 		this.setModel(model);
 		this.setLicensePlate(licensePlate);
-
+		this.setCategory(category);
 	}
 
 	// getters and setters
@@ -68,6 +69,14 @@ public class Car {
 				'}';
 	}
 
+	public Category getCategory() {
+		return category;
+	}
+
+	public void setCategory(Category category) {
+		this.category = category;
+	}
+
 	@Override
 	public String toString() {
 		return "Car{" +
@@ -75,6 +84,7 @@ public class Car {
 				", brand='" + brand + '\'' +
 				", model='" + model + '\'' +
 				", licensePlate='" + licensePlate + '\'' +
+				", category=" + category +
 				'}';
 	}
 }
