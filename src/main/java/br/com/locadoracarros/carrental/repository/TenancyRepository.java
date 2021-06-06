@@ -14,6 +14,8 @@ import java.util.Optional;
 @Repository
 public interface TenancyRepository extends PagingAndSortingRepository<Tenancy, Integer> {
 
+	//Repository for tenancy
+
 	Page<Tenancy> findAll (Pageable pageable);
 
 	Page<Tenancy> findById (int id, Pageable pageable );

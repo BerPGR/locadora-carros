@@ -14,6 +14,8 @@ import java.util.Optional;
 @Repository
 public interface CategoryRepository extends PagingAndSortingRepository<Category, Integer> {
 
+
+	// Repository for category
 	Page<Category> findAll(Pageable pageable);
 
 	Page<Category> findById(int id, Pageable pageable);

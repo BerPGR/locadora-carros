@@ -13,6 +13,8 @@ import java.util.Optional;
 @Repository
 public interface ClientRepository extends PagingAndSortingRepository<Client, Integer> {
 
+
+	// Repository for client
 	Page<Client> findAll (Pageable pageable);
 
 	Page<Client> findById (int id, Pageable pageable);

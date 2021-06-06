@@ -16,7 +16,7 @@ import java.util.Optional;
 @Service
 public class TenancyService {
 
-
+	// Service for tenancy
 	@Autowired
 	TenancyRepository tenancyRepository;
 

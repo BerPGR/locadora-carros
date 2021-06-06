@@ -16,7 +16,7 @@ import java.util.Optional;
 @Service
 public class CategoryService {
 
-
+	// Service for category
 	@Autowired
 	CategoryRepository categoryRepository;
 
