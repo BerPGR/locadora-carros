@@ -4,14 +4,19 @@ import br.com.locadoracarros.carrental.exceptions.DomainException;
 import com.sun.istack.NotNull;
 import io.swagger.annotations.ApiModelProperty;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
 @Table(name = "tenancy")
 public class Tenancy {
+
+	@Id
+	@NotNull
+	@Column(columnDefinition = "int", nullable = false)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@ApiModelProperty(notes = "Identificador único da locação")
+	private int id;
 
 	@ApiModelProperty(notes = "Carro da locação")
 	private Car car;
@@ -25,10 +30,19 @@ public class Tenancy {
 	public Tenancy() {
 	}
 
-	public Tenancy(Car car, Client client, Date tenancyDate) {
+	public Tenancy(Car car, Client client, Date tenancyDate, int id) {
+		this.setId(id);
 		this.setCar(car);
 		this.setClient(client);
 		this.setTenancyDate(tenancyDate);
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public Car getCar() {
