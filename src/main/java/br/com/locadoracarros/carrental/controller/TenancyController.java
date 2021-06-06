@@ -15,6 +15,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.net.URI;
 import java.util.Optional;
 
 @RestController
@@ -89,7 +90,25 @@ public class TenancyController {
 			e.printStackTrace();
 			return ResponseEntity.unprocessableEntity().build();
 		}
+	}
 
+	// Operation PostMapping in TenancyController
+	@ResponseStatus(HttpStatus.CREATED)
+	@ApiOperation(value = "Adiciona uma locação", notes = "Adiciona uma locação", response = Tenancy.class)
+	@ApiResponses({
+			@ApiResponse(code = 204, message = "Inclusão com sucesso de uma locação.")
+	})
+	@PostMapping
+	public ResponseEntity<Tenancy> addTenancy(@RequestBody Tenancy tenancy){
+
+		try{
+			ResponseEntity response = ResponseEntity.created(new URI(endPoint)).body(this.tenancyService.save(tenancy));
+			return response;
+		}
+		catch(Exception e){
+			e.printStackTrace();
+			return ResponseEntity.unprocessableEntity().body(tenancy);
+		}
 	}
 
 }
