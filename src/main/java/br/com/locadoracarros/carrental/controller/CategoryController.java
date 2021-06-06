@@ -22,10 +22,10 @@ import java.util.Optional;
 @RequestMapping("/category")
 public class CategoryController {
 
-	//category endpoint
+	//endpoint for CategoryController
 	private final String endPoint = "/category";
 
-	//logger for category
+	//logger for CategoryController
 	final Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	//autowired for CategoryService

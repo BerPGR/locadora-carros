@@ -21,16 +21,16 @@ import java.util.Optional;
 @RequestMapping("/client")
 public class ClientController {
 
-	//endpoint em um String
+	//endpoint for ClientController
 	private final String endPoint = "/client";
 
-	//criação de logger
+	//created logger for ClientController
 	final Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	@Autowired
 	ClientService clientService;
 
-	//Operação GetMapping
+	//Operation GetMapping
 	@ApiOperation(value = "Lista todos os clientes", notes = "Lista todos os clientes",
 			response = Client.class, responseContainer = "Page")
 	@ApiResponses(value = {
@@ -69,7 +69,7 @@ public class ClientController {
 		return this.clientService.getAll(page, size, sort, q, attribute);
 	}
 
-	//Operação GetMapping pelo ID
+	//Operation GetMapping by ID
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	@ApiOperation(value = "Obtém um cliente", notes = "Obtém um cliente")
 	@ApiResponses(value = {
@@ -105,7 +105,7 @@ public class ClientController {
 		}
 	}
 
-	//Operação PostMapping
+	//Operation PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
 	@ApiOperation(value = "Insere um cliente", notes = "Insere um cliente", response = Client.class)
 	@ApiResponses({
@@ -130,7 +130,7 @@ public class ClientController {
 		}
 	}
 
-	//Operação PutMapping
+	//Operation PutMapping
 	@ResponseStatus(HttpStatus.NOT_FOUND)
 	@ApiOperation(value = "Atualiza um cliente", notes = "Atualiza um cliente.")
 	@ApiResponses({
@@ -155,7 +155,7 @@ public class ClientController {
 		}
 	}
 
-	//PutMapping por ID
+	//Operation PutMapping by ID
 	@ResponseStatus(HttpStatus.NOT_FOUND)
 	@ApiOperation(value = "Atualiza um cliente por id", notes = "Atualiza um cliente por id.")
 	@ApiResponses({
