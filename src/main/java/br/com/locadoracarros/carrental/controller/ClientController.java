@@ -162,7 +162,7 @@ public class ClientController {
 			@ApiResponse(code = 204, message = "Atualização de carro por id feita com sucesso.")
 	})
 	@PutMapping("/{id}")
-	public ResponseEntity<Client> editCar(@RequestBody Client client, @PathVariable int id){
+	public ResponseEntity<Client> editClient(@RequestBody Client client, @PathVariable int id){
 
 		logger.info("[ PUT ] => { " + endPoint + "/{id} }");
 		try{

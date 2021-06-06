@@ -111,4 +111,28 @@ public class TenancyController {
 		}
 	}
 
+
+	//Operation PutMapping
+	@ResponseStatus(HttpStatus.NOT_FOUND)
+	@ApiOperation(value = "Edita uma locação", notes = "Edita uma locação")
+	@ApiResponses({
+			@ApiResponse(code = 204, message = "Atualização com sucesso de uma locação")
+	})
+	@PutMapping
+	public ResponseEntity<Tenancy> editTenancy(@RequestBody Tenancy tenancy){
+
+		try{
+			ResponseEntity response = ResponseEntity.ok(this.tenancyService.updateTenancy(tenancy));
+			return response;
+		}
+		catch(NotFoundException e){
+			e.printStackTrace();
+			return ResponseEntity.unprocessableEntity().body(tenancy);
+		}
+	}
+
+
+	//TODO operation to get by car
+	//TODO operation to get by client
+
 }
