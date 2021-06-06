@@ -6,14 +6,16 @@ import br.com.locadoracarros.carrental.service.TenancyService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
+import javassist.NotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/tenancy")
@@ -61,5 +63,33 @@ public class TenancyController {
 		return this.tenancyService.getAll(page, size, sort, q, attribute);
 	}
 
+	//Operation GetMapping by ID
+	@ResponseStatus(HttpStatus.NO_CONTENT)
+	@ApiOperation(value = "Obtém uma locação", notes = "Obtém uma locação")
+	@ApiResponses({
+			@ApiResponse(code = 204, message = "Existe uma locação")
+	})
+	@GetMapping("/{id}")
+	public ResponseEntity<Tenancy> getTenancy(@PathVariable("id") int id){
+
+		try{
+			Optional<Tenancy> optionalTenancy = this.tenancyService.getTenancy(id);
+			ResponseEntity response;
+
+			if (optionalTenancy.isPresent()){
+				response = ResponseEntity.ok(optionalTenancy.get());
+			}
+			else{
+				response = ResponseEntity.noContent().build();
+			}
+
+			return response;
+		}
+		catch(Exception e){
+			e.printStackTrace();
+			return ResponseEntity.unprocessableEntity().build();
+		}
+
+	}
 
 }
