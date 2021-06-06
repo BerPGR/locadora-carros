@@ -31,11 +31,13 @@ public class TenancyController {
 	@Autowired
 	TenancyService tenancyService;
 
+	//TODO put logger on requests
+
 	// Operation GetMapping
-	@ApiOperation(value = "Lista todas as locações", notes = "Lista todas as locações",
+	@ApiOperation(value = "Lista todas as locações.", notes = "Lista todas as locações.",
 	response = Tenancy.class, responseContainer = "Page")
 	@ApiResponses({
-			@ApiResponse(code = 204, message = "Locações listadas com sucesso")
+			@ApiResponse(code = 204, message = "Locações listadas com sucesso.")
 	})
 	@GetMapping
 	public Page<Tenancy> getAllTenancies(
@@ -66,9 +68,9 @@ public class TenancyController {
 
 	//Operation GetMapping by ID
 	@ResponseStatus(HttpStatus.NO_CONTENT)
-	@ApiOperation(value = "Obtém uma locação", notes = "Obtém uma locação")
+	@ApiOperation(value = "Obtém uma locação.", notes = "Obtém uma locação.")
 	@ApiResponses({
-			@ApiResponse(code = 204, message = "Existe uma locação")
+			@ApiResponse(code = 204, message = "Existe uma locação.")
 	})
 	@GetMapping("/{id}")
 	public ResponseEntity<Tenancy> getTenancy(@PathVariable("id") int id){
@@ -94,7 +96,7 @@ public class TenancyController {
 
 	// Operation PostMapping in TenancyController
 	@ResponseStatus(HttpStatus.CREATED)
-	@ApiOperation(value = "Adiciona uma locação", notes = "Adiciona uma locação", response = Tenancy.class)
+	@ApiOperation(value = "Adiciona uma locação.", notes = "Adiciona uma locação.", response = Tenancy.class)
 	@ApiResponses({
 			@ApiResponse(code = 204, message = "Inclusão com sucesso de uma locação.")
 	})
@@ -114,9 +116,9 @@ public class TenancyController {
 
 	//Operation PutMapping
 	@ResponseStatus(HttpStatus.NOT_FOUND)
-	@ApiOperation(value = "Edita uma locação", notes = "Edita uma locação")
+	@ApiOperation(value = "Edita uma locação.", notes = "Edita uma locação.")
 	@ApiResponses({
-			@ApiResponse(code = 204, message = "Atualização com sucesso de uma locação")
+			@ApiResponse(code = 204, message = "Atualização com sucesso de uma locação.")
 	})
 	@PutMapping
 	public ResponseEntity<Tenancy> editTenancy(@RequestBody Tenancy tenancy){
@@ -131,6 +133,28 @@ public class TenancyController {
 		}
 	}
 
+	//Operation PutMapping by ID
+	@ResponseStatus(HttpStatus.NOT_FOUND)
+	@ApiOperation(value = "Atualiza uma locação por id.", notes = "Atualiza uma locação por id.")
+	@ApiResponses({
+			@ApiResponse(code = 204, message = "Atualização de locação por id feita com sucesso.")
+	})
+	@PutMapping("/{id}")
+	public ResponseEntity<Tenancy> editTenancy(@RequestBody Tenancy tenancy, @PathVariable int id){
+
+		try{
+			if (tenancy.getId() == 0){
+				tenancy.setId(id);
+			}
+
+			ResponseEntity response = ResponseEntity.ok(this.tenancyService.updateTenancy(tenancy));
+			return response;
+		}
+		catch(NotFoundException e){
+			e.printStackTrace();
+			return ResponseEntity.unprocessableEntity().body(tenancy);
+		}
+	}
 
 	//TODO operation to get by car
 	//TODO operation to get by client

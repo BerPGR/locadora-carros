@@ -165,12 +165,16 @@ public class ClientController {
 	public ResponseEntity<Client> editClient(@RequestBody Client client, @PathVariable int id){
 
 		logger.info("[ PUT ] => { " + endPoint + "/{id} }");
+		long start = System.currentTimeMillis();
 		try{
 			if (client.getId() == 0) {
 				client.setId(id);
 			}
-				ResponseEntity response = ResponseEntity.ok(this.clientService.updateClient(client));
+			ResponseEntity response = ResponseEntity.ok(this.clientService.updateClient(client));
 
+			long end = System.currentTimeMillis();
+
+			logger.debug("O tempo de execução foi de " + (end-start) + " ms.");
 			return response;
 		}
 		catch(NotFoundException e){
