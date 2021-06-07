@@ -69,6 +69,7 @@ public class Car {
 				'}';
 	}
 
+	@OneToMany(targetEntity=Category.class, mappedBy="car", fetch=FetchType.EAGER)
 	public Category getCategory() {
 		return category;
 	}

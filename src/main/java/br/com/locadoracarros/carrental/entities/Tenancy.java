@@ -25,16 +25,20 @@ public class Tenancy {
 	private Client client;
 
 	@ApiModelProperty(notes = "Dia da locação")
-	private Date tenancyDate;
+	private Date firstDate;
+
+	@ApiModelProperty(notes = "Dia da entrega")
+	private Date lastDate;
 
 	public Tenancy() {
 	}
 
-	public Tenancy(Car car, Client client, Date tenancyDate, int id) {
+	public Tenancy(Car car, Client client, Date firstDate, Date lastDate, int id) {
 		this.setId(id);
 		this.setCar(car);
 		this.setClient(client);
-		this.setTenancyDate(tenancyDate);
+		this.setFirstDate(firstDate);
+		this.setLastDate(lastDate);
 	}
 
 	public int getId() {
@@ -61,14 +65,22 @@ public class Tenancy {
 		this.client = client;
 	}
 
-	public Date getTenancyDate() {
-		return tenancyDate;
+	public Date getFirstDate() {
+		return firstDate;
 	}
 
-	public void setTenancyDate(Date tenancyDate) {
-		if(tenancyDate.before(new Date())){
+	public void setFirstDate(Date firstDate) {
+		if(firstDate.before(new Date())){
 			throw new DomainException("Tenancy date must be after now!");
 		}
-		this.tenancyDate = tenancyDate;
+		this.firstDate = firstDate;
+	}
+
+	public Date getLastDate() {
+		return lastDate;
+	}
+
+	public void setLastDate(Date lastDate) {
+		this.lastDate = lastDate;
 	}
 }

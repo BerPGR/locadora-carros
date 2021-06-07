@@ -59,7 +59,7 @@ public class Category {
 
 	@Override
 	public String toString() {
-		return "carType='" + carType + '\'' +
+		return carType + '\'' +
 				", pricePerDay=" + pricePerDay;
 	}
 }

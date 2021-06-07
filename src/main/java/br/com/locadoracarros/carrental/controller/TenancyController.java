@@ -3,6 +3,7 @@ package br.com.locadoracarros.carrental.controller;
 import br.com.locadoracarros.carrental.entities.Car;
 import br.com.locadoracarros.carrental.entities.Tenancy;
 import br.com.locadoracarros.carrental.service.TenancyService;
+import io.swagger.annotations.ApiModelProperty;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
@@ -156,7 +157,32 @@ public class TenancyController {
 		}
 	}
 
-	//TODO operation to get by car
-	//TODO operation to get by client
+	//TODO operation get by car
+	@ResponseStatus(HttpStatus.NOT_FOUND)
+	@ApiOperation(value = "Obtém uma locação por carro", notes = "Obtém uma locação por carro")
+	@ApiResponses({
+			@ApiResponse(code = 204, message = "Locação por carro obtia com sucesso.")
+	})
+	@GetMapping
+	public ResponseEntity<Tenancy> getTenancyByCar(@PathVariable Car car, Tenancy tenancy){
+		try{
+			Optional<Tenancy> optionalTenancy = this.tenancyService.getTenancy(car.getId());
+			ResponseEntity response;
+
+			if (optionalTenancy.isPresent()){
+				response = ResponseEntity.ok(optionalTenancy.get());
+			}
+			else{
+				response = ResponseEntity.noContent().build();
+			}
+
+			return response;
+		}
+		catch(Exception e){
+			e.printStackTrace();
+			return ResponseEntity.unprocessableEntity().build();
+		}
+	}
+	//TODO operation get by client
 
 }

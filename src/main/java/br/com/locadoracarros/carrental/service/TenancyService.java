@@ -64,4 +64,12 @@ public class TenancyService {
 			throw new NotFoundException("Objeto sendo editado inexistente.");
 		}
 	}
+
+	public void processTenancy(Tenancy tenancy){
+		long t1 = tenancy.getFirstDate().getTime();
+		long t2 = tenancy.getLastDate().getTime();
+		int days = (int)(t2-t1) / 1000 / 60 / 60 / 24;
+
+		double basicPayment = tenancy.getCar().getCategory().getPricePerDay() * days;
+	}
 }
