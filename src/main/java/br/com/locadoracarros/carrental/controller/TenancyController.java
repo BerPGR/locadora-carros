@@ -1,6 +1,7 @@
 package br.com.locadoracarros.carrental.controller;
 
 import br.com.locadoracarros.carrental.entities.Car;
+import br.com.locadoracarros.carrental.entities.Client;
 import br.com.locadoracarros.carrental.entities.Tenancy;
 import br.com.locadoracarros.carrental.service.TenancyService;
 import io.swagger.annotations.ApiModelProperty;
@@ -157,14 +158,17 @@ public class TenancyController {
 		}
 	}
 
+	//TODO fix
+
+	//GetMapping taking car
 	//TODO operation get by car
 	@ResponseStatus(HttpStatus.NOT_FOUND)
 	@ApiOperation(value = "Obtém uma locação por carro", notes = "Obtém uma locação por carro")
 	@ApiResponses({
-			@ApiResponse(code = 204, message = "Locação por carro obtia com sucesso.")
+			@ApiResponse(code = 204, message = "Locação por carro obtida com sucesso.")
 	})
 	@GetMapping
-	public ResponseEntity<Tenancy> getTenancyByCar(@PathVariable Car car, Tenancy tenancy){
+	public ResponseEntity<Tenancy> getTenancyByCar(@RequestBody Car car, Tenancy tenancy){
 		try{
 			Optional<Tenancy> optionalTenancy = this.tenancyService.getTenancy(car.getId());
 			ResponseEntity response;
@@ -183,6 +187,32 @@ public class TenancyController {
 			return ResponseEntity.unprocessableEntity().build();
 		}
 	}
-	//TODO operation get by client
 
+	//GetMapping taking client
+	//TODO operation get by client
+	@ResponseStatus(HttpStatus.NOT_FOUND)
+	@ApiOperation(value = "Obtém uma locação por cliente", notes = "Obtém uma locação por cliente")
+	@ApiResponses({
+			@ApiResponse(code = 204, message = "Locação por cliente obtida com sucesso.")
+	})
+	@GetMapping
+	public ResponseEntity<Tenancy> getTenancyByClient(@RequestBody Client client, Tenancy tenancy){
+		try{
+			Optional<Tenancy> optionalTenancy = this.tenancyService.getTenancy(client.getId());
+			ResponseEntity response;
+
+			if (optionalTenancy.isPresent()){
+				response = ResponseEntity.ok(optionalTenancy.get());
+			}
+			else{
+				response = ResponseEntity.noContent().build();
+			}
+
+			return response;
+		}
+		catch(Exception e){
+			e.printStackTrace();
+			return ResponseEntity.unprocessableEntity().build();
+		}
+	}
 }
