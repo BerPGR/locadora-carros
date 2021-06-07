@@ -81,7 +81,8 @@ public class TenancyController {
 	@GetMapping("/{id}")
 	public ResponseEntity<Tenancy> getTenancy(@PathVariable("id") int id){
 
-
+		logger.info("[ GET ] => { " + endPoint + "/{id} }");
+		long start = System.currentTimeMillis();
 		try{
 			Optional<Tenancy> optionalTenancy = this.tenancyService.getTenancy(id);
 			ResponseEntity response;
@@ -92,10 +93,12 @@ public class TenancyController {
 			else{
 				response = ResponseEntity.noContent().build();
 			}
-
+			long end = System.currentTimeMillis();
+			logger.debug("O tempo de execução foi de " + (end-start) + " ms");
 			return response;
 		}
 		catch(Exception e){
+			logger.error(e.getMessage());
 			e.printStackTrace();
 			return ResponseEntity.unprocessableEntity().build();
 		}
