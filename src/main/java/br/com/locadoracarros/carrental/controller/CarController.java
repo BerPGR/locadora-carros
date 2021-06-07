@@ -47,7 +47,7 @@ public class CarController {
 			required = false) String attribute)
 	{
 		long start = System.currentTimeMillis();
-		logger.info("[ GET ] => {/car}");
+		logger.info("[ GET ] => { " + endPoint + " }");
 		long end = System.currentTimeMillis();
 
 		logger.debug("O tempo de execução foi de " + (end-start) + " ms");

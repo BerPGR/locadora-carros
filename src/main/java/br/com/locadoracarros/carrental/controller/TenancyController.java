@@ -4,7 +4,6 @@ import br.com.locadoracarros.carrental.entities.Car;
 import br.com.locadoracarros.carrental.entities.Client;
 import br.com.locadoracarros.carrental.entities.Tenancy;
 import br.com.locadoracarros.carrental.service.TenancyService;
-import io.swagger.annotations.ApiModelProperty;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
@@ -25,7 +24,7 @@ import java.util.Optional;
 public class TenancyController {
 
 	// endpoint for TenancyController
-	private final String endPoint = "/tenancy";
+	final String endPoint = "/tenancy";
 
 	// Logger for TenancyController
 	final Logger logger = LoggerFactory.getLogger(this.getClass());
@@ -64,6 +63,11 @@ public class TenancyController {
 					value = "attribute",
 					required = false) String attribute)
 	{
+		long start = System.currentTimeMillis();
+		logger.info("[ GET ] => { " + endPoint + " }");
+		long end = System.currentTimeMillis();
+
+		logger.debug("O tempo de execução foi de " + (end-start) + " ms");
 
 		return this.tenancyService.getAll(page, size, sort, q, attribute);
 	}
@@ -76,6 +80,7 @@ public class TenancyController {
 	})
 	@GetMapping("/{id}")
 	public ResponseEntity<Tenancy> getTenancy(@PathVariable("id") int id){
+
 
 		try{
 			Optional<Tenancy> optionalTenancy = this.tenancyService.getTenancy(id);
@@ -158,7 +163,7 @@ public class TenancyController {
 		}
 	}
 
-	//TODO fix
+	//TODO fix last 2 operations
 
 	//GetMapping taking car
 	//TODO operation get by car
