@@ -139,11 +139,18 @@ public class TenancyController {
 	@PutMapping
 	public ResponseEntity<Tenancy> editTenancy(@RequestBody Tenancy tenancy){
 
+		logger.info("[ PUT ] : { " + endPoint + " }");
+		long start = System.currentTimeMillis();
 		try{
 			ResponseEntity response = ResponseEntity.ok(this.tenancyService.updateTenancy(tenancy));
+
+			long end = System.currentTimeMillis();
+			logger.debug("O tempo de execução foi de " + (end-start) + " ms");
+
 			return response;
 		}
 		catch(NotFoundException e){
+			logger.error(e.getMessage());
 			e.printStackTrace();
 			return ResponseEntity.unprocessableEntity().body(tenancy);
 		}
@@ -158,21 +165,29 @@ public class TenancyController {
 	@PutMapping("/{id}")
 	public ResponseEntity<Tenancy> editTenancy(@RequestBody Tenancy tenancy, @PathVariable int id){
 
+		logger.info("[ PUT ] => { " + endPoint + "/{id} }");
+		long start = System.currentTimeMillis();
+
 		try{
 			if (tenancy.getId() == 0){
 				tenancy.setId(id);
 			}
 
 			ResponseEntity response = ResponseEntity.ok(this.tenancyService.updateTenancy(tenancy));
+
+			long end = System.currentTimeMillis();
+			logger.debug("O tempo de execução foi de " + (end-start) + " ms");
+
 			return response;
 		}
 		catch(NotFoundException e){
+			logger.error(e.getMessage());
 			e.printStackTrace();
 			return ResponseEntity.unprocessableEntity().body(tenancy);
 		}
 	}
 
-	//TODO fix last 2 operations
+	//TODO fix last 2 operations and loggers
 
 	//GetMapping taking car
 	//TODO operation get by car
@@ -183,6 +198,9 @@ public class TenancyController {
 	})
 	@GetMapping
 	public ResponseEntity<Tenancy> getTenancyByCar(@RequestBody Car car, Tenancy tenancy){
+
+		logger.info("[ GET ] => { " + endPoint + " }");
+		long start = System.currentTimeMillis();
 		try{
 			Optional<Tenancy> optionalTenancy = this.tenancyService.getTenancy(car.getId());
 			ResponseEntity response;
@@ -194,9 +212,12 @@ public class TenancyController {
 				response = ResponseEntity.noContent().build();
 			}
 
+			long end = System.currentTimeMillis();
+			logger.debug("O tempo de execução foi de " + (end-start) + " ms");
 			return response;
 		}
 		catch(Exception e){
+			logger.error(e.getMessage());
 			e.printStackTrace();
 			return ResponseEntity.unprocessableEntity().build();
 		}
@@ -211,6 +232,9 @@ public class TenancyController {
 	})
 	@GetMapping
 	public ResponseEntity<Tenancy> getTenancyByClient(@RequestBody Client client, Tenancy tenancy){
+
+		logger.info("[ GET ] => { " + endPoint + " }");
+		long start = System.currentTimeMillis();
 		try{
 			Optional<Tenancy> optionalTenancy = this.tenancyService.getTenancy(client.getId());
 			ResponseEntity response;
@@ -221,10 +245,12 @@ public class TenancyController {
 			else{
 				response = ResponseEntity.noContent().build();
 			}
-
+			long end = System.currentTimeMillis();
+			logger.debug("O tempo de execução foi de " + (end-start) + " ms");
 			return response;
 		}
 		catch(Exception e){
+			logger.error(e.getMessage());
 			e.printStackTrace();
 			return ResponseEntity.unprocessableEntity().build();
 		}
