@@ -191,7 +191,7 @@ public class TenancyController {
 
 	//GetMapping taking car
 	//TODO operation get by car
-	@ResponseStatus(HttpStatus.NOT_FOUND)
+	/*@ResponseStatus(HttpStatus.NOT_FOUND)
 	@ApiOperation(value = "Obtém uma locação por carro", notes = "Obtém uma locação por carro")
 	@ApiResponses({
 			@ApiResponse(code = 204, message = "Locação por carro obtida com sucesso.")
@@ -221,11 +221,11 @@ public class TenancyController {
 			e.printStackTrace();
 			return ResponseEntity.unprocessableEntity().build();
 		}
-	}
+	}*/
 
 	//GetMapping taking client
 	//TODO operation get by client
-	@ResponseStatus(HttpStatus.NOT_FOUND)
+	/*@ResponseStatus(HttpStatus.NOT_FOUND)
 	@ApiOperation(value = "Obtém uma locação por cliente", notes = "Obtém uma locação por cliente")
 	@ApiResponses({
 			@ApiResponse(code = 204, message = "Locação por cliente obtida com sucesso.")
@@ -254,5 +254,5 @@ public class TenancyController {
 			e.printStackTrace();
 			return ResponseEntity.unprocessableEntity().build();
 		}
-	}
+	}*/
 }

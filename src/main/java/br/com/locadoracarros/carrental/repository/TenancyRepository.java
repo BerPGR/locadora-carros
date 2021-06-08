@@ -16,8 +16,6 @@ public interface TenancyRepository extends PagingAndSortingRepository<Tenancy, I
 
 	//Repository for tenancy
 
-	double processTenancy();
-
 	Page<Tenancy> findAll (Pageable pageable);
 
 	Page<Tenancy> findById (int id, Pageable pageable );

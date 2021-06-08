@@ -9,6 +9,8 @@ public class Car {
 	private String model;
 	private String licensePlate;
 
+	@NotNull
+	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	@ApiModelProperty(notes = "Categoria do carro", required = true)
 	private Category category;
 
@@ -69,7 +71,6 @@ public class Car {
 				'}';
 	}
 
-	@OneToMany(targetEntity=Category.class, mappedBy="car", fetch=FetchType.EAGER)
 	public Category getCategory() {
 		return category;
 	}

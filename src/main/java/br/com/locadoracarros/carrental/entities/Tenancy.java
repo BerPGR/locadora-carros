@@ -5,6 +5,7 @@ import com.sun.istack.NotNull;
 import io.swagger.annotations.ApiModelProperty;
 
 import javax.persistence.*;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @Entity
@@ -18,9 +19,11 @@ public class Tenancy {
 	@ApiModelProperty(notes = "Identificador único da locação")
 	private int id;
 
+	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	@ApiModelProperty(notes = "Carro da locação")
 	private Car car;
 
+	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	@ApiModelProperty(notes = "Cliente que vai alugar")
 	private Client client;
 

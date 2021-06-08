@@ -1,150 +1,50 @@
-07-06-2021 08:00:38 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 8256 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
-07-06-2021 08:00:38 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
-07-06-2021 08:00:38 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
-07-06-2021 08:00:44 | LocalContainerEntityManagerFactoryBean:426 [ ERROR ]  :  Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Could not determine type for: br.com.locadoracarros.carrental.entities.Category, at table: car, for columns: [org.hibernate.mapping.Column(category)]
-07-06-2021 08:00:44 | SpringApplication:871 [ ERROR ]  :  Application run failedorg.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Could not determine type for: br.com.locadoracarros.carrental.entities.Category, at table: car, for columns: [org.hibernate.mapping.Column(category)]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:782)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:774)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:339)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1340)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1329)
-	at br.com.locadoracarros.carrental.CarRentalApplication.main(CarRentalApplication.java:15)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Could not determine type for: br.com.locadoracarros.carrental.entities.Category, at table: car, for columns: [org.hibernate.mapping.Column(category)]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
-	... 22 common frames omitted
-Caused by: org.hibernate.MappingException: Could not determine type for: br.com.locadoracarros.carrental.entities.Category, at table: car, for columns: [org.hibernate.mapping.Column(category)]
-	at org.hibernate.mapping.SimpleValue.getType(SimpleValue.java:499)
-	at org.hibernate.mapping.SimpleValue.isValid(SimpleValue.java:466)
-	at org.hibernate.mapping.Property.isValid(Property.java:227)
-	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:624)
-	at org.hibernate.mapping.RootClass.validate(RootClass.java:267)
-	at org.hibernate.boot.internal.MetadataImpl.validate(MetadataImpl.java:354)
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:298)
-	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:468)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1259)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
-	... 26 common frames omitted
-
-07-06-2021 08:09:42 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 4688 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
-07-06-2021 08:09:43 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
-07-06-2021 08:09:43 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
-07-06-2021 08:09:49 | LocalContainerEntityManagerFactoryBean:426 [ ERROR ]  :  Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Could not determine type for: br.com.locadoracarros.carrental.entities.Category, at table: car, for columns: [org.hibernate.mapping.Column(category)]
-07-06-2021 08:09:49 | SpringApplication:871 [ ERROR ]  :  Application run failedorg.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Could not determine type for: br.com.locadoracarros.carrental.entities.Category, at table: car, for columns: [org.hibernate.mapping.Column(category)]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:782)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:774)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:339)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1340)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1329)
-	at br.com.locadoracarros.carrental.CarRentalApplication.main(CarRentalApplication.java:15)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Could not determine type for: br.com.locadoracarros.carrental.entities.Category, at table: car, for columns: [org.hibernate.mapping.Column(category)]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
-	... 22 common frames omitted
-Caused by: org.hibernate.MappingException: Could not determine type for: br.com.locadoracarros.carrental.entities.Category, at table: car, for columns: [org.hibernate.mapping.Column(category)]
-	at org.hibernate.mapping.SimpleValue.getType(SimpleValue.java:499)
-	at org.hibernate.mapping.SimpleValue.isValid(SimpleValue.java:466)
-	at org.hibernate.mapping.Property.isValid(Property.java:227)
-	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:624)
-	at org.hibernate.mapping.RootClass.validate(RootClass.java:267)
-	at org.hibernate.boot.internal.MetadataImpl.validate(MetadataImpl.java:354)
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:298)
-	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:468)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1259)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
-	... 26 common frames omitted
-
-07-06-2021 08:49:17 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 9376 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
-07-06-2021 08:49:17 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
-07-06-2021 08:49:17 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
-07-06-2021 08:49:24 | LocalContainerEntityManagerFactoryBean:426 [ ERROR ]  :  Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Could not determine type for: br.com.locadoracarros.carrental.entities.Category, at table: car, for columns: [org.hibernate.mapping.Column(category)]
-07-06-2021 08:49:24 | SpringApplication:871 [ ERROR ]  :  Application run failedorg.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Could not determine type for: br.com.locadoracarros.carrental.entities.Category, at table: car, for columns: [org.hibernate.mapping.Column(category)]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:782)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:774)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:339)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1340)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1329)
-	at br.com.locadoracarros.carrental.CarRentalApplication.main(CarRentalApplication.java:15)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Could not determine type for: br.com.locadoracarros.carrental.entities.Category, at table: car, for columns: [org.hibernate.mapping.Column(category)]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
-	... 22 common frames omitted
-Caused by: org.hibernate.MappingException: Could not determine type for: br.com.locadoracarros.carrental.entities.Category, at table: car, for columns: [org.hibernate.mapping.Column(category)]
-	at org.hibernate.mapping.SimpleValue.getType(SimpleValue.java:499)
-	at org.hibernate.mapping.SimpleValue.isValid(SimpleValue.java:466)
-	at org.hibernate.mapping.Property.isValid(Property.java:227)
-	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:624)
-	at org.hibernate.mapping.RootClass.validate(RootClass.java:267)
-	at org.hibernate.boot.internal.MetadataImpl.validate(MetadataImpl.java:354)
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:298)
-	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:468)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1259)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
-	... 26 common frames omitted
-
+08-06-2021 08:10:13 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 1088 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+08-06-2021 08:10:13 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+08-06-2021 08:10:13 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+08-06-2021 08:10:26 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 13.707 seconds (JVM running for 16.622)
+08-06-2021 08:34:01 | CarController:117 [ INFO ]  :  [ POST ] => { /car }
+08-06-2021 08:34:01 | CarController:125 [ DEBUG ]  :  O tempo de execução foi de 289 ms
+08-06-2021 08:39:26 | CarController:117 [ INFO ]  :  [ POST ] => { /car }
+08-06-2021 08:39:26 | CarController:125 [ DEBUG ]  :  O tempo de execução foi de 12 ms
+08-06-2021 08:44:30 | CategoryController:123 [ INFO ]  :  [ POST ] => { /category }
+08-06-2021 08:44:30 | CategoryController:130 [ DEBUG ]  :  O tempo de execução foi de 38 ms.
+08-06-2021 08:45:11 | CarController:117 [ INFO ]  :  [ POST ] => { /car }
+08-06-2021 08:45:11 | CarController:125 [ DEBUG ]  :  O tempo de execução foi de 13 ms
+08-06-2021 08:48:14 | CarController:117 [ INFO ]  :  [ POST ] => { /car }
+08-06-2021 08:48:14 | CarController:125 [ DEBUG ]  :  O tempo de execução foi de 8 ms
+08-06-2021 08:52:52 | CarController:117 [ INFO ]  :  [ POST ] => { /car }
+08-06-2021 08:52:52 | CarController:125 [ DEBUG ]  :  O tempo de execução foi de 60 ms
+08-06-2021 09:05:02 | CarController:117 [ INFO ]  :  [ POST ] => { /car }
+08-06-2021 09:05:02 | CarController:125 [ DEBUG ]  :  O tempo de execução foi de 13 ms
+08-06-2021 09:34:01 | CarController:117 [ INFO ]  :  [ POST ] => { /car }
+08-06-2021 09:34:01 | CarController:125 [ DEBUG ]  :  O tempo de execução foi de 165 ms
+08-06-2021 09:38:09 | CarController:117 [ INFO ]  :  [ POST ] => { /car }
+08-06-2021 09:38:09 | CarController:125 [ DEBUG ]  :  O tempo de execução foi de 159 ms
+08-06-2021 09:41:37 | CarController:145 [ INFO ]  :  [ PUT ] : { /car }
+08-06-2021 09:41:37 | CarController:153 [ DEBUG ]  :  O tempo de execução foi de 198 ms
+08-06-2021 09:48:41 | CarController:117 [ INFO ]  :  [ POST ] => { /car }
+08-06-2021 09:48:41 | CarController:125 [ DEBUG ]  :  O tempo de execução foi de 26 ms
+08-06-2021 09:49:59 | CarController:117 [ INFO ]  :  [ POST ] => { /car }
+08-06-2021 09:49:59 | CarController:125 [ DEBUG ]  :  O tempo de execução foi de 8 ms
+08-06-2021 10:01:16 | CarController:117 [ INFO ]  :  [ POST ] => { /car }
+08-06-2021 10:01:16 | CarController:125 [ DEBUG ]  :  O tempo de execução foi de 45 ms
+08-06-2021 10:09:51 | CarController:117 [ INFO ]  :  [ POST ] => { /car }
+08-06-2021 10:09:51 | CarController:125 [ DEBUG ]  :  O tempo de execução foi de 37 ms
+08-06-2021 10:12:50 | CarController:117 [ INFO ]  :  [ POST ] => { /car }
+08-06-2021 10:12:50 | CarController:125 [ DEBUG ]  :  O tempo de execução foi de 15 ms
+08-06-2021 10:17:18 | CarController:117 [ INFO ]  :  [ POST ] => { /car }
+08-06-2021 10:17:18 | CarController:125 [ DEBUG ]  :  O tempo de execução foi de 151 ms
+08-06-2021 10:17:37 | CarController:64 [ INFO ]  :  [ GET ] => { /car }
+08-06-2021 10:17:38 | CarController:67 [ DEBUG ]  :  O tempo de execução foi de 6 ms
+08-06-2021 10:20:34 | CarController:64 [ INFO ]  :  [ GET ] => { /car }
+08-06-2021 10:20:34 | CarController:67 [ DEBUG ]  :  O tempo de execução foi de 0 ms
+08-06-2021 10:21:09 | ClientController:64 [ INFO ]  :  [ GET ] => { /client }
+08-06-2021 10:21:09 | ClientController:67 [ DEBUG ]  :  O tempo de execução foi de 1 ms.
+08-06-2021 10:25:29 | CategoryController:66 [ INFO ]  :  [ GET ] => { /category } 
+08-06-2021 10:25:29 | CategoryController:70 [ DEBUG ]  :  O tempo de execução foi de 0 ms.
+08-06-2021 10:34:08 | CarController:80 [ INFO ]  :  [ GET ] => { /car/{id} }
+08-06-2021 10:34:08 | CarController:98 [ DEBUG ]  :  O tempo de execução foi de 12 ms
+08-06-2021 10:34:28 | CarController:64 [ INFO ]  :  [ GET ] => { /car }
+08-06-2021 10:34:28 | CarController:67 [ DEBUG ]  :  O tempo de execução foi de 0 ms
+08-06-2021 10:42:51 | CarController:80 [ INFO ]  :  [ GET ] => { /car/{id} }
+08-06-2021 10:42:51 | CarController:98 [ DEBUG ]  :  O tempo de execução foi de 25 ms
