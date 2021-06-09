@@ -48,3 +48,89 @@
 08-06-2021 10:34:28 | CarController:67 [ DEBUG ]  :  O tempo de execução foi de 0 ms
 08-06-2021 10:42:51 | CarController:80 [ INFO ]  :  [ GET ] => { /car/{id} }
 08-06-2021 10:42:51 | CarController:98 [ DEBUG ]  :  O tempo de execução foi de 25 ms
+08-06-2021 10:45:40 | TenancyController:116 [ INFO ]  :  [ POST ] => { /tenancy }
+08-06-2021 10:45:40 | TenancyController:122 [ DEBUG ]  :  O tempo de execução foi de 223 ms
+08-06-2021 10:47:13 | CarController:80 [ INFO ]  :  [ GET ] => { /car/{id} }
+08-06-2021 10:47:13 | CarController:98 [ DEBUG ]  :  O tempo de execução foi de 6 ms
+08-06-2021 10:48:02 | CarController:80 [ INFO ]  :  [ GET ] => { /car/{id} }
+08-06-2021 10:48:02 | CarController:98 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+08-06-2021 10:48:15 | CarController:64 [ INFO ]  :  [ GET ] => { /car }
+08-06-2021 10:48:15 | CarController:67 [ DEBUG ]  :  O tempo de execução foi de 1 ms
+08-06-2021 10:50:31 | ClientController:80 [ INFO ]  :  [ GET ] => { /client/{id} }
+08-06-2021 10:50:31 | ClientController:98 [ DEBUG ]  :  O tempo de execução foi de 19 ms.
+08-06-2021 10:50:37 | ClientController:80 [ INFO ]  :  [ GET ] => { /client/{id} }
+08-06-2021 10:50:37 | ClientController:98 [ DEBUG ]  :  O tempo de execução foi de 6 ms.
+08-06-2021 10:54:50 | TenancyController:116 [ INFO ]  :  [ POST ] => { /tenancy }
+08-06-2021 10:54:50 | TenancyController:122 [ DEBUG ]  :  O tempo de execução foi de 39 ms
+08-06-2021 10:55:42 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 1604 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+08-06-2021 10:55:42 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+08-06-2021 10:55:42 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+08-06-2021 10:56:01 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 20.071 seconds (JVM running for 22.416)
+08-06-2021 11:12:09 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 1228 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+08-06-2021 11:12:09 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+08-06-2021 11:12:09 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+08-06-2021 11:12:26 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 19.027 seconds (JVM running for 25.982)
+08-06-2021 11:13:23 | CarController:80 [ INFO ]  :  [ GET ] => { /car/{id} }
+08-06-2021 11:13:23 | CarController:98 [ DEBUG ]  :  O tempo de execução foi de 93 ms
+08-06-2021 11:13:25 | CarController:80 [ INFO ]  :  [ GET ] => { /car/{id} }
+08-06-2021 11:13:25 | CarController:98 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+08-06-2021 11:14:24 | ClientController:80 [ INFO ]  :  [ GET ] => { /client/{id} }
+08-06-2021 11:14:24 | ClientController:98 [ DEBUG ]  :  O tempo de execução foi de 10 ms.
+08-06-2021 11:17:06 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 10048 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+08-06-2021 11:17:06 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+08-06-2021 11:17:06 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+08-06-2021 11:17:21 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 16.895 seconds (JVM running for 20.161)
+08-06-2021 11:17:35 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 4196 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+08-06-2021 11:17:35 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+08-06-2021 11:17:35 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+08-06-2021 11:18:08 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 35.107 seconds (JVM running for 38.423)
+08-06-2021 11:18:52 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 2024 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+08-06-2021 11:18:52 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+08-06-2021 11:18:52 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+08-06-2021 11:19:14 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 23.501 seconds (JVM running for 26.167)
+08-06-2021 11:19:44 | ClientController:80 [ INFO ]  :  [ GET ] => { /client/{id} }
+08-06-2021 11:19:45 | ClientController:98 [ DEBUG ]  :  O tempo de execução foi de 92 ms.
+08-06-2021 11:20:08 | CarController:80 [ INFO ]  :  [ GET ] => { /car/{id} }
+08-06-2021 11:20:08 | CarController:98 [ DEBUG ]  :  O tempo de execução foi de 11 ms
+08-06-2021 11:22:12 | TenancyController:116 [ INFO ]  :  [ POST ] => { /tenancy }
+08-06-2021 11:22:12 | TenancyController:126 [ ERROR ]  :  detached entity passed to persist: br.com.locadoracarros.carrental.entities.Car; nested exception is org.hibernate.PersistentObjectException: detached entity passed to persist: br.com.locadoracarros.carrental.entities.Car
+08-06-2021 11:31:11 | TenancyController:116 [ INFO ]  :  [ POST ] => { /tenancy }
+08-06-2021 11:32:31 | TenancyController:126 [ ERROR ]  :  detached entity passed to persist: br.com.locadoracarros.carrental.entities.Car; nested exception is org.hibernate.PersistentObjectException: detached entity passed to persist: br.com.locadoracarros.carrental.entities.Car
+08-06-2021 11:32:44 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 4644 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+08-06-2021 11:32:44 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+08-06-2021 11:32:44 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+08-06-2021 11:33:03 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 20.551 seconds (JVM running for 23.023)
+08-06-2021 11:33:16 | TenancyController:116 [ INFO ]  :  [ POST ] => { /tenancy }
+08-06-2021 11:50:17 | TenancyController:122 [ DEBUG ]  :  O tempo de execução foi de 1020412 ms
+08-06-2021 11:50:38 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 8212 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+08-06-2021 11:50:38 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+08-06-2021 11:50:38 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+08-06-2021 11:50:54 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 18.39 seconds (JVM running for 22.694)
+08-06-2021 11:51:19 | TenancyController:116 [ INFO ]  :  [ POST ] => { /tenancy }
+08-06-2021 11:51:45 | TenancyController:122 [ DEBUG ]  :  O tempo de execução foi de 25993 ms
+08-06-2021 11:52:34 | TenancyController:116 [ INFO ]  :  [ POST ] => { /tenancy }
+08-06-2021 11:54:03 | TenancyController:126 [ ERROR ]  :  Algum integrante da Tenancy não estava presente!
+08-06-2021 11:57:03 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 1568 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+08-06-2021 11:57:03 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+08-06-2021 11:57:03 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+08-06-2021 11:57:27 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 25.576 seconds (JVM running for 28.828)
+08-06-2021 11:57:48 | TenancyController:117 [ INFO ]  :  [ POST ] => { /tenancy }
+08-06-2021 11:57:55 | TenancyController:127 [ ERROR ]  :  Algum integrante da Tenancy não estava presente!
+08-06-2021 12:14:15 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 5968 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+08-06-2021 12:14:15 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+08-06-2021 12:14:15 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+08-06-2021 12:14:33 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 19.758 seconds (JVM running for 25.722)
+08-06-2021 12:15:21 | ClientController:80 [ INFO ]  :  [ GET ] => { /client/{id} }
+08-06-2021 12:15:21 | ClientController:98 [ DEBUG ]  :  O tempo de execução foi de 97 ms.
+08-06-2021 12:16:33 | TenancyController:136 [ INFO ]  :  [ POST ] => { /tenancy }
+08-06-2021 12:16:54 | TenancyController:146 [ ERROR ]  :  Algum integrante da Tenancy não estava presente!
+08-06-2021 12:17:45 | CarController:80 [ INFO ]  :  [ GET ] => { /car/{id} }
+08-06-2021 12:17:45 | CarController:98 [ DEBUG ]  :  O tempo de execução foi de 50 ms
+08-06-2021 12:18:19 | TenancyController:136 [ INFO ]  :  [ POST ] => { /tenancy }
+08-06-2021 12:18:27 | TenancyController:142 [ DEBUG ]  :  O tempo de execução foi de 7310 ms
+08-06-2021 12:19:43 | CarController:80 [ INFO ]  :  [ GET ] => { /car/{id} }
+08-06-2021 12:19:43 | CarController:98 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+08-06-2021 12:20:04 | ClientController:80 [ INFO ]  :  [ GET ] => { /client/{id} }
+08-06-2021 12:20:04 | ClientController:98 [ DEBUG ]  :  O tempo de execução foi de 6 ms.
+08-06-2021 12:20:30 | TenancyController:136 [ INFO ]  :  [ POST ] => { /tenancy }
+08-06-2021 12:20:37 | TenancyController:142 [ DEBUG ]  :  O tempo de execução foi de 6358 ms

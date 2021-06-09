@@ -1,5 +1,6 @@
 package br.com.locadoracarros.carrental.service;
 
+import br.com.locadoracarros.carrental.entities.Car;
 import br.com.locadoracarros.carrental.entities.Client;
 import br.com.locadoracarros.carrental.entities.Tenancy;
 import br.com.locadoracarros.carrental.repository.TenancyRepository;
@@ -20,8 +21,31 @@ public class TenancyService {
 	@Autowired
 	TenancyRepository tenancyRepository;
 
-	public Tenancy save(Tenancy tenancy){
-		return this.tenancyRepository.save(tenancy);
+	@Autowired
+	CarService carService;
+
+	@Autowired
+	ClientService clientService;
+
+	public Tenancy save(Tenancy tenancy) throws NullPointerException{
+		if (tenancy.getCar() != null && tenancy.getClient() != null){
+			if (tenancy.getCar().getId() > 0 && tenancy.getClient().getId() > 0){
+				Optional<Car> optionalCar = this.carService.getCar(tenancy.getCar().getId());
+				Optional<Client> optionalClient = this.clientService.getClient(tenancy.getClient().getId());
+
+				if (optionalCar.isPresent() && optionalClient.isPresent()){
+					tenancy.setCar(optionalCar.get());
+					tenancy.setClient(optionalClient.get());
+					return tenancyRepository.save(tenancy);
+				}
+			} else {
+				throw new NullPointerException("Algum integrante da Tenancy não estava presente no banco de dados!");
+			}
+		} else {
+			throw new NullPointerException("Algum integrante da Tenancy não estava presente!");
+		}
+
+		return null;
 	}
 
 	public Optional<Tenancy> getTenancy(int id){

@@ -1,6 +1,7 @@
 package br.com.locadoracarros.carrental.entities;
 
 import br.com.locadoracarros.carrental.exceptions.DomainException;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.sun.istack.NotNull;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -28,8 +29,12 @@ public class Tenancy {
 	private Client client;
 
 	@ApiModelProperty(notes = "Dia da locação")
+	@JsonFormat(
+			shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss.SSS", timezone = "GMT-3")
 	private Date firstDate;
 
+	@JsonFormat(
+			shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss.SSS", timezone = "GMT-3")
 	@ApiModelProperty(notes = "Dia da entrega")
 	private Date lastDate;
 
@@ -84,6 +89,12 @@ public class Tenancy {
 	}
 
 	public void setLastDate(Date lastDate) {
+		if (lastDate.before(firstDate)){
+			throw new DomainException("Last date must be after first date.");
+		}
+		else if (lastDate.before(new Date())){
+			throw new DomainException("Last date must be after now.");
+		}
 		this.lastDate = lastDate;
 	}
 }

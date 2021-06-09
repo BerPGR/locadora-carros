@@ -8,6 +8,8 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import javassist.NotFoundException;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -108,7 +110,17 @@ public class TenancyController {
 	@ResponseStatus(HttpStatus.CREATED)
 	@ApiOperation(value = "Adiciona uma locação.", notes = "Adiciona uma locação.", response = Tenancy.class)
 	@ApiResponses({
-			@ApiResponse(code = 204, message = "Inclusão com sucesso de uma locação.")
+			@ApiResponse(code = 204, message = "Inclusão com sucesso de uma locação."),
+			@ApiResponse(code = 422, message = "{\n" +
+					"  \"message\": \"Validation Failed\",\n" +
+					"  \"errors\": [\n" +
+					"    {\n" +
+					"      \"resource\": \"Issue\",\n" +
+					"      \"field\": \"title\",\n" +
+					"      \"code\": \"missing_field\"\n" +
+					"    }\n" +
+					"  ]\n" +
+					"}")
 	})
 	@PostMapping
 	public ResponseEntity<Tenancy> addTenancy(@RequestBody Tenancy tenancy){
