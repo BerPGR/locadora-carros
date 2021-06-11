@@ -199,6 +199,10 @@ public class TenancyController {
 		}
 	}
 
+
+	//TODO Make a GetMapping but taking a random tenancy
+
+
 	//TODO fix last 2 operations and loggers
 
 	//GetMapping taking car

@@ -32,13 +32,13 @@
         </rollingPolicy>
     </appender>
 
-    <!-- LOG everything at INFO level -->
+    <!-- LOG everything at ERROR level -->
     <root level="error">
         <appender-ref ref="RollingFile" />
         <appender-ref ref="Console" />
     </root>
 
-    <!-- LOG "com.baeldung*" at TRACE level -->
+    <!-- LOG "com.baeldung*" at DEBUG level -->
     <logger name="br.com.locadoracarros" level="debug" additivity="false">
         <appender-ref ref="RollingFile" />
         <appender-ref ref="Console" />

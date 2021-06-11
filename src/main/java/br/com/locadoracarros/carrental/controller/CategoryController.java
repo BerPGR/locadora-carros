@@ -193,4 +193,7 @@ public class CategoryController {
 			return ResponseEntity.unprocessableEntity().body(category);
 		}
 	}
+
+
+	//TODO make a GetMapping but taking a random category
 }

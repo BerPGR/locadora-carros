@@ -1,6 +1,7 @@
 package br.com.locadoracarros.carrental.service;
 
 import br.com.locadoracarros.carrental.repository.CarRepository;
+import br.com.locadoracarros.carrental.vo.CarBrandVO;
 import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -9,8 +10,10 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import br.com.locadoracarros.carrental.entities.Car;
-import java.util.Optional;
+
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CarService {
@@ -24,6 +27,15 @@ public class CarService {
 	public Car save(Car car) {
 
 		return this.carRepository.save(car);
+	}
+
+	public Optional<Car> getCarBrands(int id) {
+		List<CarBrandVO> carBrandVOList = new ArrayList<>();
+		for (String s : carRepository.listBrandsDistint()) {
+			carBrandVOList.add(new CarBrandVO(s));
+		}
+
+		return this.carRepository.findById(id);
 	}
 
 	public Optional<Car> getCar(int id) {

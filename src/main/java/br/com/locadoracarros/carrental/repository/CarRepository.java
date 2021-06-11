@@ -8,6 +8,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import br.com.locadoracarros.carrental.entities.Car;
 
+import java.util.List;
 import java.util.Optional;
 
 @Repository
@@ -25,4 +26,7 @@ public interface CarRepository extends PagingAndSortingRepository<Car, Integer> 
 	@Query(value = "SELECT * FROM car  "
 			+ "WHERE lower(model) like :query ", nativeQuery = true)
 	public Page<Car> findCars(@Param("query") String query, Pageable pageable);
+
+	@Query(value = "SELECT Distinct brand FROM car", nativeQuery = true)
+	public List<String> listBrandsDistint();
 }

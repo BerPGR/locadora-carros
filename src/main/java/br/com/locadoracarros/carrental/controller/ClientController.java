@@ -183,6 +183,9 @@ public class ClientController {
 			return ResponseEntity.unprocessableEntity().body(client);
 		}
 	}
+
+
+	//TODO make a GetMapping but taking a random Client
 }
 
 
