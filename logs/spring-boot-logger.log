@@ -1,280 +1,682 @@
-11-06-2021 08:42:29 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 4640 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
-11-06-2021 08:42:29 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
-11-06-2021 08:42:29 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
-11-06-2021 08:42:46 | SpringApplication:871 [ ERROR ]  :  Application run failedorg.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/C:/Users/bemel/.m2/repository/io/springfox/springfox-spring-web/2.6.1/springfox-spring-web-2.6.1.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/C:/Users/bemel/.m2/repository/io/springfox/springfox-spring-web/2.6.1/springfox-spring-web-2.6.1.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'carController' method 
-br.com.locadoracarros.carrental.controller.CarController#getAllCars(int, int, String, String, String)
-to {GET [/car]}: There is already 'carController' bean method
-br.com.locadoracarros.carrental.controller.CarController#getRandomCar(int) mapped.
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1354)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:782)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:774)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:339)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1340)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1329)
-	at br.com.locadoracarros.carrental.CarRentalApplication.main(CarRentalApplication.java:18)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/C:/Users/bemel/.m2/repository/io/springfox/springfox-spring-web/2.6.1/springfox-spring-web-2.6.1.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'carController' method 
-br.com.locadoracarros.carrental.controller.CarController#getAllCars(int, int, String, String, String)
-to {GET [/car]}: There is already 'carController' bean method
-br.com.locadoracarros.carrental.controller.CarController#getRandomCar(int) mapped.
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1354)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1598)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1562)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1451)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1338)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
-	... 25 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'carController' method 
-br.com.locadoracarros.carrental.controller.CarController#getAllCars(int, int, String, String, String)
-to {GET [/car]}: There is already 'carController' bean method
-br.com.locadoracarros.carrental.controller.CarController#getRandomCar(int) mapped.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1598)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1562)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1451)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1338)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
-	... 42 common frames omitted
-Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'carController' method 
-br.com.locadoracarros.carrental.controller.CarController#getAllCars(int, int, String, String, String)
-to {GET [/car]}: There is already 'carController' bean method
-br.com.locadoracarros.carrental.controller.CarController#getRandomCar(int) mapped.
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:662)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:628)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:328)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:395)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:298)
-	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:296)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:265)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:224)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:212)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:206)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
-	... 56 common frames omitted
+13-06-2021 21:29:18 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 636 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+13-06-2021 21:29:18 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+13-06-2021 21:29:18 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+13-06-2021 21:29:33 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 16.251 seconds (JVM running for 19.886)
+13-06-2021 21:29:41 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:29:41 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 165 ms
+13-06-2021 21:29:44 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:29:44 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+13-06-2021 21:29:44 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:29:44 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+13-06-2021 21:32:12 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 9432 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+13-06-2021 21:32:12 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+13-06-2021 21:32:12 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+13-06-2021 21:32:26 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 14.76 seconds (JVM running for 17.178)
+13-06-2021 21:32:30 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:32:30 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 260 ms
+13-06-2021 21:32:32 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:32:32 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+13-06-2021 21:34:54 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:34:54 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+13-06-2021 21:35:17 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 6416 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+13-06-2021 21:35:17 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+13-06-2021 21:35:17 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+13-06-2021 21:35:32 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 15.486 seconds (JVM running for 17.709)
+13-06-2021 21:35:50 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:36:08 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 17220 ms
+13-06-2021 21:36:15 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:36:22 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 7390 ms
+13-06-2021 21:36:37 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 12108 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+13-06-2021 21:36:37 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+13-06-2021 21:36:37 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+13-06-2021 21:36:49 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 13.38 seconds (JVM running for 15.652)
+13-06-2021 21:37:02 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:37:36 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 33241 ms
+13-06-2021 21:38:23 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 7228 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+13-06-2021 21:38:23 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+13-06-2021 21:38:23 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+13-06-2021 21:38:38 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 15.777 seconds (JVM running for 17.778)
+13-06-2021 21:38:42 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:38:42 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 183 ms
+13-06-2021 21:38:44 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:38:44 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:38:46 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:38:46 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+13-06-2021 21:38:47 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:38:47 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:38:47 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:38:47 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+13-06-2021 21:38:47 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:38:47 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+13-06-2021 21:38:47 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:38:47 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:38:47 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:38:47 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+13-06-2021 21:38:48 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:38:48 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+13-06-2021 21:38:48 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:38:48 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+13-06-2021 21:38:48 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:38:48 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:38:48 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:38:48 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:38:48 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:38:48 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+13-06-2021 21:38:48 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:38:48 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:38:49 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:38:49 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 6 ms
+13-06-2021 21:38:49 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:38:49 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+13-06-2021 21:38:49 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:38:49 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+13-06-2021 21:38:49 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:38:49 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:38:49 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:38:49 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:38:49 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:38:49 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 2 ms
+13-06-2021 21:38:50 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:38:50 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:38:50 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:38:50 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 2 ms
+13-06-2021 21:38:50 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:38:50 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+13-06-2021 21:38:50 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:38:50 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 6 ms
+13-06-2021 21:38:50 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:38:50 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:38:51 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:38:51 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:39:40 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 9712 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+13-06-2021 21:39:40 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+13-06-2021 21:39:40 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+13-06-2021 21:39:53 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 13.78 seconds (JVM running for 15.842)
+13-06-2021 21:40:01 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:01 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 154 ms
+13-06-2021 21:40:02 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:02 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+13-06-2021 21:40:02 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:02 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 6 ms
+13-06-2021 21:40:02 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:02 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:03 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:03 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+13-06-2021 21:40:03 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:03 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:04 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:04 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+13-06-2021 21:40:04 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:04 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+13-06-2021 21:40:05 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:05 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+13-06-2021 21:40:05 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:05 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+13-06-2021 21:40:05 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:05 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:06 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:06 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:06 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:06 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:07 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:07 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+13-06-2021 21:40:07 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:07 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:07 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:07 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+13-06-2021 21:40:08 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:08 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:08 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:08 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+13-06-2021 21:40:08 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:08 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:10 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:10 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:11 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:11 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+13-06-2021 21:40:11 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:11 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:12 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:12 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+13-06-2021 21:40:12 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:12 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:13 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:13 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:13 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:13 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:14 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:14 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+13-06-2021 21:40:14 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:14 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:14 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:14 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+13-06-2021 21:40:15 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:15 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:15 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:15 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:16 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:16 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+13-06-2021 21:40:16 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:16 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 2 ms
+13-06-2021 21:40:17 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:17 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:17 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:17 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:18 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:18 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+13-06-2021 21:40:18 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:18 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:19 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:19 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+13-06-2021 21:40:19 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:19 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+13-06-2021 21:40:21 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:21 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:21 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:21 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+13-06-2021 21:40:22 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:22 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:23 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:23 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:23 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:23 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+13-06-2021 21:40:24 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:24 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:24 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:24 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 2 ms
+13-06-2021 21:40:25 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:25 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:25 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:25 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:26 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:26 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+13-06-2021 21:40:26 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:26 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:27 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:27 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:27 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:27 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+13-06-2021 21:40:27 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:27 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+13-06-2021 21:40:28 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:28 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+13-06-2021 21:40:28 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:28 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:29 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:29 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+13-06-2021 21:40:32 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:32 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:33 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:33 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:33 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:33 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 2 ms
+13-06-2021 21:40:33 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:33 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:34 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:34 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:35 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:35 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:35 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:35 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:36 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:36 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:36 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:36 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:37 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:37 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+13-06-2021 21:40:37 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:37 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:38 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:38 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:38 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:38 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:39 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:39 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:39 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:39 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:39 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:40 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+13-06-2021 21:40:40 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:40 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+13-06-2021 21:40:40 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:40 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:41 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:41 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:41 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:41 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:41 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:41 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 2 ms
+13-06-2021 21:40:42 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:42 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 2 ms
+13-06-2021 21:40:42 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:42 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+13-06-2021 21:40:43 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:43 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:43 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:43 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:43 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:43 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 2 ms
+13-06-2021 21:40:44 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:44 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:44 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:44 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:44 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:44 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:44 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:44 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+13-06-2021 21:40:45 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:45 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 2 ms
+13-06-2021 21:40:45 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:45 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:40:45 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:40:45 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 2 ms
+13-06-2021 21:41:04 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:41:04 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:41:05 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:41:05 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+13-06-2021 21:41:06 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:41:06 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:41:06 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:41:06 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+13-06-2021 21:41:07 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:41:07 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+13-06-2021 21:41:08 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:41:08 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+13-06-2021 21:41:08 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:41:08 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+13-06-2021 21:41:09 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:41:09 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+13-06-2021 21:41:10 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:41:10 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 2 ms
+13-06-2021 21:41:10 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:41:10 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 2 ms
+13-06-2021 21:41:11 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:41:11 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:41:11 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:41:11 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+13-06-2021 21:41:11 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:41:11 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+13-06-2021 21:41:12 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:41:12 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:41:12 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:41:12 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:41:13 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:41:13 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:41:13 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:41:13 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 2 ms
+13-06-2021 21:41:13 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:41:13 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:41:14 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:41:14 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:41:14 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:41:14 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:41:15 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:41:15 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:41:15 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:41:15 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 2 ms
+13-06-2021 21:41:16 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:41:16 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:41:17 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:41:17 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:41:17 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:41:17 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+13-06-2021 21:41:18 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
+13-06-2021 21:41:18 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+13-06-2021 21:41:22 | [dispatcherServlet]:175 [ ERROR ]  :  Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: Ambiguous handler methods mapped for '/car/12': {public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getCar(int), public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getRandomCar()}] with root causejava.lang.IllegalStateException: Ambiguous handler methods mapped for '/car/12': {public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getCar(int), public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getRandomCar()}
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:425)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:376)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:123)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:66)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:498)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1254)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1036)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
 
-11-06-2021 08:43:08 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 408 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
-11-06-2021 08:43:08 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
-11-06-2021 08:43:08 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
-11-06-2021 08:43:18 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 11.496 seconds (JVM running for 13.614)
-11-06-2021 08:43:56 | TenancyController:70 [ INFO ]  :  [ GET ] => { /tenancy }
-11-06-2021 08:43:56 | TenancyController:73 [ DEBUG ]  :  O tempo de execução foi de 2 ms
-11-06-2021 08:50:11 | TenancyController:87 [ INFO ]  :  [ GET ] => { /tenancy/{id} }
-11-06-2021 08:50:11 | TenancyController:100 [ DEBUG ]  :  O tempo de execução foi de 32 ms
-11-06-2021 08:53:22 | TenancyController:70 [ INFO ]  :  [ GET ] => { /tenancy }
-11-06-2021 08:53:22 | TenancyController:73 [ DEBUG ]  :  O tempo de execução foi de 0 ms
-11-06-2021 08:54:44 | TenancyController:87 [ INFO ]  :  [ GET ] => { /tenancy/{id} }
-11-06-2021 08:54:44 | TenancyController:100 [ DEBUG ]  :  O tempo de execução foi de 5 ms
-11-06-2021 08:56:11 | TenancyController:87 [ INFO ]  :  [ GET ] => { /tenancy/{id} }
-11-06-2021 08:56:11 | TenancyController:100 [ DEBUG ]  :  O tempo de execução foi de 5 ms
-11-06-2021 09:16:53 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 8260 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
-11-06-2021 09:16:53 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
-11-06-2021 09:16:53 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
-11-06-2021 09:17:03 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 10.809 seconds (JVM running for 12.887)
-11-06-2021 09:17:28 | CarController:81 [ INFO ]  :  [ GET ] => { /car/{id} }
-11-06-2021 09:18:30 | SqlExceptionHelper:142 [ ERROR ]  :  ERROR: argument of WHERE must be type boolean, not type text
-  Posição: 39
-11-06-2021 09:18:53 | SqlExceptionHelper:142 [ ERROR ]  :  ERROR: argument of WHERE must be type boolean, not type text
-  Posição: 39
-11-06-2021 09:18:56 | SqlExceptionHelper:142 [ ERROR ]  :  ERROR: argument of WHERE must be type boolean, not type text
-  Posição: 39
-11-06-2021 09:19:50 | SqlExceptionHelper:142 [ ERROR ]  :  ERROR: argument of WHERE must be type boolean, not type text
-  Posição: 39
-11-06-2021 09:19:50 | CarController:100 [ ERROR ]  :  could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
-11-06-2021 09:19:59 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 6188 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
-11-06-2021 09:19:59 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
-11-06-2021 09:19:59 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
-11-06-2021 09:20:08 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 10.872 seconds (JVM running for 13.016)
-11-06-2021 09:20:16 | CarController:81 [ INFO ]  :  [ GET ] => { /car/{id} }
-11-06-2021 09:21:00 | CarController:100 [ ERROR ]  :  No converter found capable of converting from type [org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap] to type [br.com.locadoracarros.carrental.vo.CarBrandVO]
-11-06-2021 09:21:09 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 6088 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
-11-06-2021 09:21:09 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
-11-06-2021 09:21:09 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
-11-06-2021 09:21:20 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 13.227 seconds (JVM running for 15.409)
-11-06-2021 09:21:26 | CarController:81 [ INFO ]  :  [ GET ] => { /car/{id} }
-11-06-2021 09:22:44 | CarController:100 [ ERROR ]  :  No converter found capable of converting from type [org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap] to type [br.com.locadoracarros.carrental.vo.CarBrandVO]
-11-06-2021 09:22:52 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 5480 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
-11-06-2021 09:22:52 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
-11-06-2021 09:22:52 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
-11-06-2021 09:23:02 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 11.295 seconds (JVM running for 13.28)
-11-06-2021 09:23:10 | CarController:81 [ INFO ]  :  [ GET ] => { /car/{id} }
-11-06-2021 09:24:18 | CarController:100 [ ERROR ]  :  No converter found capable of converting from type [org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap] to type [br.com.locadoracarros.carrental.vo.CarBrandVO]
-11-06-2021 09:24:25 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 10296 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
-11-06-2021 09:24:25 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
-11-06-2021 09:24:25 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
-11-06-2021 09:24:34 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 9.905 seconds (JVM running for 11.493)
-11-06-2021 09:24:40 | CarController:81 [ INFO ]  :  [ GET ] => { /car/{id} }
-11-06-2021 09:33:35 | CarController:100 [ ERROR ]  :  No converter found capable of converting from type [org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap] to type [br.com.locadoracarros.carrental.vo.CarBrandVO]
-11-06-2021 09:33:49 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 9624 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
-11-06-2021 09:33:49 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
-11-06-2021 09:33:49 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
-11-06-2021 09:34:00 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 12.707 seconds (JVM running for 14.785)
-11-06-2021 09:34:25 | CarController:81 [ INFO ]  :  [ GET ] => { /car/{id} }
-11-06-2021 09:39:49 | CarController:97 [ DEBUG ]  :  O tempo de execução foi de 324527 ms
-11-06-2021 09:39:58 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 10768 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
-11-06-2021 09:39:58 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
-11-06-2021 09:39:58 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
-11-06-2021 09:40:09 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 12.307 seconds (JVM running for 14.188)
-11-06-2021 09:40:13 | CarController:81 [ INFO ]  :  [ GET ] => { /car/{id} }
-11-06-2021 09:48:25 | CarController:97 [ DEBUG ]  :  O tempo de execução foi de 492925 ms
-11-06-2021 11:37:05 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 4036 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
-11-06-2021 11:37:05 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
-11-06-2021 11:37:05 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
-11-06-2021 11:37:14 | SpringApplication:871 [ ERROR ]  :  Application run failedorg.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/C:/Users/bemel/.m2/repository/io/springfox/springfox-spring-web/2.6.1/springfox-spring-web-2.6.1.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/C:/Users/bemel/.m2/repository/io/springfox/springfox-spring-web/2.6.1/springfox-spring-web-2.6.1.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'carController' method 
-br.com.locadoracarros.carrental.controller.CarController#getRandomCar(int)
-to {GET [/car]}: There is already 'carController' bean method
-br.com.locadoracarros.carrental.controller.CarController#getAllCars(int, int, String, String, String) mapped.
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1354)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:782)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:774)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:339)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1340)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1329)
-	at br.com.locadoracarros.carrental.CarRentalApplication.main(CarRentalApplication.java:18)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/C:/Users/bemel/.m2/repository/io/springfox/springfox-spring-web/2.6.1/springfox-spring-web-2.6.1.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'carController' method 
-br.com.locadoracarros.carrental.controller.CarController#getRandomCar(int)
-to {GET [/car]}: There is already 'carController' bean method
-br.com.locadoracarros.carrental.controller.CarController#getAllCars(int, int, String, String, String) mapped.
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1354)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1598)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1562)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1451)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1338)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
-	... 25 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'carController' method 
-br.com.locadoracarros.carrental.controller.CarController#getRandomCar(int)
-to {GET [/car]}: There is already 'carController' bean method
-br.com.locadoracarros.carrental.controller.CarController#getAllCars(int, int, String, String, String) mapped.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1598)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1562)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1451)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1338)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
-	... 42 common frames omitted
-Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'carController' method 
-br.com.locadoracarros.carrental.controller.CarController#getRandomCar(int)
-to {GET [/car]}: There is already 'carController' bean method
-br.com.locadoracarros.carrental.controller.CarController#getAllCars(int, int, String, String, String) mapped.
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:662)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:628)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:328)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:395)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:298)
-	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:296)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:265)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:224)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:212)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:206)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
-	... 56 common frames omitted
+13-06-2021 21:41:26 | [dispatcherServlet]:175 [ ERROR ]  :  Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: Ambiguous handler methods mapped for '/car/12': {public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getCar(int), public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getRandomCar()}] with root causejava.lang.IllegalStateException: Ambiguous handler methods mapped for '/car/12': {public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getCar(int), public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getRandomCar()}
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:425)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:376)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:123)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:66)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:498)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1254)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1036)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
 
-11-06-2021 11:38:54 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 4752 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
-11-06-2021 11:38:54 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
-11-06-2021 11:38:54 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
-11-06-2021 11:39:02 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 8.414 seconds (JVM running for 10.045)
-11-06-2021 11:39:47 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 9596 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
-11-06-2021 11:39:47 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
-11-06-2021 11:39:47 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
-11-06-2021 11:39:56 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 9.277 seconds (JVM running for 10.786)
-11-06-2021 11:51:01 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 1792 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
-11-06-2021 11:51:01 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
-11-06-2021 11:51:01 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
-11-06-2021 11:51:10 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 9.657 seconds (JVM running for 11.222)
-11-06-2021 11:51:26 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
-11-06-2021 11:51:26 | CarController:132 [ DEBUG ]  :  O tempo de execução foi de 63 ms
-11-06-2021 11:51:31 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
-11-06-2021 11:51:31 | CarController:132 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-11-06-2021 11:51:35 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
-11-06-2021 11:51:35 | CarController:132 [ DEBUG ]  :  O tempo de execução foi de 2 ms
-11-06-2021 11:51:39 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
-11-06-2021 11:51:39 | CarController:132 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-11-06-2021 11:51:41 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
-11-06-2021 11:51:41 | CarController:132 [ DEBUG ]  :  O tempo de execução foi de 2 ms
-11-06-2021 11:51:41 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
-11-06-2021 11:51:41 | CarController:132 [ DEBUG ]  :  O tempo de execução foi de 1 ms
+13-06-2021 21:42:43 | [dispatcherServlet]:175 [ ERROR ]  :  Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: Ambiguous handler methods mapped for '/car/11': {public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getCar(int), public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getRandomCar()}] with root causejava.lang.IllegalStateException: Ambiguous handler methods mapped for '/car/11': {public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getCar(int), public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getRandomCar()}
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:425)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:376)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:123)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:66)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:498)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1254)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1036)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+13-06-2021 21:42:48 | [dispatcherServlet]:175 [ ERROR ]  :  Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: Ambiguous handler methods mapped for '/car/10': {public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getCar(int), public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getRandomCar()}] with root causejava.lang.IllegalStateException: Ambiguous handler methods mapped for '/car/10': {public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getCar(int), public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getRandomCar()}
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:425)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:376)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:123)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:66)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:498)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1254)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1036)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+13-06-2021 21:45:10 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 6512 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+13-06-2021 21:45:10 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+13-06-2021 21:45:10 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+13-06-2021 21:45:27 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 19.016 seconds (JVM running for 20.89)
+13-06-2021 21:46:34 | CarController:66 [ INFO ]  :  [ GET ] => { /car }
+13-06-2021 21:46:34 | CarController:69 [ DEBUG ]  :  O tempo de execução foi de 1 ms
+13-06-2021 21:47:00 | CarController:66 [ INFO ]  :  [ GET ] => { /car }
+13-06-2021 21:47:00 | CarController:69 [ DEBUG ]  :  O tempo de execução foi de 0 ms
+13-06-2021 21:47:25 | [dispatcherServlet]:175 [ ERROR ]  :  Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: Ambiguous handler methods mapped for '/car/1': {public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getCar(int), public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getRandomCar()}] with root causejava.lang.IllegalStateException: Ambiguous handler methods mapped for '/car/1': {public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getCar(int), public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getRandomCar()}
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:425)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:376)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:123)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:66)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:498)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1254)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1036)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+13-06-2021 21:57:08 | CarController:66 [ INFO ]  :  [ GET ] => { /car }
+13-06-2021 21:57:08 | CarController:69 [ DEBUG ]  :  O tempo de execução foi de 21 ms
+13-06-2021 22:25:38 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 2712 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+13-06-2021 22:25:38 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+13-06-2021 22:25:38 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+13-06-2021 22:25:48 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 15.411 seconds (JVM running for 17.2)
+13-06-2021 22:26:08 | CarController:66 [ INFO ]  :  [ GET ] => { /car }
+13-06-2021 22:26:08 | CarController:69 [ DEBUG ]  :  O tempo de execução foi de 1 ms
+13-06-2021 22:26:16 | CarController:66 [ INFO ]  :  [ GET ] => { /car }
+13-06-2021 22:26:16 | CarController:69 [ DEBUG ]  :  O tempo de execução foi de 0 ms
+13-06-2021 22:26:29 | [dispatcherServlet]:175 [ ERROR ]  :  Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: Ambiguous handler methods mapped for '/car/1': {public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getRandomCar(), public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getCar(int)}] with root causejava.lang.IllegalStateException: Ambiguous handler methods mapped for '/car/1': {public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getRandomCar(), public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getCar(int)}
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:425)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:376)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:123)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:66)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:498)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1254)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1036)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+13-06-2021 23:10:42 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 9492 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+13-06-2021 23:10:42 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+13-06-2021 23:10:42 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+13-06-2021 23:10:50 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 9.76 seconds (JVM running for 11.224)
+13-06-2021 23:11:05 | [dispatcherServlet]:175 [ ERROR ]  :  Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: Ambiguous handler methods mapped for '/car/2': {public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getRandomCar(), public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getCar(int)}] with root causejava.lang.IllegalStateException: Ambiguous handler methods mapped for '/car/2': {public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getRandomCar(), public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getCar(int)}
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:425)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:376)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:123)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:66)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:498)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1254)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1036)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
