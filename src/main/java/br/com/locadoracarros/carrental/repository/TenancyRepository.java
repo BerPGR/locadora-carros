@@ -25,4 +25,7 @@ public interface TenancyRepository extends PagingAndSortingRepository<Tenancy, I
 	@Query(value = "SELECT * FROM tenancy  "
 			+ "WHERE lower(client) like :query ", nativeQuery = true)
 	public Page<Tenancy> findTenancies(@Param("query") String query, Pageable pageable);
+
+	@Query(value = "SELECT count(*) FROM tenancy", nativeQuery = true)
+	int getCountTenancies();
 }

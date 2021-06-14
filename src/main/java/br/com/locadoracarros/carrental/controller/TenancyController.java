@@ -20,7 +20,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
+import java.util.List;
 import java.util.Optional;
+import java.util.Random;
 
 @RestController
 @RequestMapping("/tenancy")
@@ -104,6 +106,40 @@ public class TenancyController {
 			logger.error(e.getMessage());
 			e.printStackTrace();
 
+			return ResponseEntity.unprocessableEntity().build();
+		}
+	}
+
+	@ResponseStatus(HttpStatus.NO_CONTENT)
+	@ApiOperation(value = "Obtém uma locação randômica", notes = "Obtém uma locação randômica")
+	@ApiResponses({
+			@ApiResponse(code = 204, message = "Locação randômica gerada!")
+	})
+	@GetMapping("/random")
+	public ResponseEntity<Tenancy> getRandomTenancy(){
+
+		ResponseEntity response;
+
+		try{
+
+			List<Tenancy> tenancyList = this.tenancyService.getAll();
+			Random randomId = new Random();
+			int nroRandom = randomId.nextInt(tenancyList.size());
+			Optional<Tenancy> optionalTenancy = Optional.empty();
+
+			if (tenancyList.size() > 0){
+				optionalTenancy = Optional.of(tenancyList.get(nroRandom));
+			}
+
+			if (optionalTenancy.isPresent()){
+				response = ResponseEntity.ok(optionalTenancy.get());
+			}
+			else{
+				response = ResponseEntity.noContent().build();
+			}
+			return response;
+		}
+		catch(Exception e){
 			return ResponseEntity.unprocessableEntity().build();
 		}
 	}
@@ -200,10 +236,6 @@ public class TenancyController {
 			return ResponseEntity.unprocessableEntity().body(tenancy);
 		}
 	}
-
-
-	//TODO Make a GetMapping but taking a random tenancy
-
 
 	//TODO fix last 2 operations and loggers
 

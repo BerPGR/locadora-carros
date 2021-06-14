@@ -26,4 +26,7 @@ public interface ClientRepository extends PagingAndSortingRepository<Client, Int
 			+ "WHERE lower(name) like :query ", nativeQuery = true)
 	public Page<Client> findClients(@Param("query") String query, Pageable pageable);
 
+	@Query(value = "SELECT count(*) FROM client", nativeQuery = true)
+	int getCountClients();
+
 }
