@@ -122,6 +122,8 @@ public class CategoryController {
 	public ResponseEntity<Category> getRandomCategory(){
 
 		ResponseEntity response;
+		logger.info("[ GET ] => { " + endPoint + "/random }");
+		long start = System.currentTimeMillis();
 
 		try{
 			List<Category> categoryList = this.categoryService.getAll();
@@ -139,10 +141,12 @@ public class CategoryController {
 			else{
 				response = ResponseEntity.noContent().build();
 			}
-
+			long end = System.currentTimeMillis();
+			logger.debug("O tempo de execução foi de " + (end-start) + " ms");
 			return response;
 		}
 		catch(Exception e){
+			logger.error(e.getMessage());
 			return ResponseEntity.unprocessableEntity().build();
 		}
 	}
