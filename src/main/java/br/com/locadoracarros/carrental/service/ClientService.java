@@ -11,6 +11,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -26,6 +27,10 @@ public class ClientService {
 
 	public Optional<Client> getClient(int id){
 		return this.clientRepository.findById(id);
+	}
+
+	public List<Client> getAll(){
+		return (List<Client>) this.clientRepository.findAll();
 	}
 
 	public Page<Client> getAll(int page, int size, String sort, String q, String attribute) {

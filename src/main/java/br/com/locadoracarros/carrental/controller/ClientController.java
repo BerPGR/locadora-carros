@@ -15,7 +15,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
+import java.util.List;
 import java.util.Optional;
+import java.util.Random;
 
 @RestController
 @RequestMapping("/client")
@@ -101,6 +103,42 @@ public class ClientController {
 		} catch(Exception e){
 			logger.error(e.getMessage());
 			e.printStackTrace();
+			return ResponseEntity.unprocessableEntity().build();
+		}
+	}
+
+	//GetMapping taking a random category
+	@ResponseStatus(HttpStatus.NO_CONTENT)
+	@ApiOperation(value = "Pega um cliente randomico", notes = "Pega um cliente randomico")
+	@ApiResponses({
+			@ApiResponse(code = 204, message = "Cliente randomico gerado!")
+	})
+	@GetMapping("/random")
+	public ResponseEntity<Client> getRandomClient(){
+
+		ResponseEntity response;
+
+		try{
+
+			List<Client> clientList = this.clientService.getAll();
+			Random randomId = new Random();
+			int nroRandom = randomId.nextInt(clientList.size());
+			Optional<Client> optionalClient = Optional.empty();
+
+			if (clientList.size() > 0){
+				optionalClient = Optional.of(clientList.get(nroRandom));
+			}
+
+			if (optionalClient.isPresent()){
+				response = ResponseEntity.ok(optionalClient.get());
+			}
+			else{
+				response = ResponseEntity.noContent().build();
+			}
+
+			return response;
+		}
+		catch(Exception e){
 			return ResponseEntity.unprocessableEntity().build();
 		}
 	}

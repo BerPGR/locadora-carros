@@ -25,4 +25,7 @@ public interface CategoryRepository extends PagingAndSortingRepository<Category,
 	@Query(value = "SELECT * FROM category  "
 			+ "WHERE lower(carType) like :query ", nativeQuery = true)
 	public Page<Category> findCategories(@Param("query") String query, Pageable pageable);
+
+	@Query(value = "SELECT count(*) FROM category", nativeQuery = true)
+	int getCountCategories();
 }
