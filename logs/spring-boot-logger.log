@@ -1,328 +1,10 @@
-13-06-2021 21:29:18 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 636 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
-13-06-2021 21:29:18 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
-13-06-2021 21:29:18 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
-13-06-2021 21:29:33 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 16.251 seconds (JVM running for 19.886)
-13-06-2021 21:29:41 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:29:41 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 165 ms
-13-06-2021 21:29:44 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:29:44 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
-13-06-2021 21:29:44 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:29:44 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
-13-06-2021 21:32:12 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 9432 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
-13-06-2021 21:32:12 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
-13-06-2021 21:32:12 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
-13-06-2021 21:32:26 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 14.76 seconds (JVM running for 17.178)
-13-06-2021 21:32:30 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:32:30 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 260 ms
-13-06-2021 21:32:32 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:32:32 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
-13-06-2021 21:34:54 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:34:54 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
-13-06-2021 21:35:17 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 6416 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
-13-06-2021 21:35:17 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
-13-06-2021 21:35:17 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
-13-06-2021 21:35:32 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 15.486 seconds (JVM running for 17.709)
-13-06-2021 21:35:50 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:36:08 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 17220 ms
-13-06-2021 21:36:15 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:36:22 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 7390 ms
-13-06-2021 21:36:37 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 12108 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
-13-06-2021 21:36:37 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
-13-06-2021 21:36:37 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
-13-06-2021 21:36:49 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 13.38 seconds (JVM running for 15.652)
-13-06-2021 21:37:02 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:37:36 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 33241 ms
-13-06-2021 21:38:23 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 7228 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
-13-06-2021 21:38:23 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
-13-06-2021 21:38:23 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
-13-06-2021 21:38:38 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 15.777 seconds (JVM running for 17.778)
-13-06-2021 21:38:42 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:38:42 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 183 ms
-13-06-2021 21:38:44 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:38:44 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:38:46 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:38:46 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
-13-06-2021 21:38:47 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:38:47 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:38:47 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:38:47 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
-13-06-2021 21:38:47 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:38:47 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
-13-06-2021 21:38:47 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:38:47 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:38:47 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:38:47 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
-13-06-2021 21:38:48 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:38:48 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
-13-06-2021 21:38:48 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:38:48 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
-13-06-2021 21:38:48 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:38:48 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:38:48 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:38:48 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:38:48 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:38:48 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
-13-06-2021 21:38:48 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:38:48 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:38:49 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:38:49 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 6 ms
-13-06-2021 21:38:49 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:38:49 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
-13-06-2021 21:38:49 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:38:49 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
-13-06-2021 21:38:49 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:38:49 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:38:49 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:38:49 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:38:49 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:38:49 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 2 ms
-13-06-2021 21:38:50 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:38:50 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:38:50 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:38:50 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 2 ms
-13-06-2021 21:38:50 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:38:50 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
-13-06-2021 21:38:50 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:38:50 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 6 ms
-13-06-2021 21:38:50 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:38:50 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:38:51 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:38:51 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:39:40 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 9712 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
-13-06-2021 21:39:40 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
-13-06-2021 21:39:40 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
-13-06-2021 21:39:53 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 13.78 seconds (JVM running for 15.842)
-13-06-2021 21:40:01 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:01 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 154 ms
-13-06-2021 21:40:02 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:02 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
-13-06-2021 21:40:02 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:02 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 6 ms
-13-06-2021 21:40:02 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:02 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:03 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:03 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
-13-06-2021 21:40:03 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:03 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:04 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:04 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
-13-06-2021 21:40:04 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:04 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
-13-06-2021 21:40:05 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:05 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
-13-06-2021 21:40:05 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:05 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
-13-06-2021 21:40:05 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:05 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:06 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:06 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:06 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:06 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:07 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:07 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
-13-06-2021 21:40:07 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:07 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:07 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:07 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
-13-06-2021 21:40:08 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:08 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:08 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:08 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
-13-06-2021 21:40:08 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:08 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:10 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:10 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:11 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:11 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
-13-06-2021 21:40:11 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:11 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:12 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:12 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
-13-06-2021 21:40:12 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:12 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:13 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:13 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:13 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:13 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:14 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:14 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
-13-06-2021 21:40:14 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:14 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:14 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:14 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
-13-06-2021 21:40:15 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:15 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:15 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:15 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:16 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:16 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
-13-06-2021 21:40:16 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:16 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 2 ms
-13-06-2021 21:40:17 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:17 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:17 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:17 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:18 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:18 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
-13-06-2021 21:40:18 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:18 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:19 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:19 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
-13-06-2021 21:40:19 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:19 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
-13-06-2021 21:40:21 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:21 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:21 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:21 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
-13-06-2021 21:40:22 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:22 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:23 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:23 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:23 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:23 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
-13-06-2021 21:40:24 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:24 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:24 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:24 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 2 ms
-13-06-2021 21:40:25 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:25 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:25 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:25 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:26 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:26 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
-13-06-2021 21:40:26 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:26 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:27 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:27 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:27 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:27 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
-13-06-2021 21:40:27 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:27 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
-13-06-2021 21:40:28 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:28 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
-13-06-2021 21:40:28 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:28 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:29 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:29 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
-13-06-2021 21:40:32 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:32 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:33 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:33 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:33 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:33 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 2 ms
-13-06-2021 21:40:33 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:33 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:34 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:34 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:35 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:35 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:35 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:35 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:36 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:36 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:36 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:36 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:37 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:37 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
-13-06-2021 21:40:37 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:37 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:38 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:38 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:38 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:38 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:39 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:39 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:39 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:39 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:39 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:40 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
-13-06-2021 21:40:40 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:40 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
-13-06-2021 21:40:40 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:40 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:41 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:41 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:41 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:41 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:41 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:41 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 2 ms
-13-06-2021 21:40:42 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:42 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 2 ms
-13-06-2021 21:40:42 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:42 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
-13-06-2021 21:40:43 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:43 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:43 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:43 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:43 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:43 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 2 ms
-13-06-2021 21:40:44 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:44 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:44 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:44 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:44 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:44 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:44 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:44 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
-13-06-2021 21:40:45 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:45 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 2 ms
-13-06-2021 21:40:45 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:45 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:40:45 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:40:45 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 2 ms
-13-06-2021 21:41:04 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:41:04 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:41:05 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:41:05 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
-13-06-2021 21:41:06 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:41:06 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:41:06 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:41:06 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
-13-06-2021 21:41:07 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:41:07 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
-13-06-2021 21:41:08 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:41:08 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
-13-06-2021 21:41:08 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:41:08 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
-13-06-2021 21:41:09 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:41:09 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
-13-06-2021 21:41:10 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:41:10 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 2 ms
-13-06-2021 21:41:10 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:41:10 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 2 ms
-13-06-2021 21:41:11 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:41:11 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:41:11 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:41:11 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
-13-06-2021 21:41:11 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:41:11 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
-13-06-2021 21:41:12 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:41:12 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:41:12 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:41:12 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:41:13 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:41:13 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:41:13 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:41:13 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 2 ms
-13-06-2021 21:41:13 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:41:13 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:41:14 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:41:14 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:41:14 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:41:14 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:41:15 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:41:15 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:41:15 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:41:15 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 2 ms
-13-06-2021 21:41:16 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:41:16 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:41:17 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:41:17 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:41:17 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:41:17 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
-13-06-2021 21:41:18 | CarController:117 [ INFO ]  :  [ GET ] => { /car/{random} }
-13-06-2021 21:41:18 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
-13-06-2021 21:41:22 | [dispatcherServlet]:175 [ ERROR ]  :  Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: Ambiguous handler methods mapped for '/car/12': {public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getCar(int), public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getRandomCar()}] with root causejava.lang.IllegalStateException: Ambiguous handler methods mapped for '/car/12': {public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getCar(int), public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getRandomCar()}
+14-06-2021 08:07:38 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 1152 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+14-06-2021 08:07:38 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+14-06-2021 08:07:38 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+14-06-2021 08:07:52 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 15.562 seconds (JVM running for 18.707)
+14-06-2021 08:08:28 | CarController:65 [ INFO ]  :  [ GET ] => { /car }
+14-06-2021 08:08:28 | CarController:68 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+14-06-2021 08:08:39 | [dispatcherServlet]:175 [ ERROR ]  :  Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: Ambiguous handler methods mapped for '/car/2': {public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getRandomCar(), public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getCar(int)}] with root causejava.lang.IllegalStateException: Ambiguous handler methods mapped for '/car/2': {public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getRandomCar(), public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getCar(int)}
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:425)
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:376)
 	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:123)
@@ -370,7 +52,9 @@
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
 
-13-06-2021 21:41:26 | [dispatcherServlet]:175 [ ERROR ]  :  Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: Ambiguous handler methods mapped for '/car/12': {public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getCar(int), public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getRandomCar()}] with root causejava.lang.IllegalStateException: Ambiguous handler methods mapped for '/car/12': {public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getCar(int), public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getRandomCar()}
+14-06-2021 08:12:46 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:12:46 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 57 ms
+14-06-2021 08:13:06 | [dispatcherServlet]:175 [ ERROR ]  :  Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: Ambiguous handler methods mapped for '/car/2': {public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getRandomCar(), public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getCar(int)}] with root causejava.lang.IllegalStateException: Ambiguous handler methods mapped for '/car/2': {public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getRandomCar(), public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getCar(int)}
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:425)
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:376)
 	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:123)
@@ -418,265 +102,371 @@
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
 
-13-06-2021 21:42:43 | [dispatcherServlet]:175 [ ERROR ]  :  Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: Ambiguous handler methods mapped for '/car/11': {public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getCar(int), public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getRandomCar()}] with root causejava.lang.IllegalStateException: Ambiguous handler methods mapped for '/car/11': {public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getCar(int), public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getRandomCar()}
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:425)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:376)
-	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:123)
-	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:66)
-	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:498)
-	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1254)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1036)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-
-13-06-2021 21:42:48 | [dispatcherServlet]:175 [ ERROR ]  :  Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: Ambiguous handler methods mapped for '/car/10': {public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getCar(int), public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getRandomCar()}] with root causejava.lang.IllegalStateException: Ambiguous handler methods mapped for '/car/10': {public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getCar(int), public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getRandomCar()}
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:425)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:376)
-	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:123)
-	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:66)
-	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:498)
-	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1254)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1036)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-
-13-06-2021 21:45:10 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 6512 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
-13-06-2021 21:45:10 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
-13-06-2021 21:45:10 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
-13-06-2021 21:45:27 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 19.016 seconds (JVM running for 20.89)
-13-06-2021 21:46:34 | CarController:66 [ INFO ]  :  [ GET ] => { /car }
-13-06-2021 21:46:34 | CarController:69 [ DEBUG ]  :  O tempo de execução foi de 1 ms
-13-06-2021 21:47:00 | CarController:66 [ INFO ]  :  [ GET ] => { /car }
-13-06-2021 21:47:00 | CarController:69 [ DEBUG ]  :  O tempo de execução foi de 0 ms
-13-06-2021 21:47:25 | [dispatcherServlet]:175 [ ERROR ]  :  Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: Ambiguous handler methods mapped for '/car/1': {public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getCar(int), public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getRandomCar()}] with root causejava.lang.IllegalStateException: Ambiguous handler methods mapped for '/car/1': {public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getCar(int), public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getRandomCar()}
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:425)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:376)
-	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:123)
-	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:66)
-	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:498)
-	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1254)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1036)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-
-13-06-2021 21:57:08 | CarController:66 [ INFO ]  :  [ GET ] => { /car }
-13-06-2021 21:57:08 | CarController:69 [ DEBUG ]  :  O tempo de execução foi de 21 ms
-13-06-2021 22:25:38 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 2712 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
-13-06-2021 22:25:38 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
-13-06-2021 22:25:38 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
-13-06-2021 22:25:48 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 15.411 seconds (JVM running for 17.2)
-13-06-2021 22:26:08 | CarController:66 [ INFO ]  :  [ GET ] => { /car }
-13-06-2021 22:26:08 | CarController:69 [ DEBUG ]  :  O tempo de execução foi de 1 ms
-13-06-2021 22:26:16 | CarController:66 [ INFO ]  :  [ GET ] => { /car }
-13-06-2021 22:26:16 | CarController:69 [ DEBUG ]  :  O tempo de execução foi de 0 ms
-13-06-2021 22:26:29 | [dispatcherServlet]:175 [ ERROR ]  :  Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: Ambiguous handler methods mapped for '/car/1': {public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getRandomCar(), public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getCar(int)}] with root causejava.lang.IllegalStateException: Ambiguous handler methods mapped for '/car/1': {public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getRandomCar(), public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getCar(int)}
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:425)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:376)
-	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:123)
-	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:66)
-	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:498)
-	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1254)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1036)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-
-13-06-2021 23:10:42 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 9492 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
-13-06-2021 23:10:42 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
-13-06-2021 23:10:42 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
-13-06-2021 23:10:50 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 9.76 seconds (JVM running for 11.224)
-13-06-2021 23:11:05 | [dispatcherServlet]:175 [ ERROR ]  :  Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: Ambiguous handler methods mapped for '/car/2': {public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getRandomCar(), public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getCar(int)}] with root causejava.lang.IllegalStateException: Ambiguous handler methods mapped for '/car/2': {public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getRandomCar(), public org.springframework.http.ResponseEntity br.com.locadoracarros.carrental.controller.CarController.getCar(int)}
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:425)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:376)
-	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:123)
-	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:66)
-	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:498)
-	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1254)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1036)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-
+14-06-2021 08:15:01 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:01 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+14-06-2021 08:15:02 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:02 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+14-06-2021 08:15:02 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:02 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:15:03 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:03 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:15:03 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:03 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:15:03 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:03 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:15:04 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:04 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:15:04 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:04 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:15:04 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:04 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:15:04 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:04 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:15:05 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:05 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 2 ms
+14-06-2021 08:15:05 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:05 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 2 ms
+14-06-2021 08:15:05 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:05 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 7 ms
+14-06-2021 08:15:05 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:05 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:15:06 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:06 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:15:06 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:06 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:15:06 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:06 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:15:07 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:07 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:15:07 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:07 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:15:07 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:07 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:15:08 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:08 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:15:09 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:09 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:15:10 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:10 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+14-06-2021 08:15:10 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:10 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:15:11 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:11 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:15:11 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:11 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:15:11 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:11 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:15:12 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:12 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+14-06-2021 08:15:12 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:12 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:15:13 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:13 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:15:13 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:13 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 2 ms
+14-06-2021 08:15:14 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:14 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:15:15 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:15 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:15:15 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:15 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:15:15 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:15 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:15:16 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:16 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:15:16 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:16 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:15:16 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:16 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:15:17 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:17 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:15:17 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:17 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 20 ms
+14-06-2021 08:15:17 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:17 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+14-06-2021 08:15:17 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:17 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:15:18 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:18 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:15:18 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:18 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:15:18 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:18 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:15:18 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:18 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:15:19 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:19 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 2 ms
+14-06-2021 08:15:19 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:19 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+14-06-2021 08:15:20 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:20 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:15:20 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:20 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:15:21 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:21 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:15:21 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:21 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 2 ms
+14-06-2021 08:15:22 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:22 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:15:22 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:22 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:15:22 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:22 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 2 ms
+14-06-2021 08:15:23 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:23 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:15:23 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:23 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:15:24 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:24 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:15:55 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:55 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 6 ms
+14-06-2021 08:15:57 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:57 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+14-06-2021 08:15:57 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:57 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:15:58 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:58 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+14-06-2021 08:15:58 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:58 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:15:59 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:59 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 2 ms
+14-06-2021 08:15:59 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:59 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:15:59 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:15:59 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:16:00 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:00 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:16:00 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:00 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:16:00 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:00 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 2 ms
+14-06-2021 08:16:01 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:01 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 2 ms
+14-06-2021 08:16:01 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:01 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:16:02 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:02 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:16:02 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:02 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:16:03 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:03 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:16:03 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:03 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+14-06-2021 08:16:03 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:03 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:16:04 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:04 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:16:04 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:04 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:16:05 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:05 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:16:05 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:05 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:16:05 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:05 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+14-06-2021 08:16:06 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:06 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:16:06 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:06 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:16:06 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:06 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 2 ms
+14-06-2021 08:16:07 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:07 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:16:07 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:07 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:16:08 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:08 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:16:08 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:08 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:16:08 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:08 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 2 ms
+14-06-2021 08:16:09 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:09 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:16:09 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:09 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+14-06-2021 08:16:09 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:09 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:16:10 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:10 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:16:10 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:10 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:16:10 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:10 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:16:10 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:10 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:16:11 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:11 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:16:11 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:11 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:16:11 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:11 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 2 ms
+14-06-2021 08:16:11 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:11 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:16:11 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:11 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:16:12 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:12 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+14-06-2021 08:16:12 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:12 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:16:12 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:12 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:16:12 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:12 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:16:13 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:13 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:16:13 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:13 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:16:13 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:13 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:16:13 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:13 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 6 ms
+14-06-2021 08:16:14 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:14 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:16:14 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:14 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:16:14 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:14 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:16:14 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:14 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:16:15 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:15 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:16:15 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:15 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:16:15 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:15 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:16:15 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:15 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 2 ms
+14-06-2021 08:16:15 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:15 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:16:16 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:16 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:16:16 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:16 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+14-06-2021 08:16:16 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:16 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+14-06-2021 08:16:16 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:16 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:16:17 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:17 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+14-06-2021 08:16:17 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:17 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:16:17 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:17 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:16:17 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:17 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:16:18 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:18 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:16:18 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:18 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:16:18 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:18 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:16:18 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:18 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:16:19 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:19 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:16:19 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:19 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:16:19 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:19 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:16:20 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:20 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:16:20 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:20 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:16:20 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:20 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:16:20 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:20 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:16:21 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:21 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:16:21 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:21 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 2 ms
+14-06-2021 08:16:21 | CarController:116 [ INFO ]  :  [ GET ] => { /car/{random} }
+14-06-2021 08:16:21 | CarController:134 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 08:17:09 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 5320 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+14-06-2021 08:17:09 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+14-06-2021 08:17:09 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+14-06-2021 08:17:28 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 19.858 seconds (JVM running for 22.251)
+14-06-2021 08:18:03 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 4032 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+14-06-2021 08:18:03 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+14-06-2021 08:18:03 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+14-06-2021 08:18:14 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 12.256 seconds (JVM running for 14.205)
+14-06-2021 08:29:50 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 8768 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+14-06-2021 08:29:50 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+14-06-2021 08:29:50 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+14-06-2021 08:30:06 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 16.352 seconds (JVM running for 18.559)
+14-06-2021 08:30:22 | CarController:81 [ INFO ]  :  [ GET ] => { /car/{id} }
+14-06-2021 08:30:22 | CarController:97 [ DEBUG ]  :  O tempo de execução foi de 74 ms
+14-06-2021 08:30:29 | CarController:81 [ INFO ]  :  [ GET ] => { /car/{id} }
+14-06-2021 08:30:29 | CarController:97 [ DEBUG ]  :  O tempo de execução foi de 2 ms
+14-06-2021 08:30:36 | CarController:118 [ INFO ]  :  [ GET ] => { /car/random }
+14-06-2021 08:30:36 | CarController:139 [ DEBUG ]  :  O tempo de execução foi de 206 ms
+14-06-2021 08:30:41 | CarController:118 [ INFO ]  :  [ GET ] => { /car/random }
+14-06-2021 08:30:41 | CarController:139 [ DEBUG ]  :  O tempo de execução foi de 8 ms
+14-06-2021 08:30:42 | CarController:118 [ INFO ]  :  [ GET ] => { /car/random }
+14-06-2021 08:30:42 | CarController:139 [ DEBUG ]  :  O tempo de execução foi de 10 ms
+14-06-2021 08:30:42 | CarController:118 [ INFO ]  :  [ GET ] => { /car/random }
+14-06-2021 08:30:42 | CarController:139 [ DEBUG ]  :  O tempo de execução foi de 6 ms
+14-06-2021 08:30:42 | CarController:118 [ INFO ]  :  [ GET ] => { /car/random }
+14-06-2021 08:30:42 | CarController:139 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+14-06-2021 08:30:43 | CarController:118 [ INFO ]  :  [ GET ] => { /car/random }
+14-06-2021 08:30:43 | CarController:139 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+14-06-2021 08:30:43 | CarController:118 [ INFO ]  :  [ GET ] => { /car/random }
+14-06-2021 08:30:43 | CarController:139 [ DEBUG ]  :  O tempo de execução foi de 9 ms
+14-06-2021 08:30:43 | CarController:118 [ INFO ]  :  [ GET ] => { /car/random }
+14-06-2021 08:30:43 | CarController:139 [ DEBUG ]  :  O tempo de execução foi de 9 ms
+14-06-2021 08:30:44 | CarController:118 [ INFO ]  :  [ GET ] => { /car/random }
+14-06-2021 08:30:44 | CarController:139 [ DEBUG ]  :  O tempo de execução foi de 8 ms
+14-06-2021 08:30:44 | CarController:118 [ INFO ]  :  [ GET ] => { /car/random }
+14-06-2021 08:30:44 | CarController:139 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:30:44 | CarController:118 [ INFO ]  :  [ GET ] => { /car/random }
+14-06-2021 08:30:44 | CarController:139 [ DEBUG ]  :  O tempo de execução foi de 6 ms
+14-06-2021 08:30:44 | CarController:118 [ INFO ]  :  [ GET ] => { /car/random }
+14-06-2021 08:30:44 | CarController:139 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:30:44 | CarController:118 [ INFO ]  :  [ GET ] => { /car/random }
+14-06-2021 08:30:44 | CarController:139 [ DEBUG ]  :  O tempo de execução foi de 6 ms
+14-06-2021 08:30:45 | CarController:118 [ INFO ]  :  [ GET ] => { /car/random }
+14-06-2021 08:30:45 | CarController:139 [ DEBUG ]  :  O tempo de execução foi de 6 ms
+14-06-2021 08:30:45 | CarController:118 [ INFO ]  :  [ GET ] => { /car/random }
+14-06-2021 08:30:45 | CarController:139 [ DEBUG ]  :  O tempo de execução foi de 8 ms
+14-06-2021 08:30:45 | CarController:118 [ INFO ]  :  [ GET ] => { /car/random }
+14-06-2021 08:30:45 | CarController:139 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+14-06-2021 08:30:45 | CarController:118 [ INFO ]  :  [ GET ] => { /car/random }
+14-06-2021 08:30:45 | CarController:139 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:30:45 | CarController:118 [ INFO ]  :  [ GET ] => { /car/random }
+14-06-2021 08:30:45 | CarController:139 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+14-06-2021 08:30:46 | CarController:118 [ INFO ]  :  [ GET ] => { /car/random }
+14-06-2021 08:30:46 | CarController:139 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+14-06-2021 08:30:46 | CarController:118 [ INFO ]  :  [ GET ] => { /car/random }
+14-06-2021 08:30:46 | CarController:139 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+14-06-2021 08:30:46 | CarController:118 [ INFO ]  :  [ GET ] => { /car/random }
+14-06-2021 08:30:46 | CarController:139 [ DEBUG ]  :  O tempo de execução foi de 6 ms
+14-06-2021 08:30:46 | CarController:118 [ INFO ]  :  [ GET ] => { /car/random }
+14-06-2021 08:30:46 | CarController:139 [ DEBUG ]  :  O tempo de execução foi de 6 ms
+14-06-2021 08:30:46 | CarController:118 [ INFO ]  :  [ GET ] => { /car/random }
+14-06-2021 08:30:46 | CarController:139 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+14-06-2021 08:30:47 | CarController:118 [ INFO ]  :  [ GET ] => { /car/random }
+14-06-2021 08:30:47 | CarController:139 [ DEBUG ]  :  O tempo de execução foi de 6 ms
+14-06-2021 08:30:47 | CarController:118 [ INFO ]  :  [ GET ] => { /car/random }
+14-06-2021 08:30:47 | CarController:139 [ DEBUG ]  :  O tempo de execução foi de 7 ms
+14-06-2021 08:30:47 | CarController:118 [ INFO ]  :  [ GET ] => { /car/random }
+14-06-2021 08:30:47 | CarController:139 [ DEBUG ]  :  O tempo de execução foi de 6 ms
+14-06-2021 08:30:47 | CarController:118 [ INFO ]  :  [ GET ] => { /car/random }
+14-06-2021 08:30:47 | CarController:139 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:30:47 | CarController:118 [ INFO ]  :  [ GET ] => { /car/random }
+14-06-2021 08:30:47 | CarController:139 [ DEBUG ]  :  O tempo de execução foi de 7 ms
+14-06-2021 08:30:48 | CarController:118 [ INFO ]  :  [ GET ] => { /car/random }
+14-06-2021 08:30:48 | CarController:139 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+14-06-2021 08:30:48 | CarController:118 [ INFO ]  :  [ GET ] => { /car/random }
+14-06-2021 08:30:48 | CarController:139 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+14-06-2021 08:30:48 | CarController:118 [ INFO ]  :  [ GET ] => { /car/random }
+14-06-2021 08:30:48 | CarController:139 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+14-06-2021 08:30:48 | CarController:118 [ INFO ]  :  [ GET ] => { /car/random }
+14-06-2021 08:30:48 | CarController:139 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+14-06-2021 08:30:49 | CarController:118 [ INFO ]  :  [ GET ] => { /car/random }
+14-06-2021 08:30:49 | CarController:139 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+14-06-2021 08:30:49 | CarController:118 [ INFO ]  :  [ GET ] => { /car/random }
+14-06-2021 08:30:49 | CarController:139 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+14-06-2021 08:30:49 | CarController:118 [ INFO ]  :  [ GET ] => { /car/random }
+14-06-2021 08:30:49 | CarController:139 [ DEBUG ]  :  O tempo de execução foi de 8 ms
+14-06-2021 08:30:50 | CarController:118 [ INFO ]  :  [ GET ] => { /car/random }
+14-06-2021 08:30:50 | CarController:139 [ DEBUG ]  :  O tempo de execução foi de 3 ms

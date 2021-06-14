@@ -36,10 +36,6 @@ public class CarService {
 		return this.carRepository.findById(id);
 	}
 
-	public int getNumberOfCars(){
-		return this.carRepository.countCars();
-	}
-
 	public Optional<Car> getCar(int id) {
 
 		return this.carRepository.findById(id);

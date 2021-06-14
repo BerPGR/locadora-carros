@@ -29,6 +29,4 @@ public interface CarRepository extends PagingAndSortingRepository<Car, Integer> 
 	@Query(value = "SELECT Distinct brand FROM car", nativeQuery = true)
 	public List<String> listBrandsDistint();
 
-	@Query(value = "SELECT COUNT(*) FROM car", nativeQuery = true)
-	public int countCars();
 }
