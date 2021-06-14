@@ -1,12 +1,30 @@
 package br.com.locadoracarros.carrental.entities;
 
 import br.com.locadoracarros.carrental.exceptions.DomainException;
+import com.sun.istack.NotNull;
+import io.swagger.annotations.ApiModelProperty;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "car")
 public class Car {
 
 	// attributes
+	@Id
+	@NotNull
+	@Column(columnDefinition = "int", nullable = false)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@ApiModelProperty(notes = "Identificador único do carro", required = true)
+	private int id;
+
+	@ApiModelProperty(notes = "Marca do carro", required = true)
 	private String brand;
+
+	@ApiModelProperty(notes = "Modelo do carro", required = true)
 	private String model;
+
+	@ApiModelProperty(notes = "Placa do carro", required = true)
 	private String licensePlate;
 
 	@NotNull
@@ -34,7 +52,7 @@ public class Car {
 
 	// using DomainException to make validations
 	public void setBrand(String brand) {
-		if(brand.equals(null) || brand.equals("")){
+		if(brand.equals(null) || brand.isEmpty()){
 			throw new DomainException("The car must have a brand.");
 		}
 		this.brand = brand;
@@ -45,7 +63,7 @@ public class Car {
 	}
 
 	public void setModel(String model) {
-		if(model.equals(null) || model.equals("")){
+		if(model.equals(null) || model.isEmpty()){
 			throw new DomainException("The car must have a model.");
 		}
 		this.model = model;
@@ -56,19 +74,18 @@ public class Car {
 	}
 
 	public void setLicensePlate(String licensePlate) {
-		if(licensePlate.equals(null) || licensePlate.equals("")){
+		if(licensePlate.equals(null) || licensePlate.isEmpty()){
 			throw new DomainException("The car must have a license plate.");
 		}
 		this.licensePlate = licensePlate;
 	}
 
-	@Override
-	public String toString() {
-		return "Car{" +
-				"brand='" + brand + '\'' +
-				", model='" + model + '\'' +
-				", licensePlate='" + licensePlate + '\'' +
-				'}';
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public Category getCategory() {
