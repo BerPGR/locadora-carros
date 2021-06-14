@@ -10,6 +10,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @Entity
+@JsonFormat
 @Table(name = "tenancy")
 public class Tenancy {
 

@@ -13,6 +13,9 @@ public class CarController {
 	//endpoint for CarController
 	private final String endPoint = "/car";
 
+	//Logger for CarController
+	final Logger logger = LoggerFactory.getLogger(this.getClass());
+
 	@Autowired
 	CarService carService;
 

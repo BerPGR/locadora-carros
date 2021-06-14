@@ -18,11 +18,9 @@ import java.util.Optional;
 @Service
 public class CarService {
 
-
 	// Service for car
 	@Autowired
 	CarRepository carRepository;
-
 
 	public Car save(Car car) {
 
@@ -46,7 +44,6 @@ public class CarService {
 
 		return this.carRepository.findById(id);
 	}
-
 
 	public Page<Car> getAll(int page, int size, String sort, String q, String attribute) {
 

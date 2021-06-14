@@ -14,7 +14,6 @@ import java.util.Optional;
 @Repository
 public interface CarRepository extends PagingAndSortingRepository<Car, Integer> {
 
-
 	// Repository for car
 	Page<Car> findAll(Pageable pageable);
 

@@ -4,6 +4,7 @@ import br.com.locadoracarros.carrental.entities.Car;
 import br.com.locadoracarros.carrental.entities.Client;
 import br.com.locadoracarros.carrental.entities.Tenancy;
 import br.com.locadoracarros.carrental.service.TenancyService;
+import com.fasterxml.jackson.databind.util.JSONPObject;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
@@ -81,7 +82,7 @@ public class TenancyController {
 			@ApiResponse(code = 204, message = "Existe uma locação.")
 	})
 	@GetMapping("/{id}")
-	public ResponseEntity<Tenancy> getTenancy(@PathVariable("id") int id){
+	public ResponseEntity<Optional<Tenancy>> getTenancy(@PathVariable("id") int id) throws JSONException {
 
 		logger.info("[ GET ] => { " + endPoint + "/{id} }");
 		long start = System.currentTimeMillis();
@@ -102,6 +103,7 @@ public class TenancyController {
 		catch(Exception e){
 			logger.error(e.getMessage());
 			e.printStackTrace();
+
 			return ResponseEntity.unprocessableEntity().build();
 		}
 	}
