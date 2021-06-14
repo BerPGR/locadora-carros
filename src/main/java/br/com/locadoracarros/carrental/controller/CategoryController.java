@@ -16,7 +16,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
+import java.util.List;
 import java.util.Optional;
+import java.util.Random;
 
 @RestController
 @RequestMapping("/category")
@@ -106,6 +108,41 @@ public class CategoryController {
 		} catch (Exception e) {
 			logger.error(e.getMessage());
 			e.printStackTrace();
+			return ResponseEntity.unprocessableEntity().build();
+		}
+	}
+
+	//GetMapping taking a random category
+	@ResponseStatus(HttpStatus.NO_CONTENT)
+	@ApiOperation(value = "Pega uma categoria randomica", notes = "Pega uma categoria randomica")
+	@ApiResponses({
+			@ApiResponse(code = 204, message = "Categoria ranômica gerada!")
+	})
+	@GetMapping("/random")
+	public ResponseEntity<Category> getRandomCategory(){
+
+		ResponseEntity response;
+
+		try{
+			List<Category> categoryList = this.categoryService.getAll();
+			Random randomId = new Random();
+			int nroRandom = randomId.nextInt(categoryList.size());
+			Optional<Category> optionalCategory = Optional.empty();
+
+			if (categoryList.size() > 0){
+				optionalCategory = Optional.of(categoryList.get(nroRandom));
+			}
+
+			if (optionalCategory.isPresent()){
+				response = ResponseEntity.ok(optionalCategory.get());
+			}
+			else{
+				response = ResponseEntity.noContent().build();
+			}
+
+			return response;
+		}
+		catch(Exception e){
 			return ResponseEntity.unprocessableEntity().build();
 		}
 	}

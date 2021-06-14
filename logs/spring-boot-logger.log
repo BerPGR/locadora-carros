@@ -470,3 +470,9 @@
 14-06-2021 08:30:49 | CarController:139 [ DEBUG ]  :  O tempo de execução foi de 8 ms
 14-06-2021 08:30:50 | CarController:118 [ INFO ]  :  [ GET ] => { /car/random }
 14-06-2021 08:30:50 | CarController:139 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+14-06-2021 10:18:15 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 2508 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+14-06-2021 10:18:15 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+14-06-2021 10:18:15 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+14-06-2021 10:18:25 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 14.223 seconds (JVM running for 16.526)
+14-06-2021 10:18:58 | CategoryController:88 [ INFO ]  :  [ GET ] => { /category/{id} }
+14-06-2021 10:18:58 | CategoryController:106 [ DEBUG ]  :  O tempo de execução foi de 111 ms.

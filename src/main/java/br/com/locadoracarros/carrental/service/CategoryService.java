@@ -11,6 +11,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -30,6 +31,9 @@ public class CategoryService {
 		return this.categoryRepository.findById(id);
 	}
 
+	public List<Category> getAll(){
+		return (List<Category>) this.categoryRepository.findAll();
+	}
 
 	public Page<Category> getAll(int page, int size, String sort, String q, String attribute) {
 
