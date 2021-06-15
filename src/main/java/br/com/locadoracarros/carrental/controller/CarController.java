@@ -15,6 +15,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.Random;
@@ -109,8 +110,6 @@ public class CarController {
 	@ApiResponses({
 			@ApiResponse(code = 204, message = "Carro randômico gerado!")
 	})
-	/*@GetMapping("/{id}")
-	public ResponseEntity<Car> getCar(@PathVariable("id") int id)*/
 	@GetMapping("/random")
 	public ResponseEntity<Car> getRandomCar(){
 
@@ -147,16 +146,36 @@ public class CarController {
 	}
 
 	//GetMapping taking only the brands
-	/*@ResponseStatus(HttpStatus.NOT_FOUND)
+	@ResponseStatus(HttpStatus.NOT_FOUND)
 	@ApiOperation(value = "Faz uma listagem de marcas", notes = "Faz uma listagem de marcas")
 	@ApiResponses({
 			@ApiResponse(code = 204, message = "Listagem feita com sucesso.")
 	})
-	@GetMapping
-	public ResponseEntity<Car> getListBrands(Car car){
+	@GetMapping("/brands")
+	public ResponseEntity<List<String>> getListBrands(){
 
+		ResponseEntity response;
+		logger.info("[ GET ] => { " + endPoint + "/brands }");
+		long start = System.currentTimeMillis();
 
-	}*/
+		try{
+			List<String> carBrandList = new ArrayList<>(); //this.carService.getCarBrands();
+			if (carBrandList.size() > 0) {
+				response = ResponseEntity.ok(carBrandList);
+			} else  {
+				response = ResponseEntity.noContent().build();
+			}
+		}
+		catch(Exception e){
+
+			return ResponseEntity.unprocessableEntity().build();
+		}
+
+		long end = System.currentTimeMillis();
+		logger.debug("O tempo de execução foi de " + (end-start) + " ms");
+		return response;
+
+	}
 
 	// Operation PostMapping
 	@ResponseStatus(HttpStatus.CREATED)

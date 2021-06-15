@@ -24,9 +24,9 @@ public interface CarRepository extends PagingAndSortingRepository<Car, Integer> 
 
 	@Query(value = "SELECT * FROM car  "
 			+ "WHERE lower(model) like :query ", nativeQuery = true)
-	public Page<Car> findCars(@Param("query") String query, Pageable pageable);
+	Page<Car> findCars(@Param("query") String query, Pageable pageable);
 
 	@Query(value = "SELECT Distinct brand FROM car", nativeQuery = true)
-	public List<String> listBrandsDistint();
+	List<String> listBrandsDistint();
 
 }
