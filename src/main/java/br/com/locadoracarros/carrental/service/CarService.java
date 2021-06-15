@@ -8,6 +8,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 import br.com.locadoracarros.carrental.entities.Car;
 
@@ -27,13 +28,9 @@ public class CarService {
 		return this.carRepository.save(car);
 	}
 
-	public Optional<Car> getCarBrands(int id) {
-		List<CarBrandVO> carBrandVOList = new ArrayList<>();
-		for (String s : carRepository.listBrandsDistint()) {
-			carBrandVOList.add(new CarBrandVO(s));
-		}
+	public List<String> getCarBrands() {
 
-		return this.carRepository.findById(id);
+		return carRepository.listBrandsDistint();
 	}
 
 	public Optional<Car> getCar(int id) {
@@ -76,5 +73,9 @@ public class CarService {
 
 			throw new NotFoundException("Objeto sendo editado inexistente");
 		}
+	}
+
+	public List<Car> getAll() {
+		return (List<Car>) this.carRepository.findAll();
 	}
 }

@@ -19,6 +19,9 @@ public interface CarRepository extends PagingAndSortingRepository<Car, Integer> 
 
 	Page<Car> findById(int id, Pageable pageable);
 
+	@Query(value = "SELECT count(*) FROM car", nativeQuery = true)
+	int getCountCars();
+
 	@Override
 	Optional<Car> findById(Integer integer);
 
