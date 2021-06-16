@@ -17,13 +17,13 @@ public class Client {
 	@ApiModelProperty(notes = "Identificador único de cliente", required = true)
 	private int id;
 
-	@ApiModelProperty(notes = "Nome do cliente", required = true)
+	@ApiModelProperty(notes = "Nome do cliente")
 	private String name;
 
-	@ApiModelProperty(notes = "Idade do cliente", required = true)
+	@ApiModelProperty(notes = "Idade do cliente")
 	private int age;
 
-	@ApiModelProperty(notes = "Sexo do cliente", required = true)
+	@ApiModelProperty(notes = "Sexo do cliente")
 	private String gender;
 
 	//Unique in CPF

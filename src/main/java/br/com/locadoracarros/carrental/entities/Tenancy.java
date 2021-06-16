@@ -98,4 +98,5 @@ public class Tenancy {
 		}
 		this.lastDate = lastDate;
 	}
+
 }

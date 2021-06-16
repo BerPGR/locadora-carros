@@ -1,12 +1,366 @@
-15-06-2021 08:31:03 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 2924 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
-15-06-2021 08:31:03 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
-15-06-2021 08:31:03 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
-15-06-2021 08:31:14 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 12.419 seconds (JVM running for 15.596)
-15-06-2021 08:31:59 | CarController:159 [ INFO ]  :  [ GET ] => { /car/brands }
-15-06-2021 08:31:59 | CarController:176 [ DEBUG ]  :  O tempo de execução foi de 117 ms
-15-06-2021 08:32:53 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 3128 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
-15-06-2021 08:32:53 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
-15-06-2021 08:32:53 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
-15-06-2021 08:33:04 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 12.283 seconds (JVM running for 14.509)
-15-06-2021 08:33:21 | CarController:160 [ INFO ]  :  [ GET ] => { /car/brands }
-15-06-2021 08:33:21 | CarController:177 [ DEBUG ]  :  O tempo de execução foi de 8 ms
+16-06-2021 08:51:03 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 1460 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+16-06-2021 08:51:03 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+16-06-2021 08:51:03 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+16-06-2021 08:51:13 | SpringApplication:871 [ ERROR ]  :  Application run failedorg.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/C:/Users/bemel/.m2/repository/io/springfox/springfox-spring-web/2.6.1/springfox-spring-web-2.6.1.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/C:/Users/bemel/.m2/repository/io/springfox/springfox-spring-web/2.6.1/springfox-spring-web-2.6.1.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'tenancyController' method 
+br.com.locadoracarros.carrental.controller.TenancyController#getTenancyByCar(Car, Tenancy)
+to {GET [/tenancy]}: There is already 'tenancyController' bean method
+br.com.locadoracarros.carrental.controller.TenancyController#getTenancyByClient(Client, Tenancy) mapped.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1354)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:782)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:774)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:339)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1340)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1329)
+	at br.com.locadoracarros.carrental.CarRentalApplication.main(CarRentalApplication.java:18)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/C:/Users/bemel/.m2/repository/io/springfox/springfox-spring-web/2.6.1/springfox-spring-web-2.6.1.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'tenancyController' method 
+br.com.locadoracarros.carrental.controller.TenancyController#getTenancyByCar(Car, Tenancy)
+to {GET [/tenancy]}: There is already 'tenancyController' bean method
+br.com.locadoracarros.carrental.controller.TenancyController#getTenancyByClient(Client, Tenancy) mapped.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1354)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1598)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1562)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1451)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'tenancyController' method 
+br.com.locadoracarros.carrental.controller.TenancyController#getTenancyByCar(Car, Tenancy)
+to {GET [/tenancy]}: There is already 'tenancyController' bean method
+br.com.locadoracarros.carrental.controller.TenancyController#getTenancyByClient(Client, Tenancy) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1598)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1562)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1451)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 42 common frames omitted
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'tenancyController' method 
+br.com.locadoracarros.carrental.controller.TenancyController#getTenancyByCar(Car, Tenancy)
+to {GET [/tenancy]}: There is already 'tenancyController' bean method
+br.com.locadoracarros.carrental.controller.TenancyController#getTenancyByClient(Client, Tenancy) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:662)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:628)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:328)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:395)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:298)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:296)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:265)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:224)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:212)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:206)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 56 common frames omitted
+
+16-06-2021 08:52:24 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 4428 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+16-06-2021 08:52:24 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+16-06-2021 08:52:24 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+16-06-2021 08:52:34 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 10.27 seconds (JVM running for 12.607)
+16-06-2021 08:53:28 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 8580 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+16-06-2021 08:53:28 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+16-06-2021 08:53:28 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+16-06-2021 08:53:37 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 9.281 seconds (JVM running for 11.078)
+16-06-2021 08:54:55 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 10900 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+16-06-2021 08:54:55 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+16-06-2021 08:54:55 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+16-06-2021 08:55:04 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 9.547 seconds (JVM running for 11.782)
+16-06-2021 08:57:24 | TenancyController:122 [ INFO ]  :  [ GET ] => { /tenancy/random }
+16-06-2021 08:57:25 | TenancyController:143 [ DEBUG ]  :  O tempo de execução foi de 350 ms
+16-06-2021 09:01:28 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 2476 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+16-06-2021 09:01:28 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+16-06-2021 09:01:28 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+16-06-2021 09:01:38 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 10.955 seconds (JVM running for 12.742)
+16-06-2021 09:03:01 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 3700 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+16-06-2021 09:03:01 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+16-06-2021 09:03:01 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+16-06-2021 09:03:10 | TenancyController:122 [ INFO ]  :  [ GET ] => { /tenancy/random }
+16-06-2021 09:03:10 | TenancyController:143 [ DEBUG ]  :  O tempo de execução foi de 483 ms
+16-06-2021 09:03:11 | TenancyController:122 [ INFO ]  :  [ GET ] => { /tenancy/random }
+16-06-2021 09:03:11 | TenancyController:143 [ DEBUG ]  :  O tempo de execução foi de 16 ms
+16-06-2021 09:03:11 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 11.179 seconds (JVM running for 13.092)
+16-06-2021 09:03:24 | TenancyController:122 [ INFO ]  :  [ GET ] => { /tenancy/random }
+16-06-2021 09:03:24 | TenancyController:143 [ DEBUG ]  :  O tempo de execução foi de 11 ms
+16-06-2021 09:03:59 | TenancyController:291 [ INFO ]  :  [ GET ] => { /tenancy }
+16-06-2021 09:03:59 | TenancyController:304 [ DEBUG ]  :  O tempo de execução foi de 7 ms
+16-06-2021 09:04:25 | TenancyController:291 [ INFO ]  :  [ GET ] => { /tenancy }
+16-06-2021 09:04:25 | TenancyController:304 [ DEBUG ]  :  O tempo de execução foi de 4 ms
+16-06-2021 09:06:58 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 9264 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+16-06-2021 09:06:58 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+16-06-2021 09:06:59 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+16-06-2021 09:07:09 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 11.851 seconds (JVM running for 14.419)
+16-06-2021 09:07:24 | TenancyController:128 [ INFO ]  :  [ GET ] => { /tenancy/random }
+16-06-2021 09:07:24 | TenancyController:149 [ DEBUG ]  :  O tempo de execução foi de 208 ms
+16-06-2021 09:07:46 | TenancyController:297 [ INFO ]  :  [ GET ] => { /tenancy }
+16-06-2021 09:07:46 | TenancyController:310 [ DEBUG ]  :  O tempo de execução foi de 5 ms
+16-06-2021 09:09:39 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 2064 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+16-06-2021 09:09:39 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+16-06-2021 09:09:39 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+16-06-2021 09:09:48 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 9.606 seconds (JVM running for 11.432)
+16-06-2021 09:09:57 | TenancyController:128 [ INFO ]  :  [ GET ] => { /tenancy/random }
+16-06-2021 09:09:57 | TenancyController:149 [ DEBUG ]  :  O tempo de execução foi de 244 ms
+16-06-2021 09:10:32 | TenancyController:297 [ INFO ]  :  [ GET ] => { /tenancy }
+16-06-2021 09:10:32 | TenancyController:310 [ DEBUG ]  :  O tempo de execução foi de 7 ms
+16-06-2021 09:14:03 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 4264 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+16-06-2021 09:14:03 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+16-06-2021 09:14:03 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+16-06-2021 09:14:12 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 10.067 seconds (JVM running for 11.651)
+16-06-2021 09:15:16 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 4388 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+16-06-2021 09:15:16 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+16-06-2021 09:15:16 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+16-06-2021 09:15:26 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 11.583 seconds (JVM running for 13.211)
+16-06-2021 09:16:01 | TenancyController:128 [ INFO ]  :  [ GET ] => { /tenancy/random }
+16-06-2021 09:16:01 | TenancyController:149 [ DEBUG ]  :  O tempo de execução foi de 282 ms
+16-06-2021 09:28:14 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 3512 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+16-06-2021 09:28:14 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+16-06-2021 09:28:14 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+16-06-2021 09:28:26 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 13.177 seconds (JVM running for 15.167)
+16-06-2021 09:31:18 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 5712 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+16-06-2021 09:31:18 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+16-06-2021 09:31:18 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+16-06-2021 09:31:30 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 12.947 seconds (JVM running for 14.782)
+16-06-2021 09:32:03 | TenancyController:128 [ INFO ]  :  [ GET ] => { /tenancy/random }
+16-06-2021 09:32:03 | TenancyController:149 [ DEBUG ]  :  O tempo de execução foi de 258 ms
+16-06-2021 09:43:07 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 4140 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+16-06-2021 09:43:07 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+16-06-2021 09:43:07 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+16-06-2021 09:43:18 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 11.987 seconds (JVM running for 13.589)
+16-06-2021 09:45:37 | TenancyController:95 [ INFO ]  :  [ GET ] => { /tenancy/{id} }
+16-06-2021 09:45:37 | TenancyController:108 [ DEBUG ]  :  O tempo de execução foi de 48 ms
+16-06-2021 10:13:17 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 6256 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+16-06-2021 10:13:17 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+16-06-2021 10:13:17 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+16-06-2021 10:13:25 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 9.238 seconds (JVM running for 11.783)
+16-06-2021 10:13:38 | TenancyController:78 [ INFO ]  :  [ GET ] => { /tenancy }
+16-06-2021 10:13:38 | TenancyController:81 [ DEBUG ]  :  O tempo de execução foi de 1 ms
+16-06-2021 10:15:11 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 3176 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+16-06-2021 10:15:11 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+16-06-2021 10:15:11 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+16-06-2021 10:15:19 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 8.791 seconds (JVM running for 10.406)
+16-06-2021 10:15:34 | TenancyController:95 [ INFO ]  :  [ GET ] => { /tenancy/{id} }
+16-06-2021 10:15:34 | SqlExceptionHelper:142 [ ERROR ]  :  ERROR: column tenancy0_.totalprice does not exist
+  Posição: 184
+16-06-2021 10:15:34 | TenancyController:112 [ ERROR ]  :  could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+16-06-2021 10:15:39 | TenancyController:95 [ INFO ]  :  [ GET ] => { /tenancy/{id} }
+16-06-2021 10:15:39 | SqlExceptionHelper:142 [ ERROR ]  :  ERROR: column tenancy0_.totalprice does not exist
+  Posição: 184
+16-06-2021 10:15:39 | TenancyController:112 [ ERROR ]  :  could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+16-06-2021 10:15:42 | TenancyController:95 [ INFO ]  :  [ GET ] => { /tenancy/{id} }
+16-06-2021 10:15:42 | SqlExceptionHelper:142 [ ERROR ]  :  ERROR: column tenancy0_.totalprice does not exist
+  Posição: 184
+16-06-2021 10:15:42 | TenancyController:112 [ ERROR ]  :  could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+16-06-2021 10:16:33 | TenancyController:95 [ INFO ]  :  [ GET ] => { /tenancy/{id} }
+16-06-2021 10:16:33 | SqlExceptionHelper:142 [ ERROR ]  :  ERROR: column tenancy0_.totalprice does not exist
+  Posição: 184
+16-06-2021 10:16:33 | TenancyController:112 [ ERROR ]  :  could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+16-06-2021 10:16:40 | TenancyController:78 [ INFO ]  :  [ GET ] => { /tenancy }
+16-06-2021 10:16:40 | TenancyController:81 [ DEBUG ]  :  O tempo de execução foi de 0 ms
+16-06-2021 10:16:40 | SqlExceptionHelper:142 [ ERROR ]  :  ERROR: column tenancy0_.totalprice does not exist
+  Posição: 174
+16-06-2021 10:16:40 | [dispatcherServlet]:175 [ ERROR ]  :  Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet] with root causeorg.postgresql.util.PSQLException: ERROR: column tenancy0_.totalprice does not exist
+  Posição: 174
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:57)
+	at org.hibernate.loader.Loader.getResultSet(Loader.java:2303)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:2056)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:2018)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:948)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:349)
+	at org.hibernate.loader.Loader.doList(Loader.java:2849)
+	at org.hibernate.loader.Loader.doList(Loader.java:2831)
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2663)
+	at org.hibernate.loader.Loader.list(Loader.java:2658)
+	at org.hibernate.loader.hql.QueryLoader.list(QueryLoader.java:506)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.list(QueryTranslatorImpl.java:400)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.performList(HQLQueryPlan.java:219)
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1414)
+	at org.hibernate.query.internal.AbstractProducedQuery.doList(AbstractProducedQuery.java:1625)
+	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1593)
+	at org.hibernate.query.Query.getResultList(Query.java:165)
+	at org.hibernate.query.criteria.internal.compile.CriteriaQueryTypeQueryAdapter.getResultList(CriteriaQueryTypeQueryAdapter.java:76)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.readPage(SimpleJpaRepository.java:640)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:446)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:411)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:524)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:531)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:156)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:131)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:80)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at com.sun.proxy.$Proxy112.findAll(Unknown Source)
+	at br.com.locadoracarros.carrental.service.TenancyService.getAll(TenancyService.java:76)
+	at br.com.locadoracarros.carrental.controller.TenancyController.getAllTenancies(TenancyController.java:83)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+16-06-2021 10:18:31 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 12076 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+16-06-2021 10:18:31 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+16-06-2021 10:18:31 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+16-06-2021 10:18:39 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 9.285 seconds (JVM running for 10.82)
+16-06-2021 10:18:46 | TenancyController:78 [ INFO ]  :  [ GET ] => { /tenancy }
+16-06-2021 10:18:46 | TenancyController:81 [ DEBUG ]  :  O tempo de execução foi de 2 ms
+16-06-2021 10:18:51 | TenancyController:95 [ INFO ]  :  [ GET ] => { /tenancy/{id} }
+16-06-2021 10:18:51 | TenancyController:108 [ DEBUG ]  :  O tempo de execução foi de 7 ms
+16-06-2021 10:31:39 | TenancyController:95 [ INFO ]  :  [ GET ] => { /tenancy/{id} }
+16-06-2021 10:31:39 | TenancyController:108 [ DEBUG ]  :  O tempo de execução foi de 3 ms
+16-06-2021 10:37:43 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 5608 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+16-06-2021 10:37:43 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+16-06-2021 10:37:43 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+16-06-2021 10:37:52 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 9.721 seconds (JVM running for 11.181)
+16-06-2021 10:38:06 | TenancyController:297 [ INFO ]  :  [ GET ] => { /tenancy/client }
+16-06-2021 10:38:06 | TenancyController:310 [ DEBUG ]  :  O tempo de execução foi de 1 ms
+16-06-2021 10:38:11 | TenancyController:297 [ INFO ]  :  [ GET ] => { /tenancy/client }
+16-06-2021 10:38:11 | TenancyController:310 [ DEBUG ]  :  O tempo de execução foi de 0 ms
+16-06-2021 10:38:51 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 9868 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+16-06-2021 10:38:51 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+16-06-2021 10:38:51 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+16-06-2021 10:39:00 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 9.067 seconds (JVM running for 10.733)
+16-06-2021 10:39:09 | TenancyController:297 [ INFO ]  :  [ GET ] => { /tenancy/client }
+16-06-2021 10:39:09 | TenancyController:314 [ ERROR ]  :  Named parameter not bound : query; nested exception is org.hibernate.QueryException: Named parameter not bound : query
+16-06-2021 10:39:18 | TenancyController:297 [ INFO ]  :  [ GET ] => { /tenancy/client }
+16-06-2021 10:39:18 | TenancyController:314 [ ERROR ]  :  Named parameter not bound : query; nested exception is org.hibernate.QueryException: Named parameter not bound : query
+16-06-2021 10:40:22 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 12160 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+16-06-2021 10:40:22 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+16-06-2021 10:40:22 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+16-06-2021 10:40:30 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 8.897 seconds (JVM running for 10.349)
+16-06-2021 10:40:45 | TenancyController:297 [ INFO ]  :  [ GET ] => { /tenancy/client }
+16-06-2021 10:40:45 | SqlExceptionHelper:142 [ ERROR ]  :  ERROR: column "integer" does not exist
+  Posição: 41
+16-06-2021 10:40:45 | TenancyController:314 [ ERROR ]  :  could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+16-06-2021 10:43:55 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 8316 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+16-06-2021 10:43:55 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+16-06-2021 10:43:55 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+16-06-2021 10:44:03 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 8.932 seconds (JVM running for 10.614)
+16-06-2021 10:44:17 | TenancyController:297 [ INFO ]  :  [ GET ] => { /tenancy/client }
+16-06-2021 10:44:17 | SqlExceptionHelper:142 [ ERROR ]  :  A nome da coluna id não foi encontrado neste ResultSet.
+16-06-2021 10:44:17 | TenancyController:314 [ ERROR ]  :  could not execute query; SQL [SELECT client_id FROM tenancy]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute query
+16-06-2021 10:58:15 | CarRentalApplication:55 [ INFO ]  :  Starting CarRentalApplication using Java 11.0.7 on DESKTOP-UMS8CR0 with PID 10128 (C:\temp\ws-intelliJ\car-rental\target\classes started by bemel in C:\temp\ws-intelliJ\car-rental)
+16-06-2021 10:58:15 | CarRentalApplication:56 [ DEBUG ]  :  Running with Spring Boot v2.4.5, Spring v5.3.6
+16-06-2021 10:58:15 | CarRentalApplication:675 [ INFO ]  :  No active profile set, falling back to default profiles: default
+16-06-2021 10:58:23 | CarRentalApplication:61 [ INFO ]  :  Started CarRentalApplication in 8.824 seconds (JVM running for 10.213)
+16-06-2021 10:58:42 | TenancyController:296 [ INFO ]  :  [ GET ] => { /tenancy/client }
+16-06-2021 10:58:42 | TenancyController:308 [ DEBUG ]  :  O tempo de execução foi de 67 ms
+16-06-2021 10:58:50 | TenancyController:296 [ INFO ]  :  [ GET ] => { /tenancy/client }
+16-06-2021 10:58:50 | TenancyController:308 [ DEBUG ]  :  O tempo de execução foi de 2 ms
+16-06-2021 10:58:53 | TenancyController:296 [ INFO ]  :  [ GET ] => { /tenancy/client }
+16-06-2021 10:58:53 | TenancyController:308 [ DEBUG ]  :  O tempo de execução foi de 2 ms
+16-06-2021 10:58:58 | TenancyController:296 [ INFO ]  :  [ GET ] => { /tenancy/client }
+16-06-2021 10:58:58 | TenancyController:308 [ DEBUG ]  :  O tempo de execução foi de 2 ms
