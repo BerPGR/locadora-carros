@@ -1,5 +1,7 @@
 package br.com.locadoracarros.carrental.repository;
 
+import br.com.locadoracarros.carrental.entities.Car;
+import br.com.locadoracarros.carrental.entities.Client;
 import br.com.locadoracarros.carrental.entities.Tenancy;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -19,6 +21,10 @@ public interface TenancyRepository extends PagingAndSortingRepository<Tenancy, I
 	Page<Tenancy> findAll (Pageable pageable);
 
 	Page<Tenancy> findById (int id, Pageable pageable );
+
+	List<Tenancy> findByClient (Client client);
+
+	List<Tenancy> findByClient (Car car);
 
 	Optional<Tenancy> findById (Integer integer);
 

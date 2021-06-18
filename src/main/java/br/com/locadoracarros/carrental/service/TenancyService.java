@@ -53,6 +53,14 @@ public class TenancyService {
 		return this.tenancyRepository.findById(id);
 	}
 
+	public List<Tenancy> findByClient (int id){
+		return this.findByClient(id);
+	}
+
+	public List<Tenancy> findByCar (int id){
+		return this.findByCar(id);
+	}
+
 	public List<Tenancy> getAll(){
 		return (List<Tenancy>) this.tenancyRepository.findAll();
 	}

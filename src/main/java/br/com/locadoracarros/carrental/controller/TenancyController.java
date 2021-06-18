@@ -155,6 +155,88 @@ public class TenancyController {
 		}
 	}
 
+	//GetMapping taking client
+	//TODO operation get by client
+	@ResponseStatus(HttpStatus.NOT_FOUND)
+	@ApiOperation(value = "Obtém uma locação por cliente", notes = "Obtém uma locação por cliente")
+	@ApiResponses({
+			@ApiResponse(code = 204, message = "Locação por cliente obtida com sucesso.")
+	})
+	@GetMapping("/client/{id}")
+	public ResponseEntity<List<Tenancy>> getTenancyByClient(@PathVariable("id") int id){
+
+		ResponseEntity response;
+		logger.info("[ GET ] => { " + endPoint + "/client }");
+		long start = System.currentTimeMillis();
+
+		try{
+			List<Tenancy> clientTenancy = this.tenancyService.findByClient(id);
+
+			Optional<Tenancy> optionalTenancy = Optional.empty();
+
+			if (clientTenancy.size() >0){
+				optionalTenancy = Optional.of(clientTenancy.get(id));
+			}
+			if (optionalTenancy.isPresent()){
+				response = ResponseEntity.ok(optionalTenancy.get());
+			}
+			else{
+				response = ResponseEntity.noContent().build();
+			}
+
+			long end = System.currentTimeMillis();
+			logger.debug("O tempo de execução foi de " + (end-start) + " ms");
+			return response;
+		}
+		catch(Exception e){
+			logger.error(e.getMessage());
+			e.printStackTrace();
+			return ResponseEntity.unprocessableEntity().build();
+		}
+	}
+
+	//todo fix the 2 getmappings below cause they're wrong af
+
+	//GetMapping taking car
+	//TODO operation get by car
+	@ResponseStatus(HttpStatus.NOT_FOUND)
+	@ApiOperation(value = "Obtém uma locação por carro", notes = "Obtém uma locação por carro")
+	@ApiResponses({
+			@ApiResponse(code = 204, message = "Locação por carro obtida com sucesso.")
+	})
+	@GetMapping("/car/{id}")
+	public ResponseEntity<Tenancy> getTenancyByCar(@PathVariable("id") int id){
+
+		ResponseEntity response;
+		logger.info("[ GET ] => { " + endPoint + "/car }");
+		long start = System.currentTimeMillis();
+		try{
+			List<Tenancy> carTenancy = this.tenancyService.findByCar(id);
+
+			Optional<Tenancy> optionalTenancy = Optional.empty();
+
+			if(carTenancy.size() > 0){
+				optionalTenancy = Optional.of(carTenancy.get(id));
+			}
+
+			if (optionalTenancy.isPresent()){
+				response = ResponseEntity.ok(optionalTenancy.get());
+			}
+			else{
+				response = ResponseEntity.noContent().build();
+			}
+
+			long end = System.currentTimeMillis();
+			logger.debug("O tempo de execução foi de " + (end-start) + " ms");
+			return response;
+		}
+		catch(Exception e){
+			logger.error(e.getMessage());
+			e.printStackTrace();
+			return ResponseEntity.unprocessableEntity().build();
+		}
+	}
+
 	// Operation PostMapping in TenancyController
 	@ResponseStatus(HttpStatus.CREATED)
 	@ApiOperation(value = "Adiciona uma locação.", notes = "Adiciona uma locação.", response = Tenancy.class)
@@ -248,70 +330,4 @@ public class TenancyController {
 		}
 	}
 
-	//GetMapping taking car
-	//TODO operation get by car
-/*	@ResponseStatus(HttpStatus.NOT_FOUND)
-	@ApiOperation(value = "Obtém uma locação por carro", notes = "Obtém uma locação por carro")
-	@ApiResponses({
-			@ApiResponse(code = 204, message = "Locação por carro obtida com sucesso.")
-	})
-	@GetMapping("/car")
-	public ResponseEntity<Tenancy> getTenancyByCar(Car car){
-
-		ResponseEntity response;
-		logger.info("[ GET ] => { " + endPoint + "/car }");
-		long start = System.currentTimeMillis();
-		try{
-			Optional<Tenancy> optionalTenancy = this.tenancyService.getTenancy(car.getId());
-
-			if (optionalTenancy.isPresent()){
-				response = ResponseEntity.ok(optionalTenancy.get());
-			}
-			else{
-				response = ResponseEntity.noContent().build();
-			}
-
-			long end = System.currentTimeMillis();
-			logger.debug("O tempo de execução foi de " + (end-start) + " ms");
-			return response;
-		}
-		catch(Exception e){
-			logger.error(e.getMessage());
-			e.printStackTrace();
-			return ResponseEntity.unprocessableEntity().build();
-		}
-	}*/
-
-	//GetMapping taking client
-	//TODO operation get by client
-	@ResponseStatus(HttpStatus.NOT_FOUND)
-	@ApiOperation(value = "Obtém uma locação por cliente", notes = "Obtém uma locação por cliente")
-	@ApiResponses({
-			@ApiResponse(code = 204, message = "Locação por cliente obtida com sucesso.")
-	})
-	@GetMapping("/client")
-	public ResponseEntity<Tenancy> getTenancyByClient(Client client){
-
-		ResponseEntity response;
-		logger.info("[ GET ] => { " + endPoint + "/client }");
-		long start = System.currentTimeMillis();
-		try{
-			Optional<Tenancy> optionalTenancy = this.tenancyService.getTenancy(client.getId());
-
-			if (optionalTenancy.isPresent()){
-				response = ResponseEntity.ok(optionalTenancy.get());
-			}
-			else{
-				response = ResponseEntity.noContent().build();
-			}
-			long end = System.currentTimeMillis();
-			logger.debug("O tempo de execução foi de " + (end-start) + " ms");
-			return response;
-		}
-		catch(Exception e){
-			logger.error(e.getMessage());
-			e.printStackTrace();
-			return ResponseEntity.unprocessableEntity().build();
-		}
-	}
 }

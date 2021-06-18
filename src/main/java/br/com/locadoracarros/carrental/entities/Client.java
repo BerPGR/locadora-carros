@@ -17,24 +17,24 @@ public class Client {
 	@ApiModelProperty(notes = "Identificador único de cliente", required = true)
 	private int id;
 
-	@ApiModelProperty(notes = "Nome do cliente")
+	@ApiModelProperty(notes = "Nome do cliente", required = true)
 	private String name;
 
-	@ApiModelProperty(notes = "Idade do cliente")
+	@ApiModelProperty(notes = "Idade do cliente", required = true)
 	private int age;
 
-	@ApiModelProperty(notes = "Sexo do cliente")
+	@ApiModelProperty(notes = "Sexo do cliente", required = true)
 	private String gender;
 
 	//Unique in CPF
 	@Column(unique = true, nullable = false)
-	@ApiModelProperty(notes = "CPF do cliente")
+	@ApiModelProperty(notes = "CPF do cliente", required = true)
 	private String cpf;
 
-	@ApiModelProperty(notes = "Celular do cliente")
+	@ApiModelProperty(notes = "Celular do cliente", required = true)
 	private String number;
 
-	@ApiModelProperty(notes = "CNH do cleinte")
+	@ApiModelProperty(notes = "CNH do cleinte", required = true)
 	private String cnh;
 
 
