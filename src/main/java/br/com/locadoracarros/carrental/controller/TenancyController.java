@@ -155,6 +155,14 @@ public class TenancyController {
 		}
 	}
 
+	/*
+	Maybe i fixed the last 2 Gets
+	but i'm not a 100% sure of it because
+    i can't access the Data Base from
+    my notebook, so i think when i update
+    the project in the computer, i can fix it
+	*/
+
 	//GetMapping taking client
 	//TODO operation get by client
 	@ResponseStatus(HttpStatus.NOT_FOUND)
@@ -165,6 +173,7 @@ public class TenancyController {
 	@GetMapping("/client/{id}")
 	public ResponseEntity<List<Tenancy>> getTenancyByClient(@PathVariable("id") int id){
 
+
 		ResponseEntity response;
 		logger.info("[ GET ] => { " + endPoint + "/client }");
 		long start = System.currentTimeMillis();
@@ -174,7 +183,7 @@ public class TenancyController {
 
 			Optional<Tenancy> optionalTenancy = Optional.empty();
 
-			if (clientTenancy.size() >0){
+			if (clientTenancy.size() > 0){
 				optionalTenancy = Optional.of(clientTenancy.get(id));
 			}
 			if (optionalTenancy.isPresent()){
@@ -194,8 +203,6 @@ public class TenancyController {
 			return ResponseEntity.unprocessableEntity().build();
 		}
 	}
-
-	//todo fix the 2 getmappings below cause they're wrong af
 
 	//GetMapping taking car
 	//TODO operation get by car

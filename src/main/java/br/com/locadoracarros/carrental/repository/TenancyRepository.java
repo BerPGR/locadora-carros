@@ -20,11 +20,11 @@ public interface TenancyRepository extends PagingAndSortingRepository<Tenancy, I
 
 	Page<Tenancy> findAll (Pageable pageable);
 
-	Page<Tenancy> findById (int id, Pageable pageable );
+	Page<Tenancy> findById (int id, Pageable pageable);
 
-	List<Tenancy> findByClient (Client client);
+	List<Tenancy> findByClient (int id);
 
-	List<Tenancy> findByClient (Car car);
+	List<Tenancy> findByCar (int id);
 
 	Optional<Tenancy> findById (Integer integer);
 

@@ -12,6 +12,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -53,12 +54,25 @@ public class TenancyService {
 		return this.tenancyRepository.findById(id);
 	}
 
+	//That's just a test for TenancyController
 	public List<Tenancy> findByClient (int id){
-		return this.findByClient(id);
+		List<Tenancy> findClientTenancies = new ArrayList<>();
+		for (Tenancy t : tenancyRepository.findAll()){
+			if(t.getClient().getId() == id) {
+				findClientTenancies.add(t);
+			}
+		}
+		return findClientTenancies;
 	}
 
 	public List<Tenancy> findByCar (int id){
-		return this.findByCar(id);
+		List<Tenancy> findCarTenancies = new ArrayList<>();
+		for(Tenancy t : tenancyRepository.findAll()){
+			if (t.getCar().getId() == id){
+				findCarTenancies.add(t);
+			}
+		}
+		return findCarTenancies;
 	}
 
 	public List<Tenancy> getAll(){
