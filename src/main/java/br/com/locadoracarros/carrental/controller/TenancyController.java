@@ -1,18 +1,14 @@
 package br.com.locadoracarros.carrental.controller;
 
-import br.com.locadoracarros.carrental.entities.Car;
-import br.com.locadoracarros.carrental.entities.Client;
 import br.com.locadoracarros.carrental.entities.Tenancy;
 import br.com.locadoracarros.carrental.service.CarService;
 import br.com.locadoracarros.carrental.service.ClientService;
 import br.com.locadoracarros.carrental.service.TenancyService;
-import com.fasterxml.jackson.databind.util.JSONPObject;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import javassist.NotFoundException;
 import org.json.JSONException;
-import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -155,14 +151,6 @@ public class TenancyController {
 		}
 	}
 
-	/*
-	Maybe i fixed the last 2 Gets
-	but i'm not a 100% sure of it because
-    i can't access the Data Base from
-    my notebook, so i think when i update
-    the project in the computer, i can fix it
-	*/
-
 	//GetMapping taking client
 	//TODO operation get by client
 	@ResponseStatus(HttpStatus.NOT_FOUND)
@@ -173,7 +161,6 @@ public class TenancyController {
 	@GetMapping("/client/{id}")
 	public ResponseEntity<List<Tenancy>> getTenancyByClient(@PathVariable("id") int id){
 
-
 		ResponseEntity response;
 		logger.info("[ GET ] => { " + endPoint + "/client }");
 		long start = System.currentTimeMillis();
@@ -181,17 +168,22 @@ public class TenancyController {
 		try{
 			List<Tenancy> clientTenancy = this.tenancyService.findByClient(id);
 
-			Optional<Tenancy> optionalTenancy = Optional.empty();
+			//Optional<Tenancy> optionalTenancy = Optional.empty();
 
 			if (clientTenancy.size() > 0){
-				optionalTenancy = Optional.of(clientTenancy.get(id));
-			}
-			if (optionalTenancy.isPresent()){
-				response = ResponseEntity.ok(optionalTenancy.get());
+				//optionalTenancy = Optional.of(clientTenancy.get(id));
+				response = ResponseEntity.ok(clientTenancy);
 			}
 			else{
 				response = ResponseEntity.noContent().build();
 			}
+
+			/*if (optionalTenancy.isPresent()){
+				response = ResponseEntity.ok(optionalTenancy.get());
+			}
+			else{
+				response = ResponseEntity.noContent().build();
+			}*/
 
 			long end = System.currentTimeMillis();
 			logger.debug("O tempo de execução foi de " + (end-start) + " ms");
@@ -220,18 +212,22 @@ public class TenancyController {
 		try{
 			List<Tenancy> carTenancy = this.tenancyService.findByCar(id);
 
-			Optional<Tenancy> optionalTenancy = Optional.empty();
+			//Optional<Tenancy> optionalTenancy = Optional.empty();
 
 			if(carTenancy.size() > 0){
-				optionalTenancy = Optional.of(carTenancy.get(id));
-			}
-
-			if (optionalTenancy.isPresent()){
-				response = ResponseEntity.ok(optionalTenancy.get());
+				//optionalTenancy = Optional.of(carTenancy.get(id));
+				response = ResponseEntity.ok(carTenancy);
 			}
 			else{
 				response = ResponseEntity.noContent().build();
 			}
+
+			/*if (optionalTenancy.isPresent()){
+				response = ResponseEntity.ok(optionalTenancy.get());
+			}
+			else{
+				response = ResponseEntity.noContent().build();
+			}*/
 
 			long end = System.currentTimeMillis();
 			logger.debug("O tempo de execução foi de " + (end-start) + " ms");
@@ -327,7 +323,6 @@ public class TenancyController {
 
 			long end = System.currentTimeMillis();
 			logger.debug("O tempo de execução foi de " + (end-start) + " ms");
-
 			return response;
 		}
 		catch(NotFoundException e){
