@@ -54,7 +54,6 @@ public class TenancyService {
 		return this.tenancyRepository.findById(id);
 	}
 
-	//That's just a test for TenancyController
 	public List<Tenancy> findByClient (int id){
 		List<Tenancy> findClientTenancies = new ArrayList<>();
 		for (Tenancy t : tenancyRepository.findAll()){
@@ -116,11 +115,12 @@ public class TenancyService {
 		}
 	}
 
-	/*public void processTenancy(Tenancy tenancy){
-		long t1 = tenancy.getFirstDate().getTime();
-		long t2 = tenancy.getLastDate().getTime();
-		int days = (int)(t2-t1) / 1000 / 60 / 60 / 24;
+	// Method to process payment and show how much tenant client has to pay
+	public void processPayment(Tenancy tenancy){
+		long first = tenancy.getFirstDate().getTime();
+		long last = tenancy.getLastDate().getTime();
+		int days = (int)(last-first) / 1000 / 60 / 60 / 24;
 
 		double basicPayment = tenancy.getCar().getCategory().getPricePerDay() * days;
-	}*/
+	}
 }
