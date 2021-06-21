@@ -3,10 +3,18 @@ package br.com.locadoracarros.carrental.entities;
 import br.com.locadoracarros.carrental.exceptions.DomainException;
 import com.sun.istack.NotNull;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 
+@Getter
+@Setter
 @Entity
+@Builder
+@NoArgsConstructor
 @Table(name = "car")
 public class Car {
 
@@ -32,22 +40,11 @@ public class Car {
 	@ApiModelProperty(notes = "Categoria do carro", required = true)
 	private Category category;
 
-
-	// constructor
-
-	public Car() {
-	}
-
 	public Car(String brand, String model, String licensePlate, Category category) {
 		this.setBrand(brand);
 		this.setModel(model);
 		this.setLicensePlate(licensePlate);
 		this.setCategory(category);
-	}
-
-	// getters and setters
-	public String getBrand() {
-		return brand;
 	}
 
 	// using DomainException to make validations
@@ -58,10 +55,6 @@ public class Car {
 		this.brand = brand;
 	}
 
-	public String getModel() {
-		return model;
-	}
-
 	public void setModel(String model) {
 		if(model.equals(null) || model.isEmpty()){
 			throw new DomainException("The car must have a model.");
@@ -69,31 +62,11 @@ public class Car {
 		this.model = model;
 	}
 
-	public String getLicensePlate() {
-		return licensePlate;
-	}
-
 	public void setLicensePlate(String licensePlate) {
 		if(licensePlate.equals(null) || licensePlate.isEmpty()){
 			throw new DomainException("The car must have a license plate.");
 		}
 		this.licensePlate = licensePlate;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public Category getCategory() {
-		return category;
-	}
-
-	public void setCategory(Category category) {
-		this.category = category;
 	}
 
 	@Override

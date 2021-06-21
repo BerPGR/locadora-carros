@@ -1,6 +1,5 @@
 package br.com.locadoracarros.carrental.controller;
 
-import br.com.locadoracarros.carrental.entities.Car;
 import br.com.locadoracarros.carrental.entities.Category;
 import br.com.locadoracarros.carrental.service.CategoryService;
 import io.swagger.annotations.ApiOperation;
@@ -33,7 +32,6 @@ public class CategoryController {
 	//autowired for CategoryService
 	@Autowired
 	CategoryService categoryService;
-
 
 	//first GetMapping
 	@ApiOperation(value = "Lista todas as categorias", notes = "Lista todas as categorias",
@@ -73,7 +71,6 @@ public class CategoryController {
 
 		return this.categoryService.getAll(page, size, sort, q, attribute);
 	}
-
 
 	//Operation GetMapping for one category based on ID
 	@ResponseStatus(HttpStatus.NO_CONTENT)
@@ -235,6 +232,4 @@ public class CategoryController {
 		}
 	}
 
-
-	//TODO make a GetMapping but taking a random category
 }

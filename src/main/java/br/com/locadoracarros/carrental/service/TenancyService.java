@@ -12,6 +12,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -116,11 +117,16 @@ public class TenancyService {
 		}
 	}
 
-	/*public void processTenancy(Tenancy tenancy){
+	/*
+	Operation to calculate the totalPayment
+	Validations will be donoe later
+	 */
+	public BigDecimal processTenancy(Tenancy tenancy){
 		long t1 = tenancy.getFirstDate().getTime();
 		long t2 = tenancy.getLastDate().getTime();
 		int days = (int)(t2-t1) / 1000 / 60 / 60 / 24;
 
 		double basicPayment = tenancy.getCar().getCategory().getPricePerDay() * days;
-	}*/
+		return new BigDecimal(basicPayment);
+	}
 }

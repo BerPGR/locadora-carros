@@ -227,8 +227,6 @@ public class ClientController {
 		}
 	}
 
-
-	//TODO make a GetMapping but taking a random Client
 }
 
 

@@ -3,10 +3,18 @@ package br.com.locadoracarros.carrental.entities;
 import br.com.locadoracarros.carrental.exceptions.DomainException;
 import com.sun.istack.NotNull;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 
+@Getter
+@Setter
 @Entity
+@Builder
+@NoArgsConstructor
 @Table(name = "client")
 public class Client {
 
@@ -26,7 +34,6 @@ public class Client {
 	@ApiModelProperty(notes = "Sexo do cliente", required = true)
 	private String gender;
 
-	//Unique in CPF
 	@Column(unique = true, nullable = false)
 	@ApiModelProperty(notes = "CPF do cliente", required = true)
 	private String cpf;
@@ -37,10 +44,6 @@ public class Client {
 	@ApiModelProperty(notes = "CNH do cleinte", required = true)
 	private String cnh;
 
-
-	public Client() {
-	}
-
 	public Client(int id, String name, int age, String gender, String cpf, String number, String cnh) {
 		this.setName(name);
 		this.setAge(age);
@@ -50,10 +53,6 @@ public class Client {
 		this.setCnh(cnh);
 	}
 
-	public String getName() {
-		return name;
-	}
-
 	public void setName(String name) {
 		if(name.equals(null) || name.isEmpty()){
 			throw new DomainException("Client must have a name");
@@ -61,27 +60,11 @@ public class Client {
 		this.name = name;
 	}
 
-	public int getAge() {
-		return age;
-	}
-
 	public void setAge(int age) {
 		if(age < 18){
 			throw new DomainException("Client must be over 18");
 		}
 		this.age = age;
-	}
-
-	public String getGender() {
-		return gender;
-	}
-
-	public void setGender(String gender) {
-		this.gender = gender;
-	}
-
-	public String getCpf() {
-		return cpf;
 	}
 
 	public void setCpf(String cpf) {
@@ -107,27 +90,11 @@ public class Client {
 				+ '}';
 	}
 
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getNumber() {
-		return number;
-	}
-
 	public void setNumber(String number) {
 		if(number.length() < 11 || number.isEmpty() || number.equals(null)){
 			throw new DomainException("That's not a valid cellphone number.");
 		}
 		this.number = number;
-	}
-
-	public String getCnh() {
-		return cnh;
 	}
 
 	public void setCnh(String cnh) {
