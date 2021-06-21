@@ -168,22 +168,14 @@ public class TenancyController {
 		try{
 			List<Tenancy> clientTenancy = this.tenancyService.findByClient(id);
 
-			//Optional<Tenancy> optionalTenancy = Optional.empty();
-
 			if (clientTenancy.size() > 0){
-				//optionalTenancy = Optional.of(clientTenancy.get(id));
+
 				response = ResponseEntity.ok(clientTenancy);
 			}
 			else{
-				response = ResponseEntity.noContent().build();
-			}
 
-			/*if (optionalTenancy.isPresent()){
-				response = ResponseEntity.ok(optionalTenancy.get());
-			}
-			else{
 				response = ResponseEntity.noContent().build();
-			}*/
+			}
 
 			long end = System.currentTimeMillis();
 			logger.debug("O tempo de execução foi de " + (end-start) + " ms");
@@ -212,22 +204,12 @@ public class TenancyController {
 		try{
 			List<Tenancy> carTenancy = this.tenancyService.findByCar(id);
 
-			//Optional<Tenancy> optionalTenancy = Optional.empty();
-
 			if(carTenancy.size() > 0){
-				//optionalTenancy = Optional.of(carTenancy.get(id));
 				response = ResponseEntity.ok(carTenancy);
 			}
 			else{
 				response = ResponseEntity.noContent().build();
 			}
-
-			/*if (optionalTenancy.isPresent()){
-				response = ResponseEntity.ok(optionalTenancy.get());
-			}
-			else{
-				response = ResponseEntity.noContent().build();
-			}*/
 
 			long end = System.currentTimeMillis();
 			logger.debug("O tempo de execução foi de " + (end-start) + " ms");
