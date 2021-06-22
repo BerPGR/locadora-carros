@@ -170,10 +170,7 @@ public class TenancyController {
 
 			if (clientTenancy.size() > 0){
 
-				List<Tenancy> list = new ArrayList<>();
-
-
-				response = ResponseEntity.ok(list);
+				response = ResponseEntity.ok(clientTenancy);
 			}
 			else{
 				response = ResponseEntity.noContent().build();
