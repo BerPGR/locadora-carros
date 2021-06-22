@@ -13,7 +13,6 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
-@Builder
 @NoArgsConstructor
 @Table(name = "category")
 public class Category {
@@ -29,9 +28,9 @@ public class Category {
 	private String carType;
 
 	@ApiModelProperty(notes = "Preço por dia de uma categoria")
-	private int pricePerDay;
+	private double pricePerDay;
 
-	public Category(int id, String carType, int pricePerDay){
+	public Category(int id, String carType, double pricePerDay){
 		this.setId(id);
 		this.setCarType(carType);
 		this.setPricePerDay(pricePerDay);

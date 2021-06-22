@@ -13,8 +13,6 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
-@Builder
-@NoArgsConstructor
 @Table(name = "client")
 public class Client {
 
@@ -43,6 +41,8 @@ public class Client {
 
 	@ApiModelProperty(notes = "CNH do cleinte", required = true)
 	private String cnh;
+
+	public Client(){}
 
 	public Client(int id, String name, int age, String gender, String cpf, String number, String cnh) {
 		this.setName(name);

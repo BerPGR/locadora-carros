@@ -18,6 +18,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.Random;
@@ -167,11 +168,12 @@ public class TenancyController {
 		try{
 			List<Tenancy> clientTenancy = this.tenancyService.findByClient(id);
 
-
-
 			if (clientTenancy.size() > 0){
 
-				response = ResponseEntity.ok(clientTenancy);
+				List<Tenancy> list = new ArrayList<>();
+
+
+				response = ResponseEntity.ok(list);
 			}
 			else{
 				response = ResponseEntity.noContent().build();

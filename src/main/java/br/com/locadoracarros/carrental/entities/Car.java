@@ -13,7 +13,6 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
-@Builder
 @NoArgsConstructor
 @Table(name = "car")
 public class Car {

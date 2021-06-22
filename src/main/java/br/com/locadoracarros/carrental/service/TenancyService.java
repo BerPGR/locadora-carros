@@ -13,8 +13,10 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Optional;
 
 @Service
@@ -119,14 +121,46 @@ public class TenancyService {
 
 	/*
 	Operation to calculate the totalPayment
-	Validations will be donoe later
+	Validations will be done later
 	 */
-	public BigDecimal processTenancy(Tenancy tenancy){
-		long t1 = tenancy.getFirstDate().getTime();
-		long t2 = tenancy.getLastDate().getTime();
-		int days = (int)(t2-t1) / 1000 / 60 / 60 / 24;
+	public Tenancy processTenancy(Tenancy tenancy){
+		long last = 0;
+		long first = 0;
+		final long DAY_IN_MS = 86400000L;
 
-		double basicPayment = tenancy.getCar().getCategory().getPricePerDay() * days;
-		return new BigDecimal(basicPayment);
+		if (tenancy.getFirstDate().getTime() > 0) {
+
+			first = tenancy.getFirstDate().getTime();
+		}
+
+		if (tenancy.getLastDate().getTime() > 0) {
+
+			last = tenancy.getLastDate().getTime();
+		}
+
+		int days = (int)((last - first) / DAY_IN_MS);
+
+		int diariaEmHoras = (int) (((last - first) - (days * DAY_IN_MS)) / 3600000L) + (days * 24);
+
+		if (diariaEmHoras < 24){
+
+			diariaEmHoras = 24;
+		}
+
+		double basicPayment = 0;
+
+		if (tenancy.getCar() != null){
+			if (tenancy.getCar().getCategory() != null){
+				if (tenancy.getCar().getCategory().getPricePerDay() > 0){
+
+					basicPayment = tenancy.getCar().getCategory().getPricePerDay() / 24 * diariaEmHoras;
+				}
+			}
+		}
+		NumberFormat df = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
+		String currencyString =  df.format(basicPayment).replaceAll("\\.", "").replaceAll(",", ".").substring(3);
+		basicPayment = Double.parseDouble(currencyString);
+		tenancy.setPayment(new BigDecimal(basicPayment));
+		return tenancy;
 	}
 }

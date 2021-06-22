@@ -16,7 +16,6 @@ import java.util.Date;
 @Getter
 @Setter
 @Entity
-@Builder
 @JsonFormat
 @NoArgsConstructor
 @Table(name = "tenancy")
