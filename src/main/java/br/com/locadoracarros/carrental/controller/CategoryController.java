@@ -2,6 +2,7 @@ package br.com.locadoracarros.carrental.controller;
 
 import br.com.locadoracarros.carrental.entities.Category;
 import br.com.locadoracarros.carrental.service.CategoryService;
+import br.com.locadoracarros.carrental.util.LoggerUtils;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
@@ -20,11 +21,11 @@ import java.util.Optional;
 import java.util.Random;
 
 @RestController
-@RequestMapping("/category")
+@RequestMapping(CategoryController.ENDPOINT)
 public class CategoryController {
 
 	//endpoint for CategoryController
-	private final String endPoint = "/category";
+	final static String ENDPOINT = "/category";
 
 	//logger for CategoryController
 	final Logger logger = LoggerFactory.getLogger(this.getClass());
@@ -60,16 +61,15 @@ public class CategoryController {
 			@RequestParam(
 					defaultValue = "carType",
 					value = "attribute",
-					required = false) String attribute)
-	{
-		//log in GetMapping
-		logger.info("[ GET ] => { " + endPoint + " } ");
+					required = false) String attribute) {
+		Page<Category> response;
+		logger.info(LoggerUtils.notificationEndpointRequested("GET", ENDPOINT));
 		long start = System.currentTimeMillis();
 
-		long end = System.currentTimeMillis();
-		logger.debug("O tempo de execução foi de " + (end-start) + " ms.");
+		response = this.categoryService.getAll(page, size, sort, q, attribute);
+		logger.debug(LoggerUtils.calculateExecutionTime(start));
 
-		return this.categoryService.getAll(page, size, sort, q, attribute);
+		return response;
 	}
 
 	//Operation GetMapping for one category based on ID
@@ -79,16 +79,15 @@ public class CategoryController {
 			@ApiResponse(code = 204, message = "Existe uma categoria")
 	})
 	@GetMapping("/{id}")
-	public ResponseEntity<Category> getCategory(@PathVariable("id") int id){
+	public ResponseEntity<Category> getCategory(@PathVariable("id") int id) {
 
-		//log in GetMapping by id
-		logger.info("[ GET ] => { " + endPoint + "/{id} }");
+		ResponseEntity<Category> response;
+		logger.info(LoggerUtils.notificationEndpointRequested("GET", ENDPOINT, "/{id}"));
 		long start = System.currentTimeMillis();
 
 		try {
 			Optional<Category> optionalCategory = this.categoryService.getCategory(id);
 
-			ResponseEntity response;
 			if (optionalCategory.isPresent()) {
 
 				response = ResponseEntity.ok(optionalCategory.get());
@@ -96,17 +95,14 @@ public class CategoryController {
 			} else {
 
 				response = ResponseEntity.noContent().build();
-
 			}
-			long end = System.currentTimeMillis();
-
-			logger.debug("O tempo de execução foi de " + (end-start) + " ms.");
-			return response;
 		} catch (Exception e) {
-			logger.error(e.getMessage());
-			e.printStackTrace();
-			return ResponseEntity.unprocessableEntity().build();
+			LoggerUtils.printStackTrace(e, true);
+			response = ResponseEntity.unprocessableEntity().build();
 		}
+
+		logger.debug(LoggerUtils.calculateExecutionTime(start));
+		return response;
 	}
 
 	//GetMapping taking a random category
@@ -116,64 +112,58 @@ public class CategoryController {
 			@ApiResponse(code = 204, message = "Categoria ranômica gerada!")
 	})
 	@GetMapping("/random")
-	public ResponseEntity<Category> getRandomCategory(){
+	public ResponseEntity<Category> getRandomCategory() {
 
-		ResponseEntity response;
-		logger.info("[ GET ] => { " + endPoint + "/random }");
+		ResponseEntity<Category> response;
+		logger.info(LoggerUtils.notificationEndpointRequested("GET", ENDPOINT, "/random"));
 		long start = System.currentTimeMillis();
 
-		try{
+		try {
 			List<Category> categoryList = this.categoryService.getAll();
 			Random randomId = new Random();
 			int nroRandom = randomId.nextInt(categoryList.size());
 			Optional<Category> optionalCategory = Optional.empty();
 
-			if (categoryList.size() > 0){
+			if (categoryList.size() > 0) {
 				optionalCategory = Optional.of(categoryList.get(nroRandom));
 			}
 
-			if (optionalCategory.isPresent()){
+			if (optionalCategory.isPresent()) {
 				response = ResponseEntity.ok(optionalCategory.get());
-			}
-			else{
+			} else {
 				response = ResponseEntity.noContent().build();
 			}
-			long end = System.currentTimeMillis();
-			logger.debug("O tempo de execução foi de " + (end-start) + " ms");
-			return response;
+		} catch (Exception e) {
+			LoggerUtils.printStackTrace(e, true);
+			response = ResponseEntity.unprocessableEntity().build();
 		}
-		catch(Exception e){
-			logger.error(e.getMessage());
-			return ResponseEntity.unprocessableEntity().build();
-		}
+
+		logger.debug(LoggerUtils.calculateExecutionTime(start));
+		return response;
 	}
 
 	//Operation postMapping to add categories
 	@ResponseStatus(HttpStatus.CREATED)
 	@ApiOperation(value = "Insere uma categoria", notes = "Insere uma caregoria", response = Category.class)
-	@ApiResponses(value ={
+	@ApiResponses(value = {
 			@ApiResponse(code = 204, message = "Categoria inserida com sucesso")
 	})
 	@PostMapping
-	public ResponseEntity<Category> addCategory(@RequestBody Category category){
+	public ResponseEntity<Category> addCategory(@RequestBody Category category) {
 
-		//log in PostMapping
-		logger.info("[ POST ] => { " + endPoint + " }");
+		ResponseEntity<Category> response;
+		logger.info(LoggerUtils.notificationEndpointRequested("POST", ENDPOINT));
 		long start = System.currentTimeMillis();
 
 		try {
-			ResponseEntity response = ResponseEntity.created(new URI(endPoint)).body(this.categoryService.save(category));
-
-			long end = System.currentTimeMillis();
-			logger.debug("O tempo de execução foi de " + (end-start) + " ms.");
-
-			return response;
+			response = ResponseEntity.created(new URI(ENDPOINT)).body(this.categoryService.save(category));
+		} catch (Exception e) {
+			LoggerUtils.printStackTrace(e, true);
+			response = ResponseEntity.unprocessableEntity().body(category);
 		}
-		catch (Exception e) {
-			logger.error(e.getMessage());
-			e.printStackTrace();
-			return ResponseEntity.unprocessableEntity().body(category);
-		}
+
+		logger.debug(LoggerUtils.calculateExecutionTime(start));
+		return response;
 	}
 
 	//Operation PutMapping to update a category
@@ -185,22 +175,19 @@ public class CategoryController {
 	@PutMapping
 	public ResponseEntity<Category> editCategory(@RequestBody Category category) {
 
-		//log in PutMapping
-		logger.info("[ PUT ] => { " + endPoint + " }");
+		ResponseEntity<Category> response;
+		logger.info(LoggerUtils.notificationEndpointRequested("PUT", ENDPOINT));
 		long start = System.currentTimeMillis();
 
 		try {
-			ResponseEntity response = ResponseEntity.ok(this.categoryService.updateCategory(category));
-
-			long end = System.currentTimeMillis();
-			logger.debug("O tempo de execução foi de " + (end-start) + " ms.");
-
-			return response;
+			response = ResponseEntity.ok(this.categoryService.updateCategory(category));
 		} catch (NotFoundException e) {
-			logger.error(e.getMessage());
-			e.printStackTrace();
-			return ResponseEntity.unprocessableEntity().body(category);
+			LoggerUtils.printStackTrace(e, true);
+			response = ResponseEntity.unprocessableEntity().body(category);
 		}
+
+		logger.debug(LoggerUtils.calculateExecutionTime(start));
+		return response;
 	}
 
 	//Operation Putmapping to update category by id
@@ -212,24 +199,20 @@ public class CategoryController {
 	@PutMapping("/{id}")
 	public ResponseEntity<Category> editCategory(@RequestBody Category category, @PathVariable int id) {
 
-		//log in PutMapping by id
-		logger.info("[ PUT ] => { " + endPoint + "/{id} }");
+		ResponseEntity<Category> response;
+		logger.info(LoggerUtils.notificationEndpointRequested("PUT", ENDPOINT, "/{id}"));
 		long start = System.currentTimeMillis();
+
 		try {
-			if (category.getId() == 0)
-				category.setId(id);
+			if (category.getId() == 0) category.setId(id);
 
-			ResponseEntity response = ResponseEntity.ok(this.categoryService.updateCategory(category));
-
-			long end = System.currentTimeMillis();
-			logger.debug("O tempo de execução foi de " + (end-start) + " ms.");
-
-			return response;
+			response = ResponseEntity.ok(this.categoryService.updateCategory(category));
 		} catch (NotFoundException e) {
-			logger.error(e.getMessage());
-			e.printStackTrace();
-			return ResponseEntity.unprocessableEntity().body(category);
+			LoggerUtils.printStackTrace(e, true);
+			response = ResponseEntity.unprocessableEntity().body(category);
 		}
-	}
 
+		logger.debug(LoggerUtils.calculateExecutionTime(start));
+		return response;
+	}
 }

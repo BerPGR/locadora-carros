@@ -2,6 +2,7 @@ package br.com.locadoracarros.carrental.controller;
 
 import br.com.locadoracarros.carrental.entities.Car;
 import br.com.locadoracarros.carrental.service.CarService;
+import br.com.locadoracarros.carrental.util.LoggerUtils;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
@@ -15,17 +16,16 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.Random;
 
 @RestController
-@RequestMapping("/car")
+@RequestMapping(CarController.ENDPOINT)
 public class CarController {
 
 	//endpoint for CarController
-	private final String endPoint = "/car";
+	final static String ENDPOINT = "/car";
 
 	//Logger for CarController
 	final Logger logger = LoggerFactory.getLogger(this.getClass());
@@ -62,13 +62,15 @@ public class CarController {
 			value = "attribute",
 			required = false) String attribute)
 	{
+		Page<Car> response;
+
 		long start = System.currentTimeMillis();
-		logger.info("[ GET ] => { " + endPoint + " }");
-		long end = System.currentTimeMillis();
+		logger.info(LoggerUtils.notificationEndpointRequested("GET", ENDPOINT));
 
-		logger.debug("O tempo de execução foi de " + (end-start) + " ms");
+		response = this.carService.getAll(page, size, sort, q, attribute);
+		logger.debug(LoggerUtils.calculateExecutionTime(start));
 
-		return this.carService.getAll(page, size, sort, q, attribute);
+		return response;
 	}
 
 	// Operation getMapping by ID
@@ -79,13 +81,13 @@ public class CarController {
 	@GetMapping("/{id}")
 	public ResponseEntity<Car> getCar(@PathVariable("id") int id) {
 
-		logger.info("[ GET ] => { " + endPoint + "/{id} }");
+		ResponseEntity<Car> response;
+		logger.info(LoggerUtils.notificationEndpointRequested("GET", ENDPOINT, "/{id}"));
 		long start = System.currentTimeMillis();
 
 		try {
 			Optional<Car> optionalCar = this.carService.getCar(id);
 
-			ResponseEntity response;
 			if (optionalCar.isPresent()) {
 
 				response = ResponseEntity.ok(optionalCar.get());
@@ -94,14 +96,13 @@ public class CarController {
 				response = ResponseEntity.noContent().build();
 			}
 
-			long end = System.currentTimeMillis();
-			logger.debug("O tempo de execução foi de " + (end-start) + " ms");
-			return response;
 		} catch (Exception e) {
-			logger.error(e.getMessage());
-			e.printStackTrace();
-			return ResponseEntity.unprocessableEntity().build();
+			LoggerUtils.printStackTrace(e, true);
+			response = ResponseEntity.unprocessableEntity().build();
 		}
+
+		logger.debug(LoggerUtils.calculateExecutionTime(start));
+		return response;
 	}
 
 	//GetMapping taking a random car
@@ -113,8 +114,8 @@ public class CarController {
 	@GetMapping("/random")
 	public ResponseEntity<Car> getRandomCar(){
 
-		ResponseEntity response;
-		logger.info("[ GET ] => { " + endPoint + "/random }");
+		ResponseEntity<Car> response;
+		logger.info(LoggerUtils.notificationEndpointRequested("GET", ENDPOINT, "/random"));
 		long start = System.currentTimeMillis();
 
 		try{
@@ -134,15 +135,14 @@ public class CarController {
 			else{
 				response = ResponseEntity.noContent().build();
 			}
-			long end = System.currentTimeMillis();
-			logger.debug("O tempo de execução foi de " + (end-start) + " ms");
-
-			return response;
 		}
 		catch(Exception e){
-			logger.error(e.getMessage());
-			return ResponseEntity.unprocessableEntity().build();
+			LoggerUtils.printStackTrace(e, true);
+			response = ResponseEntity.unprocessableEntity().build();
 		}
+
+		logger.debug(LoggerUtils.calculateExecutionTime(start));
+		return response;
 	}
 
 	//GetMapping taking only the brands
@@ -154,12 +154,12 @@ public class CarController {
 	@GetMapping("/brands")
 	public ResponseEntity<List<String>> getListBrands(){
 
-		ResponseEntity response;
-		logger.info("[ GET ] => { " + endPoint + "/brands }");
+		ResponseEntity<List<String>> response;
+		logger.info(LoggerUtils.notificationEndpointRequested("GET", ENDPOINT, "/brands"));
 		long start = System.currentTimeMillis();
 
 		try{
-			List<String> carBrandList = new ArrayList<>(); //this.carService.getCarBrands();
+			List<String> carBrandList = this.carService.getCarBrands();
 			if (carBrandList.size() > 0) {
 				response = ResponseEntity.ok(carBrandList);
 			} else  {
@@ -168,13 +168,11 @@ public class CarController {
 		}
 		catch(Exception e){
 
-			return ResponseEntity.unprocessableEntity().build();
+			response = ResponseEntity.unprocessableEntity().build();
 		}
 
-		long end = System.currentTimeMillis();
-		logger.debug("O tempo de execução foi de " + (end-start) + " ms");
+		logger.debug(LoggerUtils.calculateExecutionTime(start));
 		return response;
-
 	}
 
 	// Operation PostMapping
@@ -186,24 +184,21 @@ public class CarController {
 	@PostMapping
 	public ResponseEntity<Car> addCar(@RequestBody Car car) {
 
-		//REPLICATE IN ALL ENDPOINTS
-		logger.info("[ POST ] => { " + endPoint +" }");
+		ResponseEntity<Car> response;
+		logger.info(LoggerUtils.notificationEndpointRequested("POST", ENDPOINT));
 		long start = System.currentTimeMillis();
 
 		try {
-			ResponseEntity response = ResponseEntity.created(new URI(endPoint)).body(this.carService.save(car));
 
-			long end = System.currentTimeMillis();
-			long time = end - start;
-			logger.debug("O tempo de execução foi de " + time + " ms");
-
-			return response;
+			response = ResponseEntity.created(new URI(ENDPOINT)).body(this.carService.save(car));
 		}
 		catch (Exception e) {
-			logger.error(e.getMessage());
-			e.printStackTrace();
-			return ResponseEntity.unprocessableEntity().body(car);
+			LoggerUtils.printStackTrace(e, true);
+			response = ResponseEntity.unprocessableEntity().body(car);
 		}
+
+		logger.debug(LoggerUtils.calculateExecutionTime(start));
+		return response;
 	}
 
 	//Operation PutMapping
@@ -215,22 +210,21 @@ public class CarController {
 	@PutMapping
 	public ResponseEntity<Car> editCar(@RequestBody Car car) {
 
-		logger.info("[ PUT ] : { " + endPoint + " }");
+		ResponseEntity<Car> response;
 
+		logger.info(LoggerUtils.notificationEndpointRequested("PUT", ENDPOINT));
 		long start = System.currentTimeMillis();
 
 		try {
-			ResponseEntity response = ResponseEntity.ok(this.carService.updateCar(car));
 
-			long end = System.currentTimeMillis();
-			logger.debug("O tempo de execução foi de " + (end-start) + " ms");
-
-			return response;
+			response = ResponseEntity.ok(this.carService.updateCar(car));
 		} catch (NotFoundException e) {
-			logger.error(e.getMessage());
-			e.printStackTrace();
-			return ResponseEntity.unprocessableEntity().body(car);
+			LoggerUtils.printStackTrace(e, true);
+			response = ResponseEntity.unprocessableEntity().body(car);
 		}
+
+		logger.debug(LoggerUtils.calculateExecutionTime(start));
+		return response;
 	}
 
 	//Operation PutMapping by ID
@@ -242,25 +236,22 @@ public class CarController {
 	@PutMapping("/{id}")
 	public ResponseEntity<Car> editCar(@RequestBody Car car, @PathVariable int id) {
 
+		ResponseEntity<Car> response;
 
-		logger.info("[ PUT ] => { " + endPoint + "/{id} }");
+		logger.info(LoggerUtils.notificationEndpointRequested("PUT", ENDPOINT, "/{id}"));
 		long start = System.currentTimeMillis();
 
 		try {
 			if (car.getId() == 0) {
 				car.setId(id);
 			}
-			ResponseEntity response = ResponseEntity.ok(this.carService.updateCar(car));
-
-			long end = System.currentTimeMillis();
-			logger.debug("O tempo de execução foi de " + (end-start) + " ms");
-
-			return response;
+			response = ResponseEntity.ok(this.carService.updateCar(car));
 		} catch (NotFoundException e) {
-			logger.error(e.getMessage());
-			e.printStackTrace();
-			return ResponseEntity.unprocessableEntity().body(car);
+			LoggerUtils.printStackTrace(e, true);
+			response = ResponseEntity.unprocessableEntity().body(car);
 		}
-	}
 
+		logger.debug(LoggerUtils.calculateExecutionTime(start));
+		return response;
+	}
 }

@@ -4,6 +4,7 @@ import br.com.locadoracarros.carrental.entities.Tenancy;
 import br.com.locadoracarros.carrental.service.CarService;
 import br.com.locadoracarros.carrental.service.ClientService;
 import br.com.locadoracarros.carrental.service.TenancyService;
+import br.com.locadoracarros.carrental.util.LoggerUtils;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
@@ -24,11 +25,11 @@ import java.util.Optional;
 import java.util.Random;
 
 @RestController
-@RequestMapping("/tenancy")
+@RequestMapping(TenancyController.ENDPOINT)
 public class TenancyController {
 
 	// endpoint for TenancyController
-	final String endPoint = "/tenancy";
+	final static String ENDPOINT = "/tenancy";
 
 	// Logger for TenancyController
 	final Logger logger = LoggerFactory.getLogger(this.getClass());
@@ -71,13 +72,13 @@ public class TenancyController {
 					value = "attribute",
 					required = false) String attribute)
 	{
+		Page<Tenancy> response;
 		long start = System.currentTimeMillis();
-		logger.info("[ GET ] => { " + endPoint + " }");
-		long end = System.currentTimeMillis();
+		logger.info(LoggerUtils.notificationEndpointRequested("GEt", ENDPOINT ));
 
-		logger.debug("O tempo de execução foi de " + (end-start) + " ms");
-
-		return this.tenancyService.getAll(page, size, sort, q, attribute);
+		response = this.tenancyService.getAll(page, size, sort, q, attribute);
+		logger.debug(LoggerUtils.calculateExecutionTime(start));
+		return response;
 	}
 
 	//Operation GetMapping by ID
@@ -87,13 +88,15 @@ public class TenancyController {
 			@ApiResponse(code = 204, message = "Existe uma locação.")
 	})
 	@GetMapping("/{id}")
-	public ResponseEntity<Optional<Tenancy>> getTenancy(@PathVariable("id") int id) throws JSONException {
+	public ResponseEntity<Tenancy> getTenancy(@PathVariable("id") int id) throws JSONException {
 
-		logger.info("[ GET ] => { " + endPoint + "/{id} }");
+		ResponseEntity<Tenancy> response;
+
+		logger.info(LoggerUtils.notificationEndpointRequested("GET", ENDPOINT, "/{id}"));
 		long start = System.currentTimeMillis();
+
 		try{
 			Optional<Tenancy> optionalTenancy = this.tenancyService.getTenancy(id);
-			ResponseEntity response;
 
 			if (optionalTenancy.isPresent()){
 				response = ResponseEntity.ok(optionalTenancy.get());
@@ -101,16 +104,14 @@ public class TenancyController {
 			else{
 				response = ResponseEntity.noContent().build();
 			}
-			long end = System.currentTimeMillis();
-			logger.debug("O tempo de execução foi de " + (end-start) + " ms");
-			return response;
 		}
 		catch(Exception e){
-			logger.error(e.getMessage());
-			e.printStackTrace();
-
-			return ResponseEntity.unprocessableEntity().build();
+			LoggerUtils.printStackTrace(e, true);
+			response = ResponseEntity.unprocessableEntity().build();
 		}
+
+		logger.debug(LoggerUtils.calculateExecutionTime(start));
+		return response;
 	}
 
 	@ResponseStatus(HttpStatus.NO_CONTENT)
@@ -122,7 +123,7 @@ public class TenancyController {
 	public ResponseEntity<Tenancy> getRandomTenancy(){
 
 		ResponseEntity response;
-		logger.info("[ GET ] => { " + endPoint + "/random }");
+		logger.info(LoggerUtils.notificationEndpointRequested("GET", ENDPOINT, "/random"));
 		long start = System.currentTimeMillis();
 
 		try{
@@ -142,14 +143,14 @@ public class TenancyController {
 			else{
 				response = ResponseEntity.noContent().build();
 			}
-			long end = System.currentTimeMillis();
-			logger.debug("O tempo de execução foi de " + (end-start) + " ms");
-			return response;
 		}
 		catch(Exception e){
-			logger.error(e.getMessage());
-			return ResponseEntity.unprocessableEntity().build();
+			LoggerUtils.printStackTrace(e, true);
+			response = ResponseEntity.unprocessableEntity().build();
 		}
+
+		logger.debug(LoggerUtils.calculateExecutionTime(start));
+		return response;
 	}
 
 	//GetMapping taking client
@@ -161,8 +162,9 @@ public class TenancyController {
 	@GetMapping("/client/{id}")
 	public ResponseEntity<List<Tenancy>> getTenancyByClient(@PathVariable("id") int id){
 
-		ResponseEntity response;
-		logger.info("[ GET ] => { " + endPoint + "/client }");
+		ResponseEntity<List<Tenancy>> response;
+		logger.info(LoggerUtils.notificationEndpointRequested("GET", ENDPOINT, "/client",
+				"/{id}"));
 		long start = System.currentTimeMillis();
 
 		try{
@@ -175,16 +177,14 @@ public class TenancyController {
 			else{
 				response = ResponseEntity.noContent().build();
 			}
-
-			long end = System.currentTimeMillis();
-			logger.debug("O tempo de execução foi de " + (end-start) + " ms");
-			return response;
 		}
 		catch(Exception e){
-			logger.error(e.getMessage());
-			e.printStackTrace();
-			return ResponseEntity.unprocessableEntity().build();
+			LoggerUtils.printStackTrace(e, true);
+			response = ResponseEntity.unprocessableEntity().build();
 		}
+
+		logger.debug(LoggerUtils.calculateExecutionTime(start));
+		return response;
 	}
 
 	//GetMapping taking car
@@ -197,8 +197,10 @@ public class TenancyController {
 	public ResponseEntity<Tenancy> getTenancyByCar(@PathVariable("id") int id){
 
 		ResponseEntity response;
-		logger.info("[ GET ] => { " + endPoint + "/car }");
+		logger.info(LoggerUtils.notificationEndpointRequested("GET", ENDPOINT, "/car",
+				"/{id}"));
 		long start = System.currentTimeMillis();
+
 		try{
 			List<Tenancy> carTenancy = this.tenancyService.findByCar(id);
 
@@ -209,16 +211,14 @@ public class TenancyController {
 			else{
 				response = ResponseEntity.noContent().build();
 			}
-
-			long end = System.currentTimeMillis();
-			logger.debug("O tempo de execução foi de " + (end-start) + " ms");
-			return response;
 		}
 		catch(Exception e){
-			logger.error(e.getMessage());
-			e.printStackTrace();
-			return ResponseEntity.unprocessableEntity().build();
+			LoggerUtils.printStackTrace(e, true);
+			response = ResponseEntity.unprocessableEntity().build();
 		}
+
+		logger.debug(LoggerUtils.calculateExecutionTime(start));
+		return response;
 	}
 
 	// Operation PostMapping in TenancyController
@@ -237,23 +237,25 @@ public class TenancyController {
 					"  ]\n" +
 					"}")
 	})
+
 	@PostMapping
 	public ResponseEntity<Tenancy> addTenancy(@RequestBody Tenancy tenancy){
 
-		logger.info("[ POST ] => { " + endPoint +" }");
-		long start = System.currentTimeMillis();
-		try{
-			ResponseEntity response = ResponseEntity.created(new URI(endPoint)).body(this.tenancyService.save(tenancy));
+		ResponseEntity<Tenancy> response;
 
-			long end = System.currentTimeMillis();
-			logger.debug("O tempo de execução foi de " + (end-start) + " ms");
-			return response;
+		logger.info(LoggerUtils.notificationEndpointRequested("POST", ENDPOINT));
+		long start = System.currentTimeMillis();
+
+		try{
+			response = ResponseEntity.created(new URI(ENDPOINT)).body(this.tenancyService.save(tenancy));
 		}
 		catch(Exception e){
-			logger.error(e.getMessage());
-			e.printStackTrace();
-			return ResponseEntity.unprocessableEntity().body(tenancy);
+			LoggerUtils.printStackTrace(e, true);
+			response = ResponseEntity.unprocessableEntity().body(tenancy);
 		}
+
+		logger.debug(LoggerUtils.calculateExecutionTime(start));
+		return response;
 	}
 
 	//Operation PutMapping
@@ -265,21 +267,21 @@ public class TenancyController {
 	@PutMapping
 	public ResponseEntity<Tenancy> editTenancy(@RequestBody Tenancy tenancy){
 
-		logger.info("[ PUT ] : { " + endPoint + " }");
+		ResponseEntity<Tenancy> response;
+
+		logger.info(LoggerUtils.notificationEndpointRequested("PUT", ENDPOINT));
 		long start = System.currentTimeMillis();
+
 		try{
-			ResponseEntity response = ResponseEntity.ok(this.tenancyService.updateTenancy(tenancy));
-
-			long end = System.currentTimeMillis();
-			logger.debug("O tempo de execução foi de " + (end-start) + " ms");
-
-			return response;
+			response = ResponseEntity.ok(this.tenancyService.updateTenancy(tenancy));
 		}
 		catch(NotFoundException e){
-			logger.error(e.getMessage());
-			e.printStackTrace();
-			return ResponseEntity.unprocessableEntity().body(tenancy);
+			LoggerUtils.printStackTrace(e, true);
+			response = ResponseEntity.unprocessableEntity().body(tenancy);
 		}
+
+		logger.debug(LoggerUtils.calculateExecutionTime(start));
+		return response;
 	}
 
 	//Operation PutMapping by ID
@@ -291,25 +293,23 @@ public class TenancyController {
 	@PutMapping("/{id}")
 	public ResponseEntity<Tenancy> editTenancy(@RequestBody Tenancy tenancy, @PathVariable int id){
 
-		logger.info("[ PUT ] => { " + endPoint + "/{id} }");
+		ResponseEntity<Tenancy> response;
+
+		logger.info(LoggerUtils.notificationEndpointRequested("PUT", ENDPOINT, "/{id}"));
 		long start = System.currentTimeMillis();
 
 		try{
 			if (tenancy.getId() == 0){
 				tenancy.setId(id);
 			}
-
-			ResponseEntity response = ResponseEntity.ok(this.tenancyService.updateTenancy(tenancy));
-
-			long end = System.currentTimeMillis();
-			logger.debug("O tempo de execução foi de " + (end-start) + " ms");
-			return response;
+			response = ResponseEntity.ok(this.tenancyService.updateTenancy(tenancy));
 		}
 		catch(NotFoundException e){
-			logger.error(e.getMessage());
-			e.printStackTrace();
-			return ResponseEntity.unprocessableEntity().body(tenancy);
+			LoggerUtils.printStackTrace(e, true);
+			response = ResponseEntity.unprocessableEntity().body(tenancy);
 		}
-	}
 
+		logger.debug(LoggerUtils.calculateExecutionTime(start));
+		return response;
+	}
 }

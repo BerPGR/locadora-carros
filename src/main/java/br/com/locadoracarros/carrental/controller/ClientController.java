@@ -2,6 +2,7 @@ package br.com.locadoracarros.carrental.controller;
 
 import br.com.locadoracarros.carrental.entities.Client;
 import br.com.locadoracarros.carrental.service.ClientService;
+import br.com.locadoracarros.carrental.util.LoggerUtils;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
@@ -20,11 +21,11 @@ import java.util.Optional;
 import java.util.Random;
 
 @RestController
-@RequestMapping("/client")
+@RequestMapping(ClientController.ENDPOINT)
 public class ClientController {
 
 	//endpoint for ClientController
-	private final String endPoint = "/client";
+	final static String ENDPOINT = "/client";
 
 	//created logger for ClientController
 	final Logger logger = LoggerFactory.getLogger(this.getClass());
@@ -62,13 +63,14 @@ public class ClientController {
 					required = false) String attribute)
 	{
 
+		Page<Client> response;
 		long start = System.currentTimeMillis();
-		logger.info("[ GET ] => { " + endPoint + " }");
-		long end = System.currentTimeMillis();
+		logger.info(LoggerUtils.notificationEndpointRequested("GET", ENDPOINT));
 
-		logger.debug("O tempo de execução foi de " + (end-start) + " ms.");
+		response = this.clientService.getAll(page, size, sort, q, attribute);
+		logger.debug(LoggerUtils.calculateExecutionTime(start));
 
-		return this.clientService.getAll(page, size, sort, q, attribute);
+		return response;
 	}
 
 	//Operation GetMapping by ID
@@ -79,13 +81,13 @@ public class ClientController {
 	@GetMapping("/{id}")
 	public ResponseEntity<Client> getClient(@PathVariable("id") int id){
 
-		logger.info("[ GET ] => { " + endPoint + "/{id} }");
+		ResponseEntity<Client> response;
+
+		logger.info(LoggerUtils.notificationEndpointRequested("GET", ENDPOINT, "/{id}"));
 		long start = System.currentTimeMillis();
 
 		try{
 			Optional<Client> optionalClient = this.clientService.getClient(id);
-
-			ResponseEntity response;
 
 			if (optionalClient.isPresent()){
 
@@ -94,17 +96,14 @@ public class ClientController {
 			else{
 
 				response = ResponseEntity.noContent().build();
-
 			}
-			long end = System.currentTimeMillis();
-			logger.debug("O tempo de execução foi de " + (end-start) + " ms.");
-
-			return response;
 		} catch(Exception e){
-			logger.error(e.getMessage());
-			e.printStackTrace();
-			return ResponseEntity.unprocessableEntity().build();
+			LoggerUtils.printStackTrace(e, true);
+			response = ResponseEntity.unprocessableEntity().build();
 		}
+
+		logger.debug(LoggerUtils.calculateExecutionTime(start));
+		return response;
 	}
 
 	//GetMapping taking a random category
@@ -116,8 +115,8 @@ public class ClientController {
 	@GetMapping("/random")
 	public ResponseEntity<Client> getRandomClient(){
 
-		ResponseEntity response;
-		logger.info("[ GET ] => { " + endPoint + "/random }");
+		ResponseEntity<Client> response;
+		logger.info(LoggerUtils.notificationEndpointRequested("GET", ENDPOINT, "/random"));
 		long start = System.currentTimeMillis();
 
 		try{
@@ -137,15 +136,14 @@ public class ClientController {
 			else{
 				response = ResponseEntity.noContent().build();
 			}
-			long end = System.currentTimeMillis();
-			logger.debug("O tempo de execução foi de " + (end-start) + " ms");
-
-			return response;
 		}
 		catch(Exception e){
-			logger.error(e.getMessage());
-			return ResponseEntity.unprocessableEntity().build();
+			LoggerUtils.printStackTrace(e, true);
+			response = ResponseEntity.unprocessableEntity().build();
 		}
+
+		logger.debug(LoggerUtils.calculateExecutionTime(start));
+		return response;
 	}
 
 	//Operation PostMapping
@@ -157,20 +155,21 @@ public class ClientController {
 	@PostMapping
 	public ResponseEntity<Client> addClient(@RequestBody Client client){
 
-		logger.info("[ POST ] => { " + endPoint + " }");
-		long start = System.currentTimeMillis();
-		try{
-			ResponseEntity response = ResponseEntity.created(new URI(endPoint)).body(this.clientService.save(client));
+		ResponseEntity<Client> response;
 
-			long end = System.currentTimeMillis();
-			logger.debug("O tempo de execução foi de " + (end-start) + " ms.");
-			return response;
+		logger.info(LoggerUtils.notificationEndpointRequested("POST", ENDPOINT));
+		long start = System.currentTimeMillis();
+
+		try{
+			response = ResponseEntity.created(new URI(ENDPOINT)).body(this.clientService.save(client));
 		}
 		catch(Exception e){
-			logger.error(e.getMessage());
-			e.printStackTrace();
-			return ResponseEntity.unprocessableEntity().body(client);
+			LoggerUtils.printStackTrace(e, true);
+			response = ResponseEntity.unprocessableEntity().body(client);
 		}
+
+		logger.debug(LoggerUtils.calculateExecutionTime(start));
+		return response;
 	}
 
 	//Operation PutMapping
@@ -182,20 +181,21 @@ public class ClientController {
 	@PutMapping
 	public ResponseEntity<Client> editClient(@RequestBody Client client){
 
-		logger.info("[ PUT ] => { " + endPoint + " }");
-		long start = System.currentTimeMillis();
-		try{
-			ResponseEntity response = ResponseEntity.ok(this.clientService.updateClient(client));
+		ResponseEntity<Client> response;
 
-			long end = System.currentTimeMillis();
-			logger.debug("O tempo de execução foi de " + (end-start) + " ms.");
-			return response;
+		logger.info(LoggerUtils.notificationEndpointRequested("PUT", ENDPOINT));
+		long start = System.currentTimeMillis();
+
+		try{
+			response = ResponseEntity.ok(this.clientService.updateClient(client));
 		}
 		catch(NotFoundException e){
-			logger.error(e.getMessage());
-			e.printStackTrace();
-			return ResponseEntity.unprocessableEntity().body(client);
+			LoggerUtils.printStackTrace(e, true);
+			response = ResponseEntity.unprocessableEntity().body(client);
 		}
+
+		logger.debug(LoggerUtils.calculateExecutionTime(start));
+		return response;
 	}
 
 	//Operation PutMapping by ID
@@ -207,26 +207,23 @@ public class ClientController {
 	@PutMapping("/{id}")
 	public ResponseEntity<Client> editClient(@RequestBody Client client, @PathVariable int id){
 
-		logger.info("[ PUT ] => { " + endPoint + "/{id} }");
+		ResponseEntity<Client> response;
+
+		logger.info(LoggerUtils.notificationEndpointRequested("PUT", ENDPOINT, "/{id}"));
 		long start = System.currentTimeMillis();
+
 		try{
 			if (client.getId() == 0) {
 				client.setId(id);
 			}
-			ResponseEntity response = ResponseEntity.ok(this.clientService.updateClient(client));
-
-			long end = System.currentTimeMillis();
-
-			logger.debug("O tempo de execução foi de " + (end-start) + " ms.");
-			return response;
+			response = ResponseEntity.ok(this.clientService.updateClient(client));;
 		}
 		catch(NotFoundException e){
-			logger.error(e.getMessage());
-			e.printStackTrace();
-			return ResponseEntity.unprocessableEntity().body(client);
+			LoggerUtils.printStackTrace(e, true);
+			response = ResponseEntity.unprocessableEntity().body(client);
 		}
+
+		logger.debug(LoggerUtils.calculateExecutionTime(start));
+		return response;
 	}
-
 }
-
-
